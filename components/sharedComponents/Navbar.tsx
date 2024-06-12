@@ -87,17 +87,17 @@ const Navbar = () => {
 
       <div className={`py-8 flex flex-col gap-3 text-lg grow ml-8 list-none text-primary-50 ${isOpen ? 'block' : 'hidden'}`}>
           <li>
-            <Link href="">
+            <Link href="/about">
               ABOUT
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="/assistant">
               PRODUCTS
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="gene">
               RESOURCES
             </Link>
           </li>
