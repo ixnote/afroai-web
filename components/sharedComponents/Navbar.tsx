@@ -16,21 +16,23 @@ const Navbar = () => {
       {/* Desktop Nav */}
       <div className='hidden lg:flex items-center mx-4 list-none'>
         <div>
+          <Link href="/">
           <Image src={logo} alt="logo" />
+          </Link>
         </div>
         <div className={`flex grow ml-8 justify-between text-primary-50 `} >
           <li>
-            <Link href="">
+            <Link href="/about">
               ABOUT
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="/assistant">
               PRODUCTS
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="/gene">
               RESOURCES
             </Link>
           </li>
