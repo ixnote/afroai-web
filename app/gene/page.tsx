@@ -1,7 +1,7 @@
 import Image from "next/image";
 import logo from "@/public/assets/svgs/about.svg";
 import icon from "@/public/assets/images/Animated Icon.png";
-import assistant from "@/public/assets/images/assistant.png";
+import campus from "@/public/assets/images/campus.png";
 import light from "@/public/assets/svgs/light.svg";
 import arrow from "@/public/assets/images/arrowUp.png";
 import money from "@/public/assets/svgs/money.svg";
@@ -12,41 +12,49 @@ import plus1 from "@/public/assets/svgs/plus2.svg";
 import plus2 from "@/public/assets/svgs/plus1.svg";
 
 
-const Assistant = () => {
+
+
+const Gene = () => {
   return (
     <div className="bg-primary-200">
       <section className="h-auto min-h-[1000px] py-20 lg:py-40 text-primary-50 mx-4 lg:mx-2">
-  <div className="flex justify-center lg:justify-start">
-    <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
-      <Image src={logo} alt="Logo" className="w-6 h-6 lg:w-8 lg:h-8" />
-      <h2 className="text-base lg:text-lg">/Ai ASSISTANT</h2>
-    </button>
-  </div>
-  <div className="flex flex-col lg:flex-row items-center py-10">
-    <h2 className="text-xl lg:text-5xl lg:w-3/6 text-center lg:text-left">
-      YOUR DYNAMIC AI COMPANION CONVERSATIONS
-    </h2>
-    <div className="mt-6 lg:mt-0">
-      <Image src={icon} alt="Icon" className="w-12 h-12 lg:w-20 lg:h-20" />
-    </div>
-  </div>
-  <hr className="border-t border-primary-50 my-8" />
-  <Image
-    src={assistant}
-    alt="AI Assistant"
-    className="w-full h-auto object-cover rounded-lg mt-8"
-  />
-</section>
+        <div className="flex justify-center lg:justify-start">
+          <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
+            <Image src={logo} alt="Logo" className="w-6 h-6 lg:w-8 lg:h-8" />
+            <h2 className="text-base lg:text-lg">/CAMPUS GENE</h2>
+          </button>
+        </div>
+
+        <div className="flex flex-col lg:flex-row items-center py-10">
+          <h2 className="text-xl lg:text-5xl lg:w-3/6 text-center lg:text-left">
+            UNLOCK YOUR ACADEMIC POTENTIALS WITH CAMPUS GENE
+          </h2>
+          <div className="mt-6 lg:mt-0">
+            <Image
+              src={icon}
+              alt="Icon"
+              className="w-12 h-12 lg:w-20 lg:h-20"
+            />
+          </div>
+        </div>
+        <hr className="border-t border-primary-50 my-8" />
+        <Image
+          src={campus}
+          alt="AI Assistant"
+          className="w-full h-auto object-cover rounded-lg mt-8"
+        />
+      </section>
+
 
 <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
   <div className="flex justify-center lg:justify-start">
     <button className="border px-6 lg:px-10 py-3 rounded-lg font-thin">
-      EMPOWERMENT
+      STUDY COMPANION
     </button>
   </div>
   <div className="w-full lg:w-3/5 flex flex-col md:flex-row items-center py-8 text-2xl md:text-6xl">
     <h2 className="text-center md:text-left flex-1">
-      YOUR AFROCENTRIC AI COMPANION
+      YOUR ULTIMATE ACADEMIC ALLY
     </h2>
     <span className="mt-4 md:mt-0 md:ml-4">
       <Image src={light} alt="icon muscle" width={150} />
@@ -55,7 +63,7 @@ const Assistant = () => {
   <hr className="border-t border-primary-50 my-8" />
   <div className="flex flex-col md:flex-row items-center gap-8 py-8">
     <p className="w-full md:w-1/2 text-2xl lg:text-4xl">
-      Your smart, Afrocentric AI companion, delivering tailored solution for
+      Unlock Your Academic Potentials with Campus Genie
     </p>
     <p className="w-full md:w-1/2 text-md">
       Afro AI Assistant is a revolutionary AI platform designed to enhance your
@@ -71,7 +79,7 @@ const Assistant = () => {
   <hr className="border-t border-primary-50 my-8" />
   <div className="flex flex-col md:flex-row items-center gap-8 py-8">
     <p className="w-full md:w-1/2 text-2xl lg:text-4xl">
-      Tailored Solutions for Africa&apos;s Challenges
+      Featured Tailored to Your Needs
     </p>
     <p className="w-full md:w-1/2 text-md">
       From bustling marketplaces to rural villages, Afro AI Assistant is
@@ -84,19 +92,19 @@ const Assistant = () => {
   <hr className="border-t border-primary-50 my-8" />
   <div className="flex flex-col md:flex-row items-center gap-8 py-8">
     <p className="w-full md:w-1/2 text-2xl lg:text-4xl">
-      Accessible Intelligence for All
+      Streamline Your Study Experience
     </p>
     <p className="w-full md:w-1/2 text-md">
+      affordably, ensuring that individuals and businesses across Africa can
       At Afro AI, we believe that access to transformative technology should be
       a right, not a privilege. That&apos;s why Afro AI Assistant is priced
-      affordably, ensuring that individuals and businesses across Africa can
       harness its game-changing capabilities without breaking the bank.
     </p>
   </div>
   <hr className="border-t border-primary-50 my-8" />
 </section>
 
-      <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
+<section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
   <div className="flex justify-center lg:justify-start">
     <button className="border px-6 lg:px-10 py-3 rounded-lg font-thin">
       PRICING
@@ -140,6 +148,7 @@ const Assistant = () => {
     </div>
   </div>
 </section>
+
 
 <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
   <div>
@@ -214,12 +223,13 @@ const Assistant = () => {
   </div>
 </section>
 
+
 <section className="TRY AI">
   <div className="bg-primary-100 mt-4 py-12">
     <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
       <div className="w-full md:w-3/5 text-center md:text-left">
         <h2 className="text-3xl md:text-5xl font-bold">
-          JOIN THE AFRO AI REVOLUTION
+          JOIN THE CAMPUS GENE COMMUNITY
         </h2>
         <p className="mt-8 text-sm md:text-lg">
           Join the thousands of users who are already experiencing the
@@ -230,7 +240,7 @@ const Assistant = () => {
       </div>
       <div className="mt-8 md:mt-0">
         <button className="flex items-center gap-2 bg-black text-primary-50 text-xl px-10 py-3 rounded-lg hover:bg-gray-800 transition duration-300 ease-in-out">
-          Try AI Assistant
+          Try Campus Genie
           <span>
             <Image src={arrow} alt="Arrow Icon" width={20} />
           </span>
@@ -239,8 +249,10 @@ const Assistant = () => {
     </div>
   </div>
 </section>
+
+
     </div>
   );
 };
 
-export default Assistant;
+export default Gene;
