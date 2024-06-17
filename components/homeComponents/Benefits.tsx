@@ -12,22 +12,20 @@ const Benefits = () => {
   return (
     <div className="mt-16">
       <div className="text-center md:text-left">
-        <button className="border px-6 py-1 text-primary-50 font-serif rounded-md">
+        <button className="border px-6 py-1 text-primary-50 font-thin rounded-md">
           Benefits
         </button>
-        <div className="text-primary-50 text-2xl md:text-5xl w-full md:w-[70%] font-inter py-8 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start">
+        <div className="text-primary-50 text-2xl md:text-5xl mx-8 w-full md:w-[75%] font-inter py-8 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start ">
           <h2>HOW AFRO INTELLIGENCE ENHANCES YOUR EXPERIENCES</h2>
-          <div className="mt-4 md:mt-0 md:ml-4">
-            <Image src={handIcon} alt="" width={50} />
-          </div>
+          <Image src={handIcon} alt="" width={60} className="mr-24" />
         </div>
-        <hr className="border-primary-50" />
+        <hr className="border-primary-50 mx-8" />
       </div>
-      <div className="w-full md:w-[90%] mx-auto mt-8 flex flex-col md:flex-row items-center">
-        <div className="text-primary-50 text-xl md:text-5xl px-2 py-10 w-full md:w-2/6 text-center md:text-left">
+      <div className="w-full md:w-[90%] border rounded-xl mx-auto mt-8 flex flex-col md:flex-row ">
+        <div className="text-primary-50 text-xl md:text-5xl px-2  w-full md:w-2/6 text-center md:text-left">
           <h2>WHY AFRO INTELLIGENCE</h2>
         </div>
-        <div className="w-full md:w-2/6 flex flex-col items-center border rounded-xl py-6">
+        <div className="w-full md:w-2/6 flex flex-col items-center border">
           <div className="mx-4 md:mx-8 pt-4">
             <Link href="">
               <Image src={location} alt="location" />
@@ -35,51 +33,59 @@ const Benefits = () => {
             <div className="text-primary-50 mt-4 md:mt-8 text-center md:text-left">
               <h2 className="text-xl md:text-2xl font-inter">Localization</h2>
               <p className="py-4 md:py-8">
-                Access innovative solutions that understand and cater to local nuances
+                Access innovative solutions that understand and cater to local
+                nuances
               </p>
               <hr className="border-primary-50" />
-              <button className="mt-4 md:mt-8 border px-4 py-1 rounded-md">See Products</button>
+              <button className="mt-4 md:mt-8  px-4 py-1 ">See Products</button>
             </div>
           </div>
-          <div className="border-t w-full py-10">
+
+          <div className="mx-4 md:mx-8 pt-4">
             <Link href="">
-              <Image src={box} alt="location" className="mx-4 md:mx-8" />
+              <Image src={box} alt="location" />
             </Link>
-            <div className="text-primary-50 mt-4 md:mt-8 text-center md:text-left">
+            <div className="text-primary-50 mt-4 md:mt-4 text-center md:text-left">
               <h2 className="text-xl md:text-2xl font-inter">Affordable</h2>
-              <p className="py-4 md:py-8">
-                Unlock the power of GPT-4 with very affordable pricing tailored for African context
+              <p className="py-4 md:py-7">
+                Unlock the power of GPT-4 with very affordable pricing tailored
+                for African context
               </p>
               <hr className="border-primary-50" />
-              <button className="mt-4 md:mt-8 border px-4 py-1 rounded-md">See Pricing Plans</button>
+              <button className="mt-4 md:mt-3  px-4 py-1 ">
+                See Princing Plans
+              </button>
             </div>
           </div>
         </div>
-        <div className="w-full md:w-2/6 flex flex-col items-center border rounded-xl py-6 mt-8 md:mt-0 md:ml-4">
-          <div className="pt-4">
+        <div className="w-full md:w-2/6 flex flex-col items-center">
+          <div className="mx-4 md:mx-8 pt-4">
             <Link href="">
-              <Image src={head} alt="location" className="mx-4 md:mx-8" />
+              <Image src={head} alt="location" />
             </Link>
             <div className="text-primary-50 mt-4 md:mt-8 text-center md:text-left">
               <h2 className="text-xl md:text-2xl font-inter">Community</h2>
-              <p className="py-4 md:py-8">
-                Join the thriving ecosystem of like-minded individuals and organizations driving change
+              <p className="py-4 md:py-5">
+              Join the thriving ecosystem of like-minded individuals and
+              organizations driving change
               </p>
-              <hr className="border-primary-50" />
-              <button className="mt-4 md:mt-8 border px-4 py-1 rounded-md">Visit Community</button>
+              <hr className="border-primary-50 " />
+              <button className="mt-4 md:mt-8  px-4 py-1 ">Visit community</button>
             </div>
           </div>
-          <div className="border-t w-full py-10 bg-[#1C352D] rounded-b-xl">
+          <div className="mx-4 md:mx-8 pt-4 bg-[#1C352D] w-full  ">
             <Link href="">
-              <Image src={arrow} alt="location" className="mx-4 md:mx-8" />
+              <Image src={arrow} alt="location" className="mx-8 md:mx-8"/>
             </Link>
-            <div className="text-primary-50 mt-4 md:mt-8 text-center md:text-left">
-              <h2 className="text-xl md:text-2xl font-inter">Need a Demo?</h2>
-              <p className="py-4 md:py-8">
-                Get firsthand experience of Afro Intelligence
+            <div className="text-primary-50 mt-4 mx-8 md:mt-8 text-center md:text-left">
+              <h2 className="text-xl md:text-2xl font-inter mx-8 md:mx-8">Needs a Demo?</h2>
+              <p className="py-4 md:py-5 md:mx-8">
+              Get firsthand experience of Afro Intelligence
               </p>
-              <hr className="border-primary-50" />
-              <button className="mt-4 md:mt-8 border px-4 py-1 rounded-md">Try AI Assistant</button>
+              <hr className="border-primary-50 mt-5 w-[95%] mx-auto" />
+              <button className="mt-4 md:mt-4  px-4 py-1 ">
+                Try AI Assistant
+              </button>
             </div>
           </div>
         </div>

@@ -7,22 +7,22 @@ import testimonial3 from "@/public/assets/svgs/testimonial1.svg";
 
 const Testimonials = () => {
   return (
-    <div className="font-inter px-4 md:px-8 lg:px-16">
+    <div className=" px-4 md:px-8 lg:px-16 mt-20 py-20">
       <div className="text-center md:text-left">
-        <button className="border px-6 py-1 text-primary-50 font-serif rounded-md">
+        <button className="border px-6 py-1 text-primary-50 font-thin  rounded-md">
           TESTIMONIALS
         </button>
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-start w-full py-8 md:w-3/4">
-          <h2 className="text-primary-50 text-3xl md:text-6xl w-full md:w-[80%] font-inter">
+          <h2 className="text-primary-50 text-3xl font-inter md:text-6xl w-full md:w-[80%]">
             WHAT OUR USERS ARE SAYING ABOUT US
           </h2>
-          <span className="mt-4 md:mt-0">
-            <Image src={star} alt="" />
+          <span className=" mb-12">
+            <Image src={star} alt="" width={60} />
           </span>
         </div>
-        <hr className="border-primary-50" />
+        <hr className=" " />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-16 font-inter">
         <div className="py-12 px-4 border-2 border-gray-600 rounded-lg cursor-pointer shadow-2xl hover:scale-110 transform transition-transform duration-500 ease-in-out">
           <Image src={testimonial1} alt="" width={50} />
           <p className="text-primary-50 py-8 w-full md:w-3/4">
@@ -59,7 +59,7 @@ const Testimonials = () => {
           <p className="text-primary-50 mt-3 text-sm">Business Professional</p>
         </div>
       </div>
-      <div className="bg-primary-100 mt-8 py-12">
+      <div className="bg-primary-100 mt-8 py-12 ">
         <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
           <div className="w-full md:w-3/5 text-center md:text-left">
             <h2 className="text-3xl md:text-5xl">READY TO MOVE FASTER?</h2>
@@ -69,8 +69,8 @@ const Testimonials = () => {
               tailored AI solutions.
             </p>
           </div>
-          <div className="mt-8 md:mt-0">
-            <button className="flex items-center gap-2 bg-black text-primary-50 text-xl px-10 py-3 rounded-lg">
+          <div className="mt-8 md:mt-0  md:ml-24">
+            <button className="flex items-center gap-2 bg-black text-primary-50 text-xl px-20 py-3 rounded-lg">
               Try AI
               <span>
                 <Image src={arrow} alt="" width={20} />

@@ -9,22 +9,22 @@ import logo5 from "@/public/assets/images/Logo5.png"
 
 const Partners = () => {
   return (
-    <div className='min-h-screen mt-10 px-4 md:px-8 lg:px-16'>
+    <div className='min-h-screen py-24 md:mt-72 lg:mt-72 px-4 md:px-8 lg:px-16'>
       <div className='text-center md:text-left'>
-        <button className='border px-6 py-1 text-primary-50 font-serif rounded-md'>
+        <button className='border px-6 py-1 text-primary-50 font-thin rounded-md'>
           OUR PARTNERS
         </button>
         <div className='flex flex-col md:flex-row items-center py-4 gap-2'>
-          <h2 className='text-primary-50 text-3xl font-inter'>
+          <h2 className='text-primary-50 text-3xl md:text-6xl font-inter'>
             TRUSTED BY MILLIONS
           </h2>
           <div className='mt-2 md:mt-0'>
-            <Image src={handIcon} alt='HandIcon' width={30} />
+            <Image src={handIcon} alt='HandIcon' width={60} />
           </div>
         </div>
-        <hr className='border-primary-50' />
+        <hr className='text-primary-50 ' />
       </div>
-      <div className='mt-16 w-full md:w-3/6 mx-auto text-center'>
+      <div className='mt-14 w-full md:w-3/5 text-xl mx-auto text-center'>
         <p className='text-primary-50'>
           Afro Intelligence, with over 1 million users across 12 African Nations,
           seamlessly integrated into daily life, redefining AI potential and shaping
@@ -33,7 +33,7 @@ const Partners = () => {
           </span>
         </p>
       </div>
-      <div className='flex flex-wrap justify-around mx-8 mt-20 md:mt-44 gap-4'>
+      <div className='flex flex-wrap justify-around mx-8 mt-20 md:mt-40 gap-4'>
         <div className='w-1/2 md:w-auto flex justify-center'>
           <Image src={logo1} alt='logo1' />
         </div>
