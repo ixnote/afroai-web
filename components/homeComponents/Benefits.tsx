@@ -10,20 +10,22 @@ import Link from "next/link";
 
 const Benefits = () => {
   return (
-    <div className="mt-16">
-      <div className="text-center md:text-left">
-        <button className="border px-6 py-1 text-primary-50 font-thin rounded-md">
+    <div className="mt-16 mx-4">
+      <div className="text-center md:text-left mx-8">
+        <button className="border px-6 py-1 text-primary-50 font-thin mx-8 rounded-md">
           Benefits
         </button>
-        <div className="text-primary-50 text-2xl md:text-5xl mx-8 w-full md:w-[75%] font-inter py-8 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start ">
-          <h2>HOW AFRO INTELLIGENCE ENHANCES YOUR EXPERIENCES</h2>
+        <div className="text-primary-50 text-2xl md:text-6xl mx-8 w-full md:w-[70%] font-inter py-9 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start ">
+        <h2 className="text-primary-50 text-3xl font-inter md:text-5xl ">
+          HOW AFRO AI ENHANCES YOUR EXPERIENCES
+          </h2>
           <Image src={handIcon} alt="" width={60} className="mr-24" />
         </div>
         <hr className="border-primary-50 mx-8" />
       </div>
       <div className="w-full md:w-[90%] border rounded-xl mx-auto mt-8 flex flex-col md:flex-row ">
-        <div className="text-primary-50 text-xl md:text-5xl px-2  w-full md:w-2/6 text-center md:text-left">
-          <h2>WHY AFRO INTELLIGENCE</h2>
+        <div className="text-primary-50 text-xl md:text-4xl px-2  w-full md:w-2/6 text-center md:text-left md:py-6 md:px-4">
+          <h2>WHY AFRO AI?</h2>
         </div>
         <div className="w-full md:w-2/6 flex flex-col items-center border">
           <div className="mx-4 md:mx-8 pt-4">

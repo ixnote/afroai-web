@@ -7,20 +7,20 @@ import star from "@/public/assets/images/star.png"
 const Products = () => {
   return (
     <div className=''>
-      <div className='bg-primary-50 w-full min-h-screen px-4 md:px-8 lg:px-16 py-8'>
+      <div className='w-full min-h-screen px-4 md:px-8 lg:px-16 py-8'>
         <div className='text-center md:text-left'>
-          <button className='px-6 py-1 rounded-md border-2 font-thin text-black my-10'>
+          <button className='px-6 py-1 rounded-md border-2 font-thin text-primary-50 my-10'>
             PRODUCTS
           </button>
-          <div className='flex flex-col md:flex-row items-center gap-4 md:gap-2'>
-            <h2 className='text-black text-3xl md:text-6xl w-full md:w-[70%] font-inter'>
+          <div className='flex flex-col md:flex-row gap-4 md:gap-2'>
+            <h2 className='text-primary-50 text-3xl md:text-6xl w-full md:w-[70%] font-inter'>
               EXPERIENCE THE POWER OF AFRO INTELLIGENCE
             </h2>
             <span className='mt-4 md:mt-0'>
               <Image src={star} alt=''width={60} />
             </span>
           </div>
-          <hr className='border-black mt-4' />
+          <hr className=' mt-4' />
         </div>
         <div className='flex flex-col md:flex-row justify-around mt-12 h-auto  gap-3'>
           <div className='w-full md:w-auto cursor-pointer shadow-2xl hover:scale-110 transform transition-transform duration-500 ease-in-out'>
@@ -43,10 +43,10 @@ const Products = () => {
           </div>
         </div>
         <div className='flex flex-col md:flex-row justify-between w-full  h-auto md:h-[200px] gap-8 '>
-          <p className='w-full md:w-1/2 text-lg md:text-xl px-4 md:px-8 md:py-8 font-inter'>
+          <p className='w-full md:w-1/2 text-lg md:text-xl px-4 md:px-8 md:py-8 font-inter text-primary-50'>
             Empowering Africa&apos;s Technology revolution with Afro Intelligence
           </p>
-          <p className='w-full md:w-1/2 text-md font-inter md:py-8'>
+          <p className='w-full md:w-1/2 text-md font-inter md:py-8 text-primary-50'>
             Afro Intelligence is dedicated to revolutionizing Africa&apos;s tech scene with innovative AI solutions.
             By understanding local nuances, we foster inclusive development and empower communities to thrive.
           </p>

@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="text-primary-50  px-10 font-inter flex flex-col items-center md:flex-row md:gap-8 md:w-full">
         <h2 className="text-2xl md:text-8xl  md:text-left md:mt-8 ">
           YOUR AFFORDABLE <br /> OPTION OF CHATGPT
-          <hr className="w-[110%] md:mt-4" />
+          <hr className="w-[120%] md:mt-4" />
         </h2>
         <div className="mt-8 md:mt-0">
           <Image src={Icon} alt="Icon" width={60} className="md:mt-12" />

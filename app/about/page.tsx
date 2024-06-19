@@ -179,9 +179,7 @@ const About = () => {
               <h2 className="md:text-4xl text-2xl font-inter">
                 THE INNOVATION FOR POSITIVE CHANGE TEAM
               </h2>
-              
                 <Image src={group} alt="message icon" width={60} className="md:mr-16 lg:mr-16"/>
-           
             </div>
             <hr />
             <div className="mt-16">

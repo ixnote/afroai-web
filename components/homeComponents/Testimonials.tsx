@@ -7,7 +7,8 @@ import testimonial3 from "@/public/assets/svgs/testimonial1.svg";
 
 const Testimonials = () => {
   return (
-    <div className=" px-4 md:px-8 lg:px-16 mt-20 py-20">
+    <div>
+      <section className=" px-4 md:px-8 lg:px-16 md:py-12 ">
       <div className="text-center md:text-left">
         <button className="border px-6 py-1 text-primary-50 font-thin  rounded-md">
           TESTIMONIALS
@@ -59,7 +60,10 @@ const Testimonials = () => {
           <p className="text-primary-50 mt-3 text-sm">Business Professional</p>
         </div>
       </div>
-      <div className="bg-primary-100 mt-8 py-12 ">
+      </section>
+      <section>
+
+      <div className="bg-primary-100 py-12   ">
         <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
           <div className="w-full md:w-3/5 text-center md:text-left">
             <h2 className="text-3xl md:text-5xl">READY TO MOVE FASTER?</h2>
@@ -79,7 +83,9 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
+      </section>
     </div>
+
   );
 };
 
