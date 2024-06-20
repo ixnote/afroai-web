@@ -16,7 +16,7 @@ import mission from "@/public/assets/images/about3.png";
 const About = () => {
   return (
     <div>
-      <section className="h-auto min-h-[800px] py-20 lg:py-32 text-primary-50 mx-4 lg:mx-4">
+      <section className="h-auto min-h-[800px] py-20 md:py-20 lg:py-20 text-primary-50 mx-4 lg:mx-4">
         <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
           <Image src={logo} alt="" />
           <h2>/ABOUT</h2>

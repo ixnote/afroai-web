@@ -22,7 +22,7 @@ const Products = () => {
           </div>
           <hr className=' mt-4' />
         </div>
-        <div className='flex flex-col md:flex-row justify-around mt-12 h-auto  gap-3'>
+        <div className='flex flex-col md:flex-row justify-around mt-12 h-auto gap-3 '>
           <div className='w-full md:w-auto cursor-pointer shadow-2xl hover:scale-110 transform transition-transform duration-500 ease-in-out'>
             <Image src={product1} alt='' width={800}  className='w-full md:w-auto ' />
             <h2 className='py-2 flex justify-between items-center text-xl md:text-2xl font-inter bg-black text-primary-50 px-6'>
