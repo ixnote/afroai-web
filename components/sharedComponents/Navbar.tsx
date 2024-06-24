@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from "@/public/assets/images/logo.png";
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,8 +15,15 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
+  const path = usePathname()
+
+  const obj:{[key:string]: string} = {
+    assistant: 'bg-[#1C352D]',
+    gene: "bg-[#1A2421]"
+  }
+
   return (
-    <div className='bg-inherit py-3 fixed font-inter left-0 right-0 z-20'>
+    <div className={`${obj[path.split('/')[1]] ?? 'bg-inherit'} py-3 fixed font-inter left-0 right-0 z-20`}>
       {/* Desktop Nav */}
       <div className='hidden lg:flex items-center mx-4 list-none'>
         <div>

@@ -1,8 +1,15 @@
 import Image from "next/image";
 import React from "react";
 import symbol from "@/public/assets/images/symbol.png";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const path = usePathname()
+
+  const obj:{[key:string]: string} = {
+    contact: 'hidden',
+    
+  }
   return (
     <div className="bg-primary-200 w-full px-4 md:px-8 lg:px-16 py-8">
       <div className="text-center md:text-left">

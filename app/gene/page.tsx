@@ -13,7 +13,7 @@ import plus2 from "@/public/assets/svgs/plus1.svg";
 
 const Gene = () => {
   return (
-    <div className="bg-primary-200">
+    <div className="bg-primary-300">
       <section className="h-auto min-h-[1000px] py-20 lg:py-40 text-primary-50 mx-4 lg:mx-2">
         <div className="flex justify-center lg:justify-start">
           <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">

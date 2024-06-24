@@ -14,7 +14,7 @@ import plus2 from "@/public/assets/svgs/plus1.svg";
 const Assistant = () => {
   return (
     <div className="bg-primary-200">
-      <section className="h-auto min-h-[1000px] py-20 lg:py-32 text-primary-50 mx-4 lg:mx-2">
+      <section className="h-auto min-h-[1000px] pt-24 lg:py-32 text-primary-50 mx-4 lg:mx-2">
         <div className="flex justify-center lg:justify-start">
           <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
             <Image src={logo} alt="Logo" className="w-6 h-6 lg:w-8 lg:h-8" />
@@ -37,7 +37,7 @@ const Assistant = () => {
         />
       </section>
 
-      <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
+      <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 lg:py-16">
         <div className="flex justify-center lg:justify-start">
           <button className="border px-6 lg:px-10 py-3 rounded-lg font-thin">
             EMPOWERMENT

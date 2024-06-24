@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { useEffect, useRef } from 'react';
 import icon from "@/public/assets/images/Animated Icon.png";
 import logo from "@/public/assets/svgs/about.svg";
 import about1 from "@/public/assets/images/about1.png";
@@ -14,6 +16,53 @@ import group from "@/public/assets/svgs/team.svg";
 import mission from "@/public/assets/images/about3.png";
 
 const About = () => {
+
+  // const containerRef = useRef<HTMLDivElement>(null);
+
+  // useEffect(() => {
+  //   const container = containerRef.current;
+  //   if (!container) return;
+
+  //   const handleScroll = () => {
+  //     const scrollTop = container.scrollTop;
+  //     const scrollHeight = container.scrollHeight;
+  //     const clientHeight = container.clientHeight;
+      
+  //     // Calculate opacity based on scroll position
+  //     const opacity = Math.min(0.5, scrollTop / (scrollHeight - clientHeight));
+  //     container.style.setProperty('--fade-opacity', opacity.toString());
+  //   };
+
+  //   container.addEventListener('scroll', handleScroll);
+  //   return () => container.removeEventListener('scroll', handleScroll);
+  // }, []);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const observerOptions = {
+      threshold: 0.1, // Trigger callback when 10% of the element is visible
+    };
+
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        } else {
+          entry.target.classList.remove('fade-in');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const sections = container.querySelectorAll('.fade-section');
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <div>
       <section className="h-auto min-h-[800px] py-20 md:py-20 lg:py-20 text-primary-50 mx-4 lg:mx-4">
@@ -71,7 +120,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className=" text-primary-50  mx-2">
+      <section className=" text-primary-50  mx-2" >
         <button className="text-primary-50 font-thin border px-8 py-1 rounded-lg">
           OUR STORY
         </button>
@@ -87,29 +136,24 @@ const About = () => {
           />
         </div>
         <hr />
-        <div className="pt-10 md:mt-16 ">
-          <p className="font-inter md:text-4xl text-xl tracking-[0.5px] text-center w-2/5 mx-auto leading-10 ">
-            Afro Intelligence Emerged From A Shared Understanding: The AI
-            Landscape Was Out Of Reach For Many Africans Due To Cost And
-            Accessibility Barriers. Driven By Inclusivity, Our Divers Team
-            United To Denocratize AI.
-          </p>
-        </div>
-        <div className="pt-16 ">
-          <p className="font-inter md:text-4xl text-xl tracking-[0.5px] text-center w-2/5 mx-auto leading-10 ">
-            We Knew That Tailoring AI To African Needs Was Essential. Our
-            Journey Began With A Commitment To Affordability and Inclusivity,
-            Ensuring That EveryOne Could Access The Benefit Of AI.
-          </p>
-        </div>
-        <div className="pt-16 ">
-          <p className="font-inter md:text-4xl text-xl tracking-[0.5px] text-center w-2/5 mx-auto leading-10 ">
-            Today, Afro Intelligence Stands As Beacon Of Hope, Offering Not Just
-            AI Solutions But Empowerment For All Africans. Our Mission Remains
-            Unwavering As We COntinue Innovate, Shaping A Future Where AI Is
-            Accessible To Alll Who Dream To Progress.{" "}
-          </p>
-        </div>
+
+<div className="scroll-smooth" ref={containerRef}>
+      <div className="pt-10 md:mt-16 fade-section">
+        <p className="font-inter md:text-4xl text-xl tracking-[0.5px] text-center w-2/5 mx-auto leading-10">
+          Afro Intelligence Emerged From A Shared Understanding: The AI Landscape Was Out Of Reach For Many Africans Due To Cost And Accessibility Barriers. Driven By Inclusivity, Our Divers Team United To Denocratize AI.
+        </p>
+      </div>
+      <div className="pt-16 fade-section">
+        <p className="font-inter md:text-4xl text-xl tracking-[0.5px] text-center w-2/5 mx-auto leading-10">
+          We Knew That Tailoring AI To African Needs Was Essential. Our Journey Began With A Commitment To Affordability and Inclusivity, Ensuring That EveryOne Could Access The Benefit Of AI.
+        </p>
+      </div>
+      <div className="pt-16 fade-section">
+        <p className="font-inter md:text-4xl text-xl tracking-[0.5px] text-center w-2/5 mx-auto leading-10">
+          Today, Afro Intelligence Stands As Beacon Of Hope, Offering Not Just AI Solutions But Empowerment For All Africans. Our Mission Remains Unwavering As We COntinue Innovate, Shaping A Future Where AI Is Accessible To Alll Who Dream To Progress.
+        </p>
+      </div>
+    </div>
 
         <section className="h-auto min-h-screen text-white mx-4 lg:mx-2 mt-16 lg:mt-32">
           <button className="text-primary-50 font-thin border px-6 lg:px-8 py-1 rounded-lg">
