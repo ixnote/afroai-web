@@ -12,7 +12,11 @@ export default function Home() {
       <Partners/>
       <Products/>
       <Benefits/>
-      <Testimonials/>
+      {/* <Testimonials testimonials={Testimonials} /> */}
+      <Testimonials testimonials ={Testimonials}/>
     </main>
   );
 }
+
+
+

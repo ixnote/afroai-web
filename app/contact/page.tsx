@@ -9,8 +9,8 @@ const Contact = () => {
     <div>
       <section className="h-auto min-h-[800px] py-20 lg:py-20 text-primary-50 mx-4 lg:mx-8">
         <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
-          <Image src={logo} alt="" className="w-6 h-6 lg:w-8 lg:h-8" />
-          <h2>/CONTACT</h2>
+          <Image src={logo} alt="" />
+          <h2 className="flex gap-2"> <span>/</span>CONTACT</h2>
         </button>
 
         <div className="flex flex-col md:flex-row mt-8 gap-8 ">
@@ -73,7 +73,7 @@ const Contact = () => {
         <button className="border ml-[45%]  px-4 lg:px-16 py-2 mt-10 rounded-lg border-primary-50 text-black bg-primary-50">
           Submit
         </button>
-        <hr className="mt-16" />
+        <hr className="mt-16 opacity-50" />
       </section>
       <section className="h-auto min-h-[600px] py-20 lg:py-20  text-primary-50 mx-4 lg:mx-8">
         <button className="border px-4 lg:px-10 py-2 rounded-lg font-thin border-primary-50 text-primary-50">
@@ -110,30 +110,27 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      <section className="TRY AI">
-        <div className="bg-primary-100 mt-4 py-12">
-          <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
-            <div className="w-full md:w-3/5 text-center md:text-left">
-              <h2 className="text-3xl md:text-5xl font-bold">
-                READY TO MOVE FASTER?
-              </h2>
-              <p className="mt-8 text-sm md:text-lg">
-                Ready to accelerate your progress? Experience the speed and
-                effeciency of afro AI. Try it now and unleash the potential of
-                tailored Ai solutions.
-              </p>
-            </div>
-            <div className="mt-8 md:mt-0">
-              <button className="flex items-center gap-2 bg-black text-primary-50 text-xl px-16 py-2 rounded-lg hover:bg-gray-800 transition duration-300 ease-in-out">
-                Try AI
-                <span>
-                  <Image src={arrow1} alt="Arrow Icon" width={20} />
-                </span>
-              </button>
-            </div>
+      <section>
+      <div className="bg-primary-100 py-12   ">
+        <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
+          <div className="w-full md:w-3/5 text-center md:text-left">
+            <h2 className="text-3xl md:text-5xl">READY TO MOVE FASTER?</h2>
+            <p className="mt-8 text-sm">
+              Ready to accelerate your progress? Experience the speed and
+              efficiency of Afro AI. Try it now and unleash the potential of
+              tailored AI solutions.
+            </p>
+          </div>
+          <div className="mt-8 md:mt-0  md:ml-24">
+            <button className="flex items-center gap-2 bg-black text-primary-50 text-xl px-20 py-3 rounded-lg">
+              Try AI
+              <span>
+                <Image src={arrow1} alt="" width={20} />
+              </span>
+            </button>
           </div>
         </div>
+      </div>
       </section>
     </div>
   );

@@ -7,19 +7,24 @@ import line from "@/public/assets/images/Line.png";
 const Hero = () => {
   return (
     <div className="h-screen flex flex-col py-20 items-center">
-      <div className="text-primary-50  px-10 font-inter flex flex-col items-center md:flex-row md:gap-8 md:w-full">
+      <div className="w-full flex flex-col">
+
+      <div className="text-primary-50  px-10 font-inter flex flex-col ">
         <h2 className="text-2xl md:text-8xl  md:text-left md:mt-8 ">
           YOUR AFFORDABLE <br /> OPTION OF CHATGPT
-          <hr className="w-[120%] md:mt-4" />
         </h2>
-        <div className="mt-8 md:mt-0">
-          <Image src={Icon} alt="Icon" width={60} className="md:mt-12" />
+        <div className="mt-8 md:mt-0 flex justify-end w-full ">
+          <Image src={Icon} alt="Icon" width={60} className="md:mt-12 w-10" />
         </div> 
+          <hr className="w-full md:mt-4 opacity-50" />
       </div>
-      <div className="flex flex-col md:mt-8 items-center w-full px-8 md:flex-row md:justify-center">
-        <div className="w-full mt-12 md:mt-0 md:w-auto">
-          <Image src={pics} alt="icon" />
+      <div className="mt-10 px-8">
+
+        <div className="w-full  md:mt-0 ">
+          <Image src={pics} alt="icon" className="w-full"/>
         </div>
+      </div>
+      
       </div>
     </div>
   );

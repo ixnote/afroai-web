@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import logo from "@/public/assets/images/logo.png";
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Dropdown from "react-dropdown";
+import 'react-dropdown/style.css';
 const Navbar = () => {
+  // const options = ["PRODUCTS", "CAMPUS GENIE", "AI ASSITANT"];
+  // const defaultOption = options[0];
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -15,68 +19,77 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  const path = usePathname()
+  const path = usePathname();
 
-  const obj:{[key:string]: string} = {
-    assistant: 'bg-[#1C352D]',
-    gene: "bg-[#1A2421]"
-  }
+  const obj: { [key: string]: string } = {
+    assistant: "bg-[#1C352D]",
+    gene: "bg-[#1A2421]",
+  };
 
   return (
-    <div className={`${obj[path.split('/')[1]] ?? 'bg-inherit'} py-3 fixed font-inter left-0 right-0 z-20`}>
+    <div
+      className={`${
+        obj[path.split("/")[1]] ?? "bg-inherit"
+      } py-3   fixed font-inter left-0 right-0 z-20`}
+    >
       {/* Desktop Nav */}
-      <div className='hidden lg:flex items-center mx-4 list-none'>
-        <div>
+      <div className="hidden lg:flex items-center   mx-4 list-none">
+        <div className="">
           <Link href="/">
             <Image src={logo} alt="logo" />
           </Link>
         </div>
-        <div className={`flex grow ml-8 justify-between text-primary-50 `}>
+        <div
+          className={`flex grow ml-16 justify-between items-center  text-primary-50 w-2/5`}
+        >
           <li>
-            <Link href="/about">
-              ABOUT
-            </Link>
+            <Link href="/about">ABOUT</Link>
           </li>
-          <li>
-            <Link href="/assistant">
-              PRODUCTS
-            </Link>
+
+          <li className="">
+          <Link href="/assistant">PRODUCTS</Link>
+
+              {/* <Dropdown
+                options={options}
+                value={defaultOption}
+                placeholder="PRODUCTS"
+                className="w-full  bg-black "
+                controlClassName="bg-black"
+                menuClassName=" bg-inherit"
+                 arrowClassName="mt-1"
+              /> */}
+            
+           </li> 
+          <li className="">
+            <Link href="/resources">RESOURCES</Link>
           </li>
-          <li>
-            <Link href="/resources">
-              RESOURCES
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact">
-              CONTACT
-            </Link>
+          <li className="mr-32" >
+            <Link href="/contact">CONTACT</Link>
           </li>
         </div>
-        <div className='flex grow justify-end gap-8'>
-          <li className='text-primary-50 border px-6 py-1 rounded-md hover:border-primary-200'>
-            <Link href="">
-              LOGIN
-            </Link>
+        <div className="flex grow justify-end gap-8">
+          <li className="text-primary-50 border px-6 py-1 rounded-md hover:border-primary-200">
+            <Link href="">LOGIN</Link>
           </li>
-          <li className='border bg-primary-50 px-6 py-1 rounded-md hover:border-primary-300'>
-            <Link href="">
-              TRY AI
-            </Link>
+          <li className="border bg-primary-50 px-6 py-1 rounded-md hover:border-primary-300">
+            <Link href="">TRY AI</Link>
           </li>
         </div>
       </div>
       {/* Desktop nav ends here */}
 
       {/* Mobile Nav */}
-      <div className='lg:hidden'>
-        <div className='py-2 px-2 flex justify-between items-center mx-4 list-none'>
+      <div className="lg:hidden">
+        <div className="py-2 px-2 flex justify-between items-center mx-4 list-none">
           <div>
             <Image src={logo} alt="logo" />
           </div>
           {/* Hamburger Menu */}
           <div className="block md:hidden">
-            <button onClick={toggleMenu} className="text-primary-50 focus:outline-none">
+            <button
+              onClick={toggleMenu}
+              className="text-primary-50 focus:outline-none"
+            >
               <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
                 <path
                   fillRule="evenodd"
@@ -88,7 +101,11 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className={`py-8 flex flex-col gap-3 text-lg grow ml-8 list-none text-primary-50 ${isOpen ? 'block' : 'hidden'}`}>
+        <div
+          className={`py-8 flex flex-col gap-3 text-lg grow ml-8 list-none text-primary-50 ${
+            isOpen ? "block" : "hidden"
+          }`}
+        >
           <li>
             <Link href="/about" onClick={closeMenu}>
               ABOUT
@@ -111,13 +128,17 @@ const Navbar = () => {
           </li>
         </div>
 
-        <div className={`flex grow ml-8 list-none gap-8 ${isOpen ? 'block' : 'hidden'}`}>
-          <li className='text-primary-50 border px-6 py-1 rounded-md hover:border-primary-200'>
+        <div
+          className={`flex grow ml-8 list-none gap-8 ${
+            isOpen ? "block" : "hidden"
+          }`}
+        >
+          <li className="text-primary-50 border px-6 py-1 rounded-md hover:border-primary-200">
             <Link href="" onClick={closeMenu}>
               LOGIN
             </Link>
           </li>
-          <li className='border bg-primary-50 px-6 py-1 rounded-md hover:border-primary-300'>
+          <li className="border bg-primary-50 px-6 py-1 rounded-md hover:border-primary-300">
             <Link href="" onClick={closeMenu}>
               TRY AI
             </Link>

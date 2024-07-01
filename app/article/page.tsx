@@ -16,8 +16,11 @@ const Article = () => {
         <div className="flex flex-col items-center">
           <div className="p-4 lg:p-8">
             <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
-              <Image src={logo} alt="" className="w-6 h-6 lg:w-8 lg:h-8" />
-              <h2>/RESOURCES/ARTICLE</h2>
+              <Image src={logo} alt="" />
+              <h2 className="flex gap-2">
+                {" "}
+                <span>/</span>RESOURCES <span>/</span>ARTICLE
+              </h2>
             </button>
           </div>
           <div className="text-center">
@@ -29,7 +32,7 @@ const Article = () => {
             </p>
           </div>
         </div>
-        <hr className="my-8 w-full border-gray-300" />
+        <hr className="my-8 w-full opacity-50" />
         <div className="w-full flex justify-center mt-8">
           <Image
             src={article}
@@ -40,66 +43,108 @@ const Article = () => {
       </section>
 
       <section className="h-auto min-h-[800px] py-20 lg:py-26 text-primary-50 mx-4 lg:mx-8">
-  <div className="flex flex-col w-full max-w-5xl mx-auto">
-    <div className="text-md md:text-lg py-8">
-      <p>
-        In recent years, artificial intelligence (AI) has emerged as a transformative force, reshaping industries and revolutionizing the way we live and work. One notable player in this technological revolution is Afro AI, a platform dedicated to democratizing access to AI across Africa. In this article, we&apos;ll explore how Afro AI is making a tangible impact on Africa&apos;s digital landscape through innovative visualization techniques.
-      </p>
-    </div>
-    <div>
-      <h2 className="text-xl md:text-3xl lg:text-4xl py-4 md:py-6 lg:py-8">
-        The Power of Data Visualization
-      </h2>
-      <p className="py-4 md:py-6 lg:py-8 text-md md:text-lg">
-        Data visualization is a powerful tool for making sense of complex information and communicating insights effectively. By transforming raw data into visual representations such as charts, graphs, and maps, data visualization enables us to uncover patterns, identify trends, and extract meaningful insights that drive informed decision-making.
-      </p>
-    </div>
-    <div>
-      <h2 className="text-xl md:text-3xl lg:text-4xl py-4 md:py-6 lg:py-8">
-        Visualizing Afro AI&apos;s Impact
-      </h2>
-      <p className="py-4 md:py-6 lg:py-8 text-md md:text-lg">
-        Afro AI harnesses the power of data visualization to illustrate its impact across various sectors and communities in Africa. Through interactive dashboards, infographics, and visual reports, Afro AI provides stakeholders with a clear understanding of how AI is driving positive change and fostering innovation across the continent.
-      </p>
-    </div>
-    <div>
-      <h2 className="text-xl md:text-3xl lg:text-4xl py-4 md:py-6 lg:py-8">
-        Case Studies: Real-Life Examples
-      </h2>
-      <p className="py-4 md:py-6 lg:py-8 text-md md:text-lg">
-        One way Afro AI visualizes its impact is through case studies that highlight real-life examples of AI implementation in African contexts. These case studies showcase how Afro AI&apos;s solutions are being used to address pressing challenges in areas such as healthcare, agriculture, education, and finance. By presenting data-driven insights in a visual format, Afro AI demonstrates the tangible benefits of AI for African communities.
-      </p>
-    </div>
-    <div>
-      <h2 className="text-xl md:text-3xl lg:text-4xl py-4 md:py-6 lg:py-8">
-        Mapping Progress and Growth
-      </h2>
-      <p className="py-4 md:py-6 lg:py-8 text-md md:text-lg">
-        Another powerful visualization tool used by Afro AI is mapping technology. By mapping data points such as infrastructure development, economic indicators, and social trends, Afro AI creates visual representations of progress and growth across Africa. These maps provide valuable insights into areas of improvement and opportunities for development, helping policymakers and organizations make data-driven decisions.
-      </p>
-    </div>
-    <div>
-      <h2 className="text-xl md:text-3xl lg:text-4xl py-4 md:py-6 lg:py-8">
-        Engaging The Community
-      </h2>
-      <p className="py-4 md:py-6 lg:py-8 text-md md:text-lg">
-        In addition to showcasing its impact through visualizations, Afro AI actively engages with the community through webinars, workshops, and events focused on data visualization and AI. By providing educational resources and hosting interactive sessions, Afro AI empowers individuals and organizations to leverage the power of data visualization for positive change.
-      </p>
-    </div>
-    <div>
-      <p className="py-4 md:py-6 lg:py-8 text-md md:text-lg">
-        In conclusion, visualizing Afro AI&apos;s impact is not just about presenting data—it&apos;s about telling a story. Through compelling visualizations and real-life examples, Afro AI demonstrates how AI is empowering Africa and shaping its future in profound ways. As we harness the power of data visualization to drive positive change, the potential for innovation and growth knows no bounds.
-      </p>
-    </div>
-  </div>
-  <hr className="my-8 w-full border-gray-300" />
-  <div className="text-primary-50 flex flex-col items-center pt-8">
-    <Image src={itodo} alt="article" className="w-24 h-24 rounded-full object-cover" />
-    <h2 className="text-2xl md:text-2xl font-inter">SIMON ITODO</h2>
-    <p className="font-thin">AI JOURNALIST</p>
-  </div>
-</section>
-
+        <div className="flex flex-col w-full max-w-5xl mx-auto">
+          <div className="text-md md:text-lg py-8">
+            <p>
+              In recent years, artificial intelligence (AI) has emerged as a
+              transformative force, reshaping industries and revolutionizing the
+              way we live and work. One notable player in this technological
+              revolution is Afro AI, a platform dedicated to democratizing
+              access to AI across Africa. In this article, we&apos;ll explore
+              how Afro AI is making a tangible impact on Africa&apos;s digital
+              landscape through innovative visualization techniques.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-xl md:text-3xl lg:text-4xl py-4 md:py-6 lg:py-8">
+              The Power of Data Visualization
+            </h2>
+            <p className="py-4 md:py-6 lg:py-8 text-md md:text-lg">
+              Data visualization is a powerful tool for making sense of complex
+              information and communicating insights effectively. By
+              transforming raw data into visual representations such as charts,
+              graphs, and maps, data visualization enables us to uncover
+              patterns, identify trends, and extract meaningful insights that
+              drive informed decision-making.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-xl md:text-3xl lg:text-4xl py-4 md:py-6 lg:py-8">
+              Visualizing Afro AI&apos;s Impact
+            </h2>
+            <p className="py-4 md:py-6 lg:py-8 text-md md:text-lg">
+              Afro AI harnesses the power of data visualization to illustrate
+              its impact across various sectors and communities in Africa.
+              Through interactive dashboards, infographics, and visual reports,
+              Afro AI provides stakeholders with a clear understanding of how AI
+              is driving positive change and fostering innovation across the
+              continent.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-xl md:text-3xl lg:text-4xl py-4 md:py-6 lg:py-8">
+              Case Studies: Real-Life Examples
+            </h2>
+            <p className="py-4 md:py-6 lg:py-8 text-md md:text-lg">
+              One way Afro AI visualizes its impact is through case studies that
+              highlight real-life examples of AI implementation in African
+              contexts. These case studies showcase how Afro AI&apos;s solutions
+              are being used to address pressing challenges in areas such as
+              healthcare, agriculture, education, and finance. By presenting
+              data-driven insights in a visual format, Afro AI demonstrates the
+              tangible benefits of AI for African communities.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-xl md:text-3xl lg:text-4xl py-4 md:py-6 lg:py-8">
+              Mapping Progress and Growth
+            </h2>
+            <p className="py-4 md:py-6 lg:py-8 text-md md:text-lg">
+              Another powerful visualization tool used by Afro AI is mapping
+              technology. By mapping data points such as infrastructure
+              development, economic indicators, and social trends, Afro AI
+              creates visual representations of progress and growth across
+              Africa. These maps provide valuable insights into areas of
+              improvement and opportunities for development, helping
+              policymakers and organizations make data-driven decisions.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-xl md:text-3xl lg:text-4xl py-4 md:py-6 lg:py-8">
+              Engaging The Community
+            </h2>
+            <p className="py-4 md:py-6 lg:py-8 text-md md:text-lg">
+              In addition to showcasing its impact through visualizations, Afro
+              AI actively engages with the community through webinars,
+              workshops, and events focused on data visualization and AI. By
+              providing educational resources and hosting interactive sessions,
+              Afro AI empowers individuals and organizations to leverage the
+              power of data visualization for positive change.
+            </p>
+          </div>
+          <div>
+            <p className="py-4 md:py-6 lg:py-8 text-md md:text-lg">
+              In conclusion, visualizing Afro AI&apos;s impact is not just about
+              presenting data—it&apos;s about telling a story. Through
+              compelling visualizations and real-life examples, Afro AI
+              demonstrates how AI is empowering Africa and shaping its future in
+              profound ways. As we harness the power of data visualization to
+              drive positive change, the potential for innovation and growth
+              knows no bounds.
+            </p>
+          </div>
+        </div>
+        <hr className="my-8 w-full opacity-50" />
+        <div className="text-primary-50 flex flex-col items-center pt-8">
+          <Image
+            src={itodo}
+            alt="article"
+            className="w-24 h-24 rounded-full object-cover"
+          />
+          <h2 className="text-2xl md:text-2xl font-inter">SIMON ITODO</h2>
+          <p className="font-thin">AI JOURNALIST</p>
+        </div>
+      </section>
 
       <section className="text-primary-50 mx-4 lg:mx-4">
         <div className="flex justify-center lg:justify-start">

@@ -17,16 +17,16 @@ const Gene = () => {
       <section className="h-auto min-h-[1000px] py-20 lg:py-40 text-primary-50 mx-4 lg:mx-2">
         <div className="flex justify-center lg:justify-start">
           <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
-            <Image src={logo} alt="Logo" className="w-6 h-6 lg:w-8 lg:h-8" />
-            <h2 className="text-base lg:text-lg">/CAMPUS GENE</h2>
-          </button>
+          <Image src={logo} alt="" />
+          <h2 className="flex gap-2"> <span>/</span>CAMPUS GENIE</h2>
+        </button>
         </div>
 
         <div className="flex flex-col lg:flex-row items-end py-10">
           <h2 className="text-xl lg:text-8xl lg:w-full text-center lg:text-left">
             UNLOCK YOUR ACADEMIC POTENTIALS WITH CAMPUS GENE
           </h2>
-          <hr  className="font-thin"/>
+          <hr  className="opacity-50"/>
           <div className="mt-6 lg:mt-0">
             <Image
               src={icon}
@@ -35,7 +35,7 @@ const Gene = () => {
             />
           </div>
         </div>
-        <hr className="border-t border-primary-50 my-8 font-thin" />
+        <hr className="opacity-50 my-8 " />
         <Image
           src={campus}
           alt="AI Assistant"
@@ -60,7 +60,7 @@ const Gene = () => {
             className="lg:mb-10 md:mr-32"
           />
         </div>
-        <hr className="border-t border-primary-50 my-8" />
+        <hr className="opacity-50 my-8" />
         <div className="flex flex-col md:flex-row items-center gap-8 py-8">
           <p className="w-full md:w-1/2 text-2xl lg:text-3xl">
             Unlock Your Academic Potentials with Campus Genie
@@ -77,7 +77,7 @@ const Gene = () => {
             revolutionizing the way you interact with technology.
           </p>
         </div>
-        <hr className="border-t border-primary-50 my-8" />
+        <hr className="opacity-50 my-8" />
         <div className="flex flex-col md:flex-row items-center gap-8 py-8">
           <p className="w-full md:w-1/2 text-2xl lg:text-3xl">
             Featured Tailored to Your Needs
@@ -91,7 +91,7 @@ const Gene = () => {
             companion every step of the way.
           </p>
         </div>
-        <hr className="border-t border-primary-50 my-8" />
+        <hr className="opacity-50 my-8" />
         <div className="flex flex-col md:flex-row items-center gap-8 py-8">
           <p className="w-full md:w-1/2 text-2xl lg:text-3xl">
             Streamline Your Study Experience
@@ -104,7 +104,7 @@ const Gene = () => {
             breaking the bank.
           </p>
         </div>
-        <hr className="border-t border-primary-50 my-8 font-thin" />
+        <hr className="opacity-50 font-thin" />
       </section>
 
       <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
@@ -124,7 +124,7 @@ const Gene = () => {
             className="lg:mb-10 md:mr-40 lg:mr-56"
           />
         </div>
-        <hr className="border-t border-primary-50 my-8" />
+        <hr className="opacity-50 my-8" />
         <div className="w-full lg:w-3/5 mx-auto flex flex-col md:flex-row justify-between items-center mt-10">
           <div className="flex flex-col items-center text-center">
             <Image src={square} alt="square" />
@@ -167,7 +167,7 @@ const Gene = () => {
           <p className="py-6 text-center lg:text-left text-2xl lg:text-3xl font-bold">
             FEATURES
           </p>
-          <hr className="border-t border-primary-50 my-4" />
+          <hr className="opacity-50 my-4" />
           <div className="py-8">
             <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
               <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
@@ -252,31 +252,28 @@ const Gene = () => {
           </div>
         </div>
       </section>
-
-      <section className="TRY AI">
-        <div className="bg-primary-100 mt-4 py-12">
-          <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
-            <div className="w-full md:w-3/5 text-center md:text-left">
-              <h2 className="text-3xl md:text-5xl font-bold">
-                JOIN THE CAMPUS GENE COMMUNITY
-              </h2>
-              <p className="mt-8 text-sm md:text-lg">
-                Join the thousands of users who are already experiencing the
+      <section>
+      <div className="bg-primary-100 py-6   ">
+        <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
+          <div className="w-full md:w-3/5 text-center md:text-left">
+            <h2 className="text-3xl md:text-5xl">JOIN THE CAMPUS GENE COMMUNITY</h2>
+            <p className="mt-8 text-sm">
+            Join the thousands of users who are already experiencing the
                 difference with Afro AI Assistant. Whether you&apos;re in Lagos,
                 Nairobi, or anywhere in between, Afro AI Assistant is here to
                 empower you on your digital journey.
-              </p>
-            </div>
-            <div className="mt-8 md:mt-0">
-              <button className="flex items-center gap-2 bg-black text-primary-50 text-xl px-10 py-3 rounded-lg hover:bg-gray-800 transition duration-300 ease-in-out">
-                Try Campus Genie
-                <span>
-                  <Image src={arrow} alt="Arrow Icon" width={20} />
-                </span>
-              </button>
-            </div>
+            </p>
+          </div>
+          <div className="mt-8 md:mt-0  md:ml-24">
+            <button className="flex items-center gap-2 bg-black text-primary-50 text-xl px-20 py-3 rounded-lg">
+            Try Campus Genie
+              <span>
+                <Image src={arrow} alt="" width={20} />
+              </span>
+            </button>
           </div>
         </div>
+      </div>
       </section>
     </div>
   );

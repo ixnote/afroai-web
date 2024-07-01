@@ -17,25 +17,6 @@ import mission from "@/public/assets/images/about3.png";
 
 const About = () => {
 
-  // const containerRef = useRef<HTMLDivElement>(null);
-
-  // useEffect(() => {
-  //   const container = containerRef.current;
-  //   if (!container) return;
-
-  //   const handleScroll = () => {
-  //     const scrollTop = container.scrollTop;
-  //     const scrollHeight = container.scrollHeight;
-  //     const clientHeight = container.clientHeight;
-      
-  //     // Calculate opacity based on scroll position
-  //     const opacity = Math.min(0.5, scrollTop / (scrollHeight - clientHeight));
-  //     container.style.setProperty('--fade-opacity', opacity.toString());
-  //   };
-
-  //   container.addEventListener('scroll', handleScroll);
-  //   return () => container.removeEventListener('scroll', handleScroll);
-  // }, []);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -43,7 +24,7 @@ const About = () => {
     if (!container) return;
 
     const observerOptions = {
-      threshold: 0.1, // Trigger callback when 10% of the element is visible
+      threshold: 0.1, 
     };
 
     const observerCallback: IntersectionObserverCallback = (entries) => {
@@ -68,7 +49,7 @@ const About = () => {
       <section className="h-auto min-h-[800px] py-20 md:py-20 lg:py-20 text-primary-50 mx-4 lg:mx-4">
         <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
           <Image src={logo} alt="" />
-          <h2>/ABOUT</h2>
+          <h2 className="flex gap-2"> <span>/</span>ABOUT</h2>
         </button>
         <div className="flex flex-col lg:flex-row items-end py-10">
           <h2 className="text-xl lg:text-8xl lg:w-full text-center lg:text-left">
@@ -78,7 +59,7 @@ const About = () => {
             <Image src={icon} alt="" width={60} />
           </div>
         </div>
-        <hr />
+        <hr className="opacity-50" />
         <Image
           src={about1}
           alt="about1"
@@ -101,7 +82,7 @@ const About = () => {
             className="lg:mb-10 md:mr-36 "
           />
         </div>
-        <hr className="md:mt-8" />
+        <hr className="md:mt-8 opacity-50" />
         <div className="flex flex-col md:flex-row justify-between w-full gap-8 mt-8 md:mt-20">
           <p className="w-full md:w-1/2 text-lg md:text-xl px-4 md:px-8 font-inter">
             Welcome to Afro Intelligence, your trusted partners driving
@@ -135,7 +116,7 @@ const About = () => {
             className="lg:mb-10 md:mr-32"
           />
         </div>
-        <hr />
+        <hr className="opacity-50" />
 
 <div className="scroll-smooth" ref={containerRef}>
       <div className="pt-10 md:mt-16 fade-section">
@@ -155,13 +136,13 @@ const About = () => {
       </div>
     </div>
 
-        <section className="h-auto min-h-screen text-white mx-4 lg:mx-2 mt-16 lg:mt-32">
+        <section className="h-auto min-h-screen  mx-4 lg:mx-2 mt-16 lg:mt-32">
           <button className="text-primary-50 font-thin border px-6 lg:px-8 py-1 rounded-lg">
             OUR VALUES
           </button>
           <div className="w-full flex flex-col lg:flex-row py-4">
             <div className="flex flex-col lg:flex-row items-start py-4 w-full lg:w-1/2">
-              <h2 className="md:text-4xl text-2xl font-inter lg:w-3/4">
+              <h2 className="md:text-4xl text-2xl font-inter lg:w-3/4 text-black">
                 EXPLORING THE CORE VALUES THAT DRIVES AFRO AI
               </h2>
               <div className="mt-4 lg:mt-0 lg:ml-4">
@@ -225,7 +206,7 @@ const About = () => {
               </h2>
                 <Image src={group} alt="message icon" width={60} className="md:mr-16 lg:mr-16"/>
             </div>
-            <hr />
+            <hr className="opacity-50" />
             <div className="mt-16">
               <Image src={team} alt="team images" className="w-full h-auto" />
             </div>
@@ -245,7 +226,7 @@ const About = () => {
                 <Image src={values} alt="message icon" />
               </div>
             </div>
-            <hr />
+            <hr className="opacity-50"/>
             <div className="mt-12 flex flex-col lg:flex-row gap-10">
               <Image
                 src={mission}
@@ -278,7 +259,30 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section className="TRY AI">
+<section>
+      <div className="bg-primary-100 py-12   ">
+        <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
+          <div className="w-full md:w-3/5 text-center md:text-left">
+            <h2 className="text-3xl md:text-5xl text-black">READY TO MOVE FASTER?</h2>
+            <p className="mt-8 text-sm  text-black">
+              Ready to accelerate your progress? Experience the speed and
+              efficiency of Afro AI. Try it now and unleash the potential of
+              tailored AI solutions.
+            </p>
+          </div>
+          <div className="mt-8 md:mt-0  md:ml-24">
+            <button className="flex items-center gap-2 bg-black text-primary-50 text-xl px-20 py-3 rounded-lg">
+              Try AI
+              <span>
+                <Image src={arrow} alt="" width={20} />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      </section>
+
+        {/* <section className="TRY AI">
           <div className="bg-primary-100 mt-4 py-12">
             <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
               <div className="w-full md:w-3/5 text-center md:text-left">
@@ -299,7 +303,7 @@ const About = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </section>
     </div>
   );

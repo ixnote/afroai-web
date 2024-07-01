@@ -20,7 +20,7 @@ const Products = () => {
               <Image src={star} alt=''width={60} />
             </span>
           </div>
-          <hr className=' mt-4' />
+          <hr className=' mt-4 opacity-50' />
         </div>
         <div className='flex flex-col md:flex-row justify-around mt-12 h-auto gap-3 '>
           <div className='w-full md:w-auto cursor-pointer shadow-2xl hover:scale-110 transform transition-transform duration-500 ease-in-out'>

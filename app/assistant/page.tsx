@@ -17,8 +17,11 @@ const Assistant = () => {
       <section className="h-auto min-h-[1000px] pt-24 lg:py-32 text-primary-50 mx-4 lg:mx-2">
         <div className="flex justify-center lg:justify-start">
           <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
-            <Image src={logo} alt="Logo" className="w-6 h-6 lg:w-8 lg:h-8" />
-            <h2 className="text-base lg:text-lg">/Ai ASSISTANT</h2>
+            <Image src={logo} alt="" />
+            <h2 className="flex gap-2">
+              {" "}
+              <span>/</span> AI ASSISTANT
+            </h2>
           </button>
         </div>
         <div className="flex flex-col lg:flex-row items-end py-10">
@@ -29,7 +32,7 @@ const Assistant = () => {
             <Image src={icon} alt="Icon" width={60} className="" />
           </div>
         </div>
-        <hr className="border-t border-primary-50 my-8" />
+        <hr className="opacity-50 my-8" />
         <Image
           src={assistant}
           alt="AI Assistant"
@@ -55,7 +58,7 @@ const Assistant = () => {
           />
         </div>
 
-        <hr className="border-t border-primary-50 my-8" />
+        <hr className="opacity-50 my-8" />
         <div className="flex flex-col md:flex-row items-center gap-8 py-8">
           <p className="w-full md:w-3/6 text-2xl lg:text-4xl">
             Your smart, Afrocentric AI companion, delivering tailored solution
@@ -73,7 +76,7 @@ const Assistant = () => {
             revolutionizing the way you interact with technology.
           </p>
         </div>
-        <hr className="border-t border-primary-50 my-8" />
+        <hr className="opacity-50 my-8" />
         <div className="flex flex-col md:flex-row items-center gap-8 py-8">
           <p className="w-full md:w-1/2 text-2xl lg:text-4xl">
             Tailored Solutions for Africa&apos;s Challenges
@@ -87,7 +90,7 @@ const Assistant = () => {
             companion every step of the way.
           </p>
         </div>
-        <hr className="border-t border-primary-50 my-8" />
+        <hr className="opacity-50 my-8" />
         <div className="flex flex-col md:flex-row items-center gap-8 py-8">
           <p className="w-full md:w-1/2 text-2xl lg:text-4xl">
             Accessible Intelligence for All
@@ -100,7 +103,7 @@ const Assistant = () => {
             without breaking the bank.
           </p>
         </div>
-        <hr className="border-t border-primary-50 my-8" />
+        <hr className="opacity-50 my-8" />
       </section>
 
       <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
@@ -111,7 +114,7 @@ const Assistant = () => {
         </div>
         <div className="w-full lg:w-[45%]  flex flex-col md:flex-row items-center py-6 text-2xl md:text-4xl font-inter">
           <h2 className="text-center md:text-left">
-          DISCOVER THE PERFECT PLAN
+            DISCOVER THE PERFECT PLAN
           </h2>
           <Image
             src={money}
@@ -120,7 +123,7 @@ const Assistant = () => {
             className="lg:mb-10 md:mr-40 lg:mr-56"
           />
         </div>
-        <hr className="border-t border-primary-50 my-8" />
+        <hr className="opacity-50 my-8" />
         <div className="w-full lg:w-3/5 mx-auto flex flex-col md:flex-row justify-between items-center mt-10">
           <div className="flex flex-col items-center text-center">
             <Image src={square} alt="square" />
@@ -136,22 +139,21 @@ const Assistant = () => {
           </div>
         </div>
         <div className="w-full lg:w-3/4 mx-auto flex flex-col md:flex-row justify-around items-center mt-16 gap-2">
-      
           <div className="flex flex-col  mt-10 md:mt-0 lg:ml-20">
             <p className="mt-8 text-2xl">
-            <span className="text-5xl">&#8358;0</span>
+              <span className="text-5xl">&#8358;0</span>
             </p>
             <p className="mt-8">100% FREE TOKENS/MONTH</p>
           </div>
           <div className="flex flex-col  mt-10 md:mt-0  lg:ml-28">
             <p className="mt-8 text-2xl">
-            <span className="text-5xl">&#8358;1,000</span>
+              <span className="text-5xl">&#8358;1,000</span>
             </p>
             <p className="mt-8">100% FREE TOKENS/MONTH</p>
           </div>
           <div className="flex flex-col  mt-10 md:mt-0 lg:ml-24">
             <p className="mt-8 text-2xl">
-            <span className="text-5xl">&#8358;2,000</span>
+              <span className="text-5xl">&#8358;2,000</span>
             </p>
             <p className="mt-8">100% FREE TOKENS/MONTH</p>
           </div>
@@ -163,7 +165,7 @@ const Assistant = () => {
           <p className="py-6 text-center lg:text-left text-2xl lg:text-3xl font-inter">
             FEATURES
           </p>
-          <hr className="border-t border-primary-50 my-4" />
+          <hr className="opacity-50 my-4" />
           <div className="py-8">
             <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
               <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
@@ -250,13 +252,13 @@ const Assistant = () => {
       </section>
 
       <section className="TRY AI">
-        <div className="bg-primary-100 mt-4 py-12">
-          <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
+        <div className="bg-primary-100 mt-4 py-6">
+          <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-10">
             <div className="w-full md:w-3/5 text-center md:text-left">
-              <h2 className="text-3xl md:text-5xl font-bold">
+              <h2 className="text-3xl md:text-5xl font-inter">
                 JOIN THE AFRO AI REVOLUTION
               </h2>
-              <p className="mt-8 text-sm md:text-lg">
+              <p className="mt-3 text-sm md:text-lg">
                 Join the thousands of users who are already experiencing the
                 difference with Afro AI Assistant. Whether you&apos;re in Lagos,
                 Nairobi, or anywhere in between, Afro AI Assistant is here to

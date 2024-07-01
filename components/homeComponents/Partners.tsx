@@ -9,7 +9,7 @@ import logo5 from "@/public/assets/images/Logo5.png"
 
 const Partners = () => {
   return (
-    <div className='min-h-screen py-24 md:mt-72 lg:mt-72 px-4 md:px-8 lg:px-16'>
+    <div className='min-h-screen  md:mt-[50%] lg:mt-[50%] px-4 md:px-8 lg:px-16'>
       <div className='text-center md:text-left'>
         <button className='border px-6 py-1 text-primary-50 font-thin rounded-md'>
           OUR PARTNERS
@@ -22,7 +22,7 @@ const Partners = () => {
             <Image src={handIcon} alt='HandIcon' width={60} />
           </div>
         </div>
-        <hr className='text-primary-50 ' />
+        <hr className='opacity-50' />
       </div>
       <div className='mt-14 w-full md:w-3/5 text-xl mx-auto text-center'>
         <p className='text-primary-50'>

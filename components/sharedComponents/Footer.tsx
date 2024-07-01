@@ -11,7 +11,7 @@ const Footer = () => {
     
   }
   return (
-    <div className="bg-primary-200 w-full px-4 md:px-8 lg:px-16 py-8">
+    <div className={`${obj[path.split("/")[1]]??""} bg-primary-200 w-full px-4 md:px-8 lg:px-16 py-8`}>
       <div className="text-center md:text-left">
         <button className="border mt-6 text-primary-50 px-6 py-2 font-thin rounded-md">
           CONTACT
@@ -24,7 +24,7 @@ const Footer = () => {
             <Image src={symbol} alt="materialsymbols" width={60} />
           </div>
         </div>
-        <hr className="border-primary-50 mt-4" />
+        <hr className="opacity-50 mt-4" />
       </div>
       <div className="flex flex-col md:flex-row mt-8 gap-8 ">
         <div className="w-full md:w-3/5">

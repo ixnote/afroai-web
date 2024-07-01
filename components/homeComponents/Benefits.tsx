@@ -21,7 +21,7 @@ const Benefits = () => {
           </h2>
           <Image src={handIcon} alt="" width={60} className="mr-24" />
         </div>
-        <hr className="border-primary-50 mx-8" />
+        <hr className="opacity-50 mx-8" />
       </div>
       <div className="w-full md:w-[90%] border rounded-xl mx-auto mt-8 flex flex-col md:flex-row ">
         <div className="text-primary-50 text-xl md:text-4xl px-2  w-full md:w-2/6 text-center md:text-left md:py-6 md:px-4">

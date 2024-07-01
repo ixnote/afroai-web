@@ -20,9 +20,9 @@ const Resources = () => {
     <div>
       <section className="h-auto min-h-[800px] py-20 lg:py-20 text-primary-50 mx-4 lg:mx-8">
   <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
-    <Image src={logo} alt="" className="w-6 h-6 lg:w-8 lg:h-8" />
-    <h2>/RESOURCES</h2>
-  </button>
+          <Image src={logo} alt="" />
+          <h2 className="flex gap-2"> <span>/</span>RESOURCES</h2>
+        </button>
   <div className="flex flex-col lg:flex-row items-center lg:items-end py-10">
     <h2 className="text-xl lg:text-8xl w-full text-center lg:text-left">
       EXPLORE OUR RESOURCES
@@ -31,7 +31,7 @@ const Resources = () => {
       <Image src={icon} alt="" width={60} className="w-12 lg:w-16" />
     </div>
   </div>
-  <hr className="border-gray-300 my-8 w-full" />
+  <hr className="opacity-50 my-8 w-full" />
   <div className="flex flex-col md:flex-row justify-around mt-12 h-auto gap-6 ">
     <div className="w-full md:w-2/4 border rounded-xl cursor-pointer shadow-2xl hover:scale-105 transform transition-transform duration-500 ease-in-out">
       <Image src={resources1} alt="" className="w-full h-48 md:h-80 object-cover rounded-t-xl" />
@@ -64,7 +64,7 @@ const Resources = () => {
     </div>
     <h2 className="font-thin mt-4 lg:mt-0">showing: <span className="font-inter">Featured</span></h2>
   </div>
-  <hr />
+  <hr className="opacity-50" />
   <div className="w-full lg:w-[40%] flex flex-col md:flex-row items-center py-6 text-2xl md:text-4xl font-inter">
     <h2 className="text-center md:text-left">FEATURED CASE STUDIES</h2>
     <Image src={resource} alt="message icon" width={60} className="lg:mb-10 md:mr-32" />
@@ -91,8 +91,30 @@ const Resources = () => {
     <Image src={arrow} alt="arrow up" width={20} />
   </button>
 </section>
+<section>
+      <div className="bg-primary-100 py-12   ">
+        <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
+          <div className="w-full md:w-3/5 text-center md:text-left">
+            <h2 className="text-3xl md:text-5xl">READY TO MOVE FASTER?</h2>
+            <p className="mt-8 text-sm">
+              Ready to accelerate your progress? Experience the speed and
+              efficiency of Afro AI. Try it now and unleash the potential of
+              tailored AI solutions.
+            </p>
+          </div>
+          <div className="mt-8 md:mt-0  md:ml-24">
+            <button className="flex items-center gap-2 bg-black text-primary-50 text-xl px-20 py-3 rounded-lg">
+              Try AI
+              <span>
+                <Image src={arrow} alt="" width={20} />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      </section>
 
-        <section className="TRY AI">
+        {/* <section className="TRY AI">
         <div className="bg-primary-100 mt-4 py-12">
           <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
             <div className="w-full md:w-3/5 text-center md:text-left">
@@ -113,7 +135,7 @@ const Resources = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }
