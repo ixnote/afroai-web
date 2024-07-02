@@ -12,8 +12,8 @@ export default function Home() {
       <Partners/>
       <Products/>
       <Benefits/>
-      {/* <Testimonials testimonials={Testimonials} /> */}
-      <Testimonials testimonials ={Testimonials}/>
+      <Testimonials />
+    
     </main>
   );
 }
