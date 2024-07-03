@@ -14,7 +14,7 @@ const Hero = () => {
             YOUR AFFORDABLE <br /> OPTION OF CHATGPT
           </h2>
           <div className="flex justify-center md:justify-end w-full mt-4 md:mt-0">
-            <Image src={Icon} alt="Icon" width={60} className="w-16 md:w-16" />
+            <Image src={Icon} alt="Icon"  className="w-17 md:w-18" />
           </div>
           <hr className="w-full mt-4 opacity-50" />
         </div>

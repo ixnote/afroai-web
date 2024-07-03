@@ -250,29 +250,25 @@ const Assistant = () => {
           </div>
         </div>
       </section>
-
-      <section className="TRY AI">
-        <div className="bg-primary-100 mt-4 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-10">
+      <section>
+        <div className="bg-primary-100 py-4">
+          <div className="flex flex-col md:flex-row items-center justify-around ">
             <div className="w-full md:w-3/5 text-center md:text-left">
-              <h2 className="text-3xl md:text-5xl font-inter">
-                JOIN THE AFRO AI REVOLUTION
-              </h2>
-              <p className="mt-3 text-sm md:text-lg">
-                Join the thousands of users who are already experiencing the
+              <h2 className="text-3xl md:text-6xl md:w-3/4 font-inter">JOIN THE AFRO AI REVOLUTION</h2>
+              <p className="mt-8 text-sm md:text-base lg:text-lg">
+              Join the thousands of users who are already experiencing the
                 difference with Afro AI Assistant. Whether you&apos;re in Lagos,
                 Nairobi, or anywhere in between, Afro AI Assistant is here to
                 empower you on your digital journey.
               </p>
             </div>
-            <div className="mt-8 md:mt-0">
-              <button className="flex items-center gap-2 bg-black text-primary-50 text-xl px-10 py-3 rounded-lg hover:bg-gray-800 transition duration-300 ease-in-out">
-                Try AI Assistant
-                <span>
-                  <Image src={arrow} alt="Arrow Icon" width={20} />
-                </span>
-              </button>
-            </div>
+
+            <button className="flex items-center mt-3 justify-center gap-2 bg-black w-3/4 max-w-xs md:max-w-sm h-16 rounded-xl px-4">
+              <p className="text-primary-50 text-xl font-inter">TRY AI ASSISTANT  </p>
+              <span>
+                <Image src={arrow} alt="Arrow" width={25} />
+              </span>
+            </button>
           </div>
         </div>
       </section>

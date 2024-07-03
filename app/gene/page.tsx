@@ -253,27 +253,26 @@ const Gene = () => {
         </div>
       </section>
       <section>
-      <div className="bg-primary-100 py-6   ">
-        <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
-          <div className="w-full md:w-3/5 text-center md:text-left">
-            <h2 className="text-3xl md:text-5xl">JOIN THE CAMPUS GENE COMMUNITY</h2>
-            <p className="mt-8 text-sm">
-            Join the thousands of users who are already experiencing the
+        <div className="bg-primary-100 py-4">
+          <div className="flex flex-col md:flex-row items-center justify-around ">
+            <div className="w-full md:w-3/5 text-center md:text-left">
+              <h2 className="text-3xl md:text-6xl md:w-3/4 font-inter">JOIN THE CAMPUS GENIE COMMUNITY</h2>
+              <p className="mt-8 text-sm md:text-base lg:text-lg">
+              Join the thousands of users who are already experiencing the
                 difference with Afro AI Assistant. Whether you&apos;re in Lagos,
                 Nairobi, or anywhere in between, Afro AI Assistant is here to
                 empower you on your digital journey.
-            </p>
-          </div>
-          <div className="mt-8 md:mt-0  md:ml-24">
-            <button className="flex items-center gap-2 bg-black text-primary-50 text-xl px-20 py-3 rounded-lg">
-            Try Campus Genie
+              </p>
+            </div>
+
+            <button className="flex items-center mt-3 justify-center gap-2 bg-black w-3/4 max-w-xs md:max-w-sm h-16 rounded-xl px-4">
+              <p className="text-primary-50 text-xl font-inter">TRY CAMPUS GENIE</p>
               <span>
-                <Image src={arrow} alt="" width={20} />
+                <Image src={arrow} alt="Arrow" width={25} />
               </span>
             </button>
           </div>
         </div>
-      </div>
       </section>
     </div>
   );

@@ -111,27 +111,27 @@ const Contact = () => {
         </div>
       </section>
       <section>
-      <div className="bg-primary-100 py-12   ">
-        <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
-          <div className="w-full md:w-3/5 text-center md:text-left">
-            <h2 className="text-3xl md:text-5xl">READY TO MOVE FASTER?</h2>
-            <p className="mt-8 text-sm">
-              Ready to accelerate your progress? Experience the speed and
-              efficiency of Afro AI. Try it now and unleash the potential of
-              tailored AI solutions.
-            </p>
-          </div>
-          <div className="mt-8 md:mt-0  md:ml-24">
-            <button className="flex items-center gap-2 bg-black text-primary-50 text-xl px-20 py-3 rounded-lg">
-              Try AI
+        <div className="bg-primary-100 py-20             c  xx  vx">
+          <div className="flex flex-col md:flex-row items-center justify-around ">
+            <div className="w-full md:w-3/5 text-center md:text-left">
+              <h2 className="text-3xl md:text-5xl text-black">READY TO MOVE FASTER?</h2>
+              <p className="mt-8 text-sm md:text-base text-black lg:text-lg">
+                Ready to accelerate your progress? Experience the speed and
+                efficiency of Afro AI. Try it now and unleash the potential of
+                tailored AI solutions.
+              </p>
+            </div>
+
+            <button className="flex items-center mt-3 justify-center gap-2 bg-black w-3/4 max-w-xs md:max-w-sm h-16 rounded-xl px-4">
+              <p className="text-primary-50 text-xl font-inter">TRY AI</p>
               <span>
-                <Image src={arrow1} alt="" width={20} />
+                <Image src={arrow1} alt="Arrow" width={25} />
               </span>
             </button>
           </div>
         </div>
-      </div>
       </section>
+    
     </div>
   );
 };

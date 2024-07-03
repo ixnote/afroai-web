@@ -200,28 +200,24 @@ const Article = () => {
           </div>
         </div>
       </section>
-
-      <section className="TRY AI">
-        <div className="bg-primary-100 mt-4 py-12">
-          <div className="flex flex-col md:flex-row items-center justify-around px-4 md:px-8 lg:px-16">
+      <section className="mt-4">
+        <div className="bg-primary-100 py-20">
+          <div className="flex flex-col md:flex-row items-center justify-around ">
             <div className="w-full md:w-3/5 text-center md:text-left">
-              <h2 className="text-3xl md:text-5xl font-bold">
-                READY TO MOVE FASTER?
-              </h2>
-              <p className="mt-8 text-sm md:text-lg">
+              <h2 className="text-3xl md:text-5xl text-black">READY TO MOVE FASTER?</h2>
+              <p className="mt-8 text-sm md:text-base text-black lg:text-lg">
                 Ready to accelerate your progress? Experience the speed and
-                effeciency of afro AI. Try it now and unleash the potential of
-                tailored Ai solutions.
+                efficiency of Afro AI. Try it now and unleash the potential of
+                tailored AI solutions.
               </p>
             </div>
-            <div className="mt-8 md:mt-0">
-              <button className="flex items-center gap-2 bg-black text-primary-50 text-xl px-16 py-2 rounded-lg hover:bg-gray-800 transition duration-300 ease-in-out">
-                Try AI
-                <span>
-                  <Image src={arrow1} alt="Arrow Icon" width={20} />
-                </span>
-              </button>
-            </div>
+
+            <button className="flex items-center mt-3 justify-center gap-2 bg-black w-3/4 max-w-xs md:max-w-sm h-16 rounded-xl px-4">
+              <p className="text-primary-50 text-xl font-inter">TRY AI</p>
+              <span>
+                <Image src={arrow1} alt="Arrow" width={25} />
+              </span>
+            </button>
           </div>
         </div>
       </section>

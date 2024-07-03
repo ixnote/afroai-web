@@ -16,7 +16,7 @@ const Products = () => {
             <h2 className='text-primary-50 text-3xl md:text-6xl w-full md:w-[70%] font-inter'>
               EXPERIENCE THE POWER OF AFRO INTELLIGENCE
             </h2>
-            <span className='mt-4 md:mt-0'>
+            <span className='mt-4 md:mt-0 ml-[45%] md:ml-0'>
               <Image src={star} alt=''width={60} />
             </span>
           </div>
