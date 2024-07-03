@@ -46,8 +46,8 @@ const About = () => {
   }, []);
   return (
     <div>
-      <section className="h-auto min-h-[800px] py-20 md:py-20 lg:py-20 text-primary-50 mx-4 lg:mx-4">
-        <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
+      <section className="h-auto min-h-[600px] md:min-h-[800] py-20 md:py-20 lg:py-20 text-primary-50 mx-4 lg:mx-4">
+        <button className="border px-4 lg:px-10 py-2 font-thin  flex gap-2 items-center rounded-lg">
           <Image src={logo} alt="" />
           <h2 className="flex gap-2"> <span>/</span>ABOUT</h2>
         </button>
@@ -195,7 +195,7 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section className="h-auto min-h-[1000px] text-white mx-4 lg:mx-2 mt-16 lg:mt-32">
+        <section className="h-auto min-h-[600px] text-white mx-4 lg:mx-2 mt-16 lg:mt-32">
           <button className="text-primary-50 font-thin border px-6 lg:px-8 py-1 rounded-lg">
             TEAM
           </button>
@@ -213,7 +213,7 @@ const About = () => {
           </div>
         </section>
 
-        <section className="h-auto min-h-[800px] text-white mx-4 lg:mx-2 mt-16 lg:mt-32">
+        <section className=" border text-white mx-4 lg:mx-2  lg:mt-32">
           <button className="text-primary-50 font-thin border px-6 lg:px-8 py-1 rounded-lg">
             MISSION
           </button>

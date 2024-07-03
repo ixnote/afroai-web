@@ -3,13 +3,14 @@ import logo from "@/public/assets/images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Dropdown from "react-dropdown";
-import 'react-dropdown/style.css';
 const Navbar = () => {
-  // const options = ["PRODUCTS", "CAMPUS GENIE", "AI ASSITANT"];
-  // const defaultOption = options[0];
-
+ 
   const [isOpen, setIsOpen] = useState(false);
+  const [subnav, setSubNavOpen] = useState(false);
+
+  const toggleSubNav = () => {
+    return setSubNavOpen(!subnav);
+  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -42,36 +43,52 @@ const Navbar = () => {
         <div
           className={`flex grow ml-16 justify-between items-center  text-primary-50 w-2/5`}
         >
-          <li>
+          <li className="hover:bg-primary-100 cursor-pointer hover:text-black  px-8 py-1 hover:rounded-md">
             <Link href="/about">ABOUT</Link>
           </li>
 
-          <li className="">
-          <Link href="/assistant">PRODUCTS</Link>
+          <li className="relative items-center">
+           
+              <div onClick={toggleSubNav} className="flex">
+              <button className="hover:bg-primary-100 cursor-pointer hover:text-black  px-8 py-1 hover:rounded-md">PRODUCTS</button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#FFFFFF"
+                  viewBox="0 0 256 256"
+                  className="opacity-90 mt-2"
+                >
+                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                </svg>
+                <div>
+                  <ul className={`absolute ${subnav ? "block" : "hidden"} p-2 mt-10 mr-8 rounded-md  w-[200px]`}>
+                    <li className="text-xl">
+                      <Link href="/assistant">AI ASSISTANT</Link>
+                    </li>
+                    <li className=" text-xl">
+                      <Link href="/gene">CAMPUST GENIE</Link>
+                    </li>
+                    <li className=" text-xl">
+                      <Link href="/article">ARTICLE</Link>
+                    </li>
+                  </ul>
+                </div>
+            </div>
 
-              {/* <Dropdown
-                options={options}
-                value={defaultOption}
-                placeholder="PRODUCTS"
-                className="w-full  bg-black "
-                controlClassName="bg-black"
-                menuClassName=" bg-inherit"
-                 arrowClassName="mt-1"
-              /> */}
-            
-           </li> 
-          <li className="">
+          </li>
+          <li className="hover:bg-primary-100 cursor-pointer hover:text-black   px-8 py-1 hover:rounded-md">
             <Link href="/resources">RESOURCES</Link>
           </li>
-          <li className="mr-32" >
+          <li className="hover:bg-primary-100 cursor-pointer hover:text-black   px-8 py-1 hover:rounded-md">
             <Link href="/contact">CONTACT</Link>
           </li>
         </div>
-        <div className="flex grow justify-end gap-8">
-          <li className="text-primary-50 border px-6 py-1 rounded-md hover:border-primary-200">
+        <div className="flex grow justify-end gap-[10px]">
+          <li className="text-primary-50 border px-8 py-3  rounded-[13px] hover:border-primary-200">
             <Link href="">LOGIN</Link>
           </li>
-          <li className="border bg-primary-50 px-6 py-1 rounded-md hover:border-primary-300">
+          <li className="border bg-primary-50 px-8 py-3 rounded-[13px] hover:border-primary-300">
             <Link href="">TRY AI</Link>
           </li>
         </div>
@@ -82,7 +99,9 @@ const Navbar = () => {
       <div className="lg:hidden">
         <div className="py-2 px-2 flex justify-between items-center mx-4 list-none">
           <div>
+            <Link href="/">
             <Image src={logo} alt="logo" />
+            </Link>
           </div>
           {/* Hamburger Menu */}
           <div className="block md:hidden">
@@ -111,11 +130,44 @@ const Navbar = () => {
               ABOUT
             </Link>
           </li>
-          <li>
-            <Link href="/assistant" onClick={closeMenu}>
-              PRODUCTS
-            </Link>
+          <li className="relative items-center">
+            <div
+              onClick={toggleSubNav}
+              className="flex gap-1"
+            >
+              <button>PRODUCTS</button>
+              <div >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="#FFFFFF"
+                  viewBox="0 0 256 256"
+                  className="opacity-90"
+                >
+                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                </svg>
+                <div>
+                  <ul className={`absolute ${subnav ? "block" : "hidden"} w-32 mt-4`}>
+                    <li className="">
+                      <Link href="/about">AI ASSISTANT</Link>
+                    </li>
+                    <li>
+                      <Link href="/about">CAMPUST GENIE</Link>
+                    </li>
+                    <li>
+                      <Link href="/about">ARTICLE</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
           </li>
+            {/* <Link href="/assistant" onClick={closeMenu}>
+              PRODUCTS
+            </Link> */}
+          
           <li>
             <Link href="/resources" onClick={closeMenu}>
               RESOURCES

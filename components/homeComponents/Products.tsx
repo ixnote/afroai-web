@@ -20,37 +20,39 @@ const Products = () => {
               <Image src={star} alt=''width={60} />
             </span>
           </div>
-          <hr className=' mt-4 opacity-50' />
+          <hr className=' mt-4 opacity-5' />
         </div>
-        <div className='flex flex-col md:flex-row justify-around mt-12 h-auto gap-3 '>
-          <div className='w-full md:w-auto cursor-pointer shadow-2xl hover:scale-110 transform transition-transform duration-500 ease-in-out'>
+        <div className='flex flex-col md:flex-row justify-around mt-12 h-auto gap-8    '>
+          <div className='w-full md:w-auto '>
             <Image src={product1} alt='' width={800}  className='w-full md:w-auto ' />
-            <h2 className='py-2 flex justify-between items-center text-xl md:text-2xl font-inter bg-black text-primary-50 px-6'>
+            <h2 className='py-2 flex justify-between items-center text-xl md:text-[52px] font-inter bg-black text-primary-50 px-6'>
               AI Assistant
-              <span>
-                <Image src={arrow} alt='' className='bg-black border-2 rounded-xl px-2 py-1 border-slate-300' />
+              <span className='bg-black border-2 rounded-[100px] p-2'>
+                <Image src={arrow} alt='' className=' h-[40px] w-[50px] border-slate-300' />
               </span>
             </h2>
           </div>
-          <div className='w-full md:w-auto cursor-pointer shadow-2xl hover:scale-110 transform transition-transform duration-500 ease-in-out'>
+          <div className='w-full md:w-auto'>
             <Image src={product2} alt='' width={800}  className='w-full md:w-auto' />
-            <h2 className='py-2 flex justify-between items-center text-xl md:text-2xl font-inter bg-black text-primary-50 px-6'>
+            <h2 className='py-2 flex justify-between items-center text-xl md:text-[52px] font-inter bg-black text-primary-50 px-6'>
               Campus Genie
-              <span>
-                <Image src={arrow} alt='' className='bg-black border-2 rounded-xl px-2 py-1 border-slate-300' />
+              <span className='bg-black border-2 rounded-[100px] p-2 '>
+                <Image src={arrow} alt='' className='h-[40px] w-[50px]' />
               </span>
             </h2>
           </div>
         </div>
         <div className='flex flex-col md:flex-row justify-between w-full  h-auto md:h-[200px] gap-8 '>
-          <p className='w-full md:w-1/2 text-lg md:text-xl px-4 md:px-8 md:py-8 font-inter text-primary-50'>
+          <p className='w-full md:w-1/2 text-lg md:text-2xl   mt-10 font-inter text-primary-50'>
             Empowering Africa&apos;s Technology revolution with Afro Intelligence
           </p>
-          <p className='w-full md:w-1/2 text-md font-inter md:py-8 text-primary-50'>
+          <p className='w-full md:w-1/2 text-md mt-10  text-primary-50'>
             Afro Intelligence is dedicated to revolutionizing Africa&apos;s tech scene with innovative AI solutions.
             By understanding local nuances, we foster inclusive development and empower communities to thrive.
           </p>
         </div>
+        <hr className=' mt-4 opacity-50' />
+
       </div>
     </div>
   )

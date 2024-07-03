@@ -7,7 +7,7 @@ import plus from "@/public/assets/svgs/contactPlus.svg";
 const Contact = () => {
   return (
     <div>
-      <section className="h-auto min-h-[800px] py-20 lg:py-20 text-primary-50 mx-4 lg:mx-8">
+      <section className="h-auto min-h-[600px] md:min-h-[800px] py-20 lg:py-20 text-primary-50 mx-4 lg:mx-8">
         <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
           <Image src={logo} alt="" />
           <h2 className="flex gap-2"> <span>/</span>CONTACT</h2>
@@ -70,12 +70,12 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <button className="border ml-[45%]  px-4 lg:px-16 py-2 mt-10 rounded-lg border-primary-50 text-black bg-primary-50">
+        <button className="border ml-[38%] md:ml-[45%]  px-4 lg:px-16 py-2 mt-10 rounded-lg border-primary-50 text-black bg-primary-50">
           Submit
         </button>
         <hr className="mt-16 opacity-50" />
       </section>
-      <section className="h-auto min-h-[600px] py-20 lg:py-20  text-primary-50 mx-4 lg:mx-8">
+      <section className="h-auto min-h-[800px] py-16  lg:py-20  text-primary-50 mx-4 lg:mx-8">
         <button className="border px-4 lg:px-10 py-2 rounded-lg font-thin border-primary-50 text-primary-50">
           FAQS
         </button>

@@ -67,31 +67,34 @@ const Testimonials = () => {
           <hr className="opacity-50 " />
         </div>
         <div className="flex flex-col items-center">
-          <div className="flex justify-end w-full mt-10 pr-4 gap-2">
-            <button onClick={handlePrevClick}>
-              <Image src={btn} alt="prev" width={60} />
+          <div className="flex justify-end w-full  mt-10 pr-4 gap-2">
+            <button onClick={handlePrevClick} className="">
+              <Image src={btn} alt="prev" width={70} />
             </button>
             <button onClick={handleNextClick}>
-              <Image src={btn1} alt="next" width={60} />
+              <Image src={btn1} alt="next" width={70} />
             </button>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-16 font-inter w-full px-4">
-            <div className="py-12 px-4 border-2 border-gray-600 rounded-lg cursor-pointer shadow-2xl hover:scale-110 transform transition-transform duration-500 ease-in-out">
-              <Image src={items[currentIndex].src} alt="" width={50} />
-              <p className="text-primary-50 py-8 w-full md:w-3/4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4 mt-16 font-inter w-full px-4">
+            <div className="py-12 px-4 border-2 border-gray-600 rounded-lg ">
+              <Image src={items[currentIndex].src} alt="" width={80} />
+              
+              <p data-author={items[currentIndex].author} className="text-primary-50 py-8 w-full  md:w-3/4 text-[26px]">
+            
                 Afro Intelligence has transformed the way I approach
                 problem-solving in my business. Its intuitive AI solutions not
                 only understand our local context but also provide actionable
                 insights that drive real results. Highly recommended
               </p>
-              <p className="text-primary-50 font-bold text-lg">Samuel</p>
+              
+              <p className="text-primary-50 font-bold text-lg mt-20">Samuel</p>
               <p className="text-primary-50 mt-3 text-sm">Entrepreneur</p>
             </div>
 
-            <div className="py-12 px-4 border-2 border-gray-600 rounded-lg cursor-pointer shadow-2xl hover:scale-110 transform transition-transform duration-500 ease-in-out">
-              <Image src={testimonial2} alt="" width={50} />
-              <p className="text-primary-50 py-8 w-full md:w-3/4">
+            <div className="py-12 px-4 border-2 border-gray-600 rounded-lg">
+              <Image src={testimonial2} alt="" width={80} />
+              <p className="text-primary-50 py-8 w-full md:w-3/4 text-[26px]">
                 As a student, Afro Intelligence&apos; Campus Genie has been a
                 game changer for my academic journey. It not only helps me stay
                 organized with my coursework but also provides valuable
@@ -102,9 +105,9 @@ const Testimonials = () => {
               <p className="text-primary-50 mt-3 text-sm">University Student</p>
             </div>
 
-            <div className="py-12 px-4 border-2 border-gray-600 rounded-lg cursor-pointer shadow-2xl hover:scale-110 transform transition-transform duration-500 ease-in-out">
-              <Image src={testimonial3} alt="" width={50} />
-              <p className="text-primary-50 py-8 w-full md:w-3/4">
+            <div className="py-12 px-4 border-2 border-gray-600 rounded-lg ">
+              <Image src={testimonial3} alt="" width={80} />
+              <p className="text-primary-50 py-8 w-full md:w-3/4 text-[26px]">
                 Afro Intelligence has exceeded my expectations in every way. Its
                 user-friendly interface, coupled with its powerful AI
                 capabilities, has made it an indispensable tool in my daily
@@ -115,9 +118,9 @@ const Testimonials = () => {
               <p className="text-primary-50 mt-3 text-sm">
                 Business Professional
               </p>
+        </div>
             </div>
           </div>
-        </div>
       </section>
       <section>
         <div className="bg-primary-100 py-12   ">
