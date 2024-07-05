@@ -11,7 +11,7 @@ import logo6 from "@/public/assets/images/logo6.png";
 
 const Partners = () => {
   return (
-    <div className='min-h-screen px-4 md:px-8 lg:px-16 md:mt-[20%] lg:mt-[50%]'>
+    <div className='min-h-screen px-4 md:px-8 lg:px-16 mt-4 md:mt-[20%] lg:mt-[42%]'>
       <div className='text-center md:text-left'>
         <button className='border px-6 py-1 text-primary-50 font-thin rounded-md'>
           OUR PARTNERS

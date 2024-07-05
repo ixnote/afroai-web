@@ -10,9 +10,9 @@ import Link from "next/link";
 
 const Benefits = () => {
   return (
-    <div className="mt-16 mx-4">
+    <div className="mt-12 mx-4">
       <div className="text-center md:text-left mx-8">
-        <button className="border px-6 py-1 text-primary-50 font-thin mx-8 rounded-md">
+        <button className="border px-6 py-1 text-primary-50 font-thin  mx-8 rounded-md">
           Benefits
         </button>
         <div className="text-primary-50 text-3xl md:text-5xl lg:text-6xl mx-8 w-full md:w-[70%] font-inter py-9 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start">

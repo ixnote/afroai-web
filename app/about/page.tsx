@@ -46,17 +46,18 @@ const About = () => {
   }, []);
   return (
     <div>
-      <section className="h-auto min-h-[600px] md:min-h-[800] py-20 md:py-20 lg:py-20 text-primary-50 mx-4 lg:mx-4">
+      <section className="h-auto min-h-[600px] md:min-h-[800] py-20 md:py-32 lg:py-32 text-primary-50 mx-4 lg:mx-4">
         <button className="border px-4 lg:px-10 py-2 font-thin  flex gap-2 items-center rounded-lg">
           <Image src={logo} alt="" />
           <h2 className="flex gap-2"> <span>/</span>ABOUT</h2>
         </button>
+        
         <div className="flex flex-col lg:flex-row items-end py-10">
           <h2 className="text-xl lg:text-8xl lg:w-full text-center lg:text-left">
             WE EXIST TO EMPOWER AFRICA WITH AI
           </h2>
-          <div className="mt-6 lg:mt-12 md:mr-32">
-            <Image src={icon} alt="" width={60} />
+          <div className="mt-6 md:mr-32">
+            <Image src={icon} alt="" width={70} />
           </div>
         </div>
         <hr className="opacity-50" />

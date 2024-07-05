@@ -111,7 +111,7 @@ const Contact = () => {
         </div>
       </section>
       <section>
-        <div className="bg-primary-100 py-20             c  xx  vx">
+        <div className="bg-primary-100 py-20">
           <div className="flex flex-col md:flex-row items-center justify-around ">
             <div className="w-full md:w-3/5 text-center md:text-left">
               <h2 className="text-3xl md:text-5xl text-black">READY TO MOVE FASTER?</h2>
