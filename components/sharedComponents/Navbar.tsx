@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 const Navbar = () => {
- 
   const [isOpen, setIsOpen] = useState(false);
   const [subnav, setSubNavOpen] = useState(false);
 
@@ -48,34 +47,38 @@ const Navbar = () => {
           </li>
 
           <li className="relative items-center">
-           
-              <div onClick={toggleSubNav} className="flex">
-              <button className="hover:bg-primary-100 cursor-pointer hover:text-black  px-8 py-1 hover:rounded-md">PRODUCTS</button>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#FFFFFF"
-                  viewBox="0 0 256 256"
-                  className="opacity-90 mt-2"
+            <div onClick={toggleSubNav} className="flex">
+              <button className="hover:bg-primary-100 cursor-pointer hover:text-black  px-8 py-1 hover:rounded-md">
+                PRODUCTS
+              </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="#FFFFFF"
+                viewBox="0 0 256 256"
+                className="opacity-90 mt-2"
+              >
+                <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+              </svg>
+              <div>
+                <ul
+                  className={`absolute ${
+                    subnav ? "block" : "hidden"
+                  } p-3 mt-6  w-[200px]`}
                 >
-                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                </svg>
-                <div>
-                  <ul className={`absolute ${subnav ? "block" : "hidden"} p-2 mt-10 mr-8 rounded-md  w-[200px]`}>
-                    <li className="text-xl">
-                      <Link href="/assistant">AI ASSISTANT</Link>
-                    </li>
-                    <li className=" text-xl">
-                      <Link href="/gene">CAMPUST GENIE</Link>
-                    </li>
-                    <li className=" text-xl">
-                      <Link href="/article">ARTICLE</Link>
-                    </li>
-                  </ul>
-                </div>
+                  <li className="text-lg">
+                    <Link href="/assistant">AI ASSISTANT</Link>
+                  </li>
+                  <li className=" text-lg">
+                    <Link href="/gene">CAMPUST GENIE</Link>
+                  </li>
+                  <li className=" text-lg">
+                    <Link href="/article">ARTICLE</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
-
           </li>
           <li className="hover:bg-primary-100 cursor-pointer hover:text-black   px-8 py-1 hover:rounded-md">
             <Link href="/resources">RESOURCES</Link>
@@ -85,7 +88,7 @@ const Navbar = () => {
           </li>
         </div>
         <div className="flex grow justify-end gap-[10px]">
-          <li className="text-primary-50 border px-8 py-3  rounded-[13px] hover:border-primary-200">
+          <li className="text-primary-50 border px-8 py-3 hover:bg-primary-100 hover:text-black  rounded-[13px] hover:border-primary-200">
             <Link href="">LOGIN</Link>
           </li>
           <li className="border bg-primary-50 px-8 py-3 rounded-[13px] hover:border-primary-300">
@@ -100,7 +103,7 @@ const Navbar = () => {
         <div className="py-2 px-2 flex justify-between items-center mx-4 list-none">
           <div>
             <Link href="/">
-            <Image src={logo} alt="logo" />
+              <Image src={logo} alt="logo" />
             </Link>
           </div>
           {/* Hamburger Menu */}
@@ -131,12 +134,9 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="relative items-center">
-            <div
-              onClick={toggleSubNav}
-              className="flex gap-1"
-            >
+            <div onClick={toggleSubNav} className="flex gap-1">
               <button>PRODUCTS</button>
-              <div >
+              <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
@@ -148,7 +148,11 @@ const Navbar = () => {
                   <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
                 </svg>
                 <div>
-                  <ul className={`absolute ${subnav ? "block" : "hidden"} w-32 mt-4`}>
+                  <ul
+                    className={`absolute ${
+                      subnav ? "block" : "hidden"
+                    } w-38  ml-4 p-4`}
+                  >
                     <li className="">
                       <Link href="/about">AI ASSISTANT</Link>
                     </li>
@@ -162,12 +166,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-
           </li>
-            {/* <Link href="/assistant" onClick={closeMenu}>
-              PRODUCTS
-            </Link> */}
-          
           <li>
             <Link href="/resources" onClick={closeMenu}>
               RESOURCES

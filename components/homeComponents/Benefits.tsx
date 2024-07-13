@@ -15,9 +15,9 @@ const Benefits = () => {
         <button className="border px-6 py-1 text-primary-50 font-thin  mx-8 rounded-md">
           Benefits
         </button>
-        <div className="text-primary-50 text-3xl md:text-5xl lg:text-6xl mx-8 w-full md:w-[70%] font-inter py-9 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start">
+        <div className="text-primary-50 text-3xl md:text-5xl lg:text-6xl mx-8 w-full md:w-[80%] font-inter py-9 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start">
           <h2 className="text-primary-50 font-inter">
-            HOW AFRO AI ENHANCES YOUR EXPERIENCES
+            HOW AFRO ARTIFICIAL INTELLIGENCE ENHANCES YOUR EXPERIENCES
           </h2>
           <Image src={handIcon} alt="Hand Icon" width={60} className="md:ml-4" />
         </div>
