@@ -48,7 +48,7 @@ const Navbar = () => {
 
           <li className="relative items-center">
             <div onClick={toggleSubNav} className="flex">
-              <button className="hover:bg-primary-100 cursor-pointer hover:text-black  px-8 py-1 hover:rounded-md">
+              <button className="hover:bg-inherit cursor-pointer hover:text-black  px-8 py-1 hover:rounded-md">
                 PRODUCTS
               </button>
               <svg

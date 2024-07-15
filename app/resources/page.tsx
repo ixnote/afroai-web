@@ -18,7 +18,7 @@ import resources5 from "@/public/assets/svgs/resources5.svg";
 const Resources = () => {
   return (
     <div>
-      <section className="h-auto min-h-[800px] py-20 lg:py-20 text-primary-50 mx-4 lg:mx-8">
+      <section className="h-auto min-h-[800px] py-20 lg:pt-20 text-primary-50 mx-4 lg:mx-8">
   <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
           <Image src={logo} alt="" />
           <h2 className="flex gap-2"> <span>/</span>RESOURCES</h2>
@@ -33,19 +33,19 @@ const Resources = () => {
   </div>
   <hr className="opacity-50 my-8 w-full" />
   <div className="flex flex-col md:flex-row justify-around mt-12 h-auto gap-6 ">
-    <div className="w-full md:w-2/4 border rounded-xl cursor-pointer shadow-2xl hover:scale-105 transform transition-transform duration-500 ease-in-out">
+    <div className="w-full md:w-2/4 border rounded-xl cursor-pointer">
       <Image src={resources1} alt="" className="w-full h-48 md:h-80 object-cover rounded-t-xl" />
       <div className="p-6 bg-black text-primary-50 rounded-b-xl">
-        <button className="font-thin px-6 py-3 bg-white text-black rounded-lg mb-4">WEBINARS</button>
+        <button className="font-thin px-6 py-3 text-primary-50 rounded-lg mb-4">WEBINARS</button>
         <h2 className="text-xl md:text-2xl font-inter">
           Engage with Afro AI Experts
         </h2>
       </div>
     </div>
-    <div className="w-full md:w-2/4 border rounded-xl cursor-pointer shadow-2xl hover:scale-105 transform transition-transform duration-500 ease-in-out">
+    <div className="w-full md:w-2/4 border rounded-xl cursor-pointer">
       <Image src={resources2} alt="" className="w-full h-48 md:h-80 object-cover rounded-t-xl" />
       <div className="p-6 bg-black text-primary-50 rounded-b-xl">
-        <button className="font-thin px-6 py-3 bg-white text-black rounded-lg mb-4">ARTICLE</button>
+        <button className="font-thin px-6 py-3  text-primary-50 rounded-lg mb-4">ARTICLE</button>
         <h2 className="text-xl md:text-2xl font-inter">
           Visualizing Afro AI&apos;s Impact
         </h2>
@@ -54,7 +54,7 @@ const Resources = () => {
   </div>
 </section>
 
-<section className="h-auto min-h-[800px] py-20 lg:py-32 text-primary-50 mx-4 lg:mx-4">
+<section className="h-auto min-h-[800px] py-4  lg:pt-8 text-primary-50 mx-4 lg:mx-8">
   <div className="flex flex-col lg:flex-row justify-between py-8">
     <div className="flex gap-2 flex-wrap">
       <button className="border px-4 lg:px-10 py-2 rounded-lg border-primary-100 text-primary-100">Featured</button>
@@ -70,17 +70,17 @@ const Resources = () => {
     <Image src={resource} alt="message icon" width={60} className="lg:mb-10 md:mr-32" />
   </div>
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-16 md:py-">
-    <div className="w-full border rounded-xl cursor-pointer shadow-2xl hover:scale-110 transform transition-transform duration-500 ease-in-out">
+    <div className="w-full border rounded-xl cursor-pointer">
       <Image src={resources3} alt="" height={400} className="w-full rounded-t-xl" />
       <button className="font-thin px-6 py-3">ARTICLE</button>
       <h2 className="py-3 text-xl md:text-2xl font-inter bg-black text-primary-50 px-6">Mastering Afro AI&apos;s Features</h2>
     </div>
-    <div className="w-full border rounded-xl cursor-pointer shadow-2xl hover:scale-110 transform transition-transform duration-500 ease-in-out">
+    <div className="w-full border rounded-xl cursor-pointer ">
       <Image src={resources4} alt="" height={400} className="w-full rounded-t-xl" />
       <button className="font-thin px-6 py-3">CASE STUDY</button>
       <h2 className="py-3 text-xl md:text-2xl font-inter bg-black text-primary-50 px-6">Real-Life Application Of...</h2>
     </div>
-    <div className="w-full border rounded-xl cursor-pointer shadow-2xl hover:scale-110 transform transition-transform duration-500 ease-in-out">
+    <div className="w-full border rounded-xl cursor-pointer ">
       <Image src={resources5} alt="" height={400} className="w-full rounded-t-xl" />
       <button className="font-thin px-6 py-3">WHITEPAPER</button>
       <h2 className="py-3 text-xl md:text-2xl font-inter bg-black text-primary-50 px-6">Deep Dive into Afro AI&apos;s Technol...</h2>
@@ -106,7 +106,7 @@ const Resources = () => {
             <button className="flex items-center mt-3 justify-center gap-2 bg-black w-3/4 max-w-xs md:max-w-sm h-16 rounded-xl px-4">
               <p className="text-primary-50 text-xl font-inter">TRY AI</p>
               <span>
-                <Image src={arrow} alt="Arrow" width={25} />
+                <Image src={arrow1} alt="Arrow" width={25} />
               </span>
             </button>
           </div>

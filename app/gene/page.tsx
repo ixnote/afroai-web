@@ -14,7 +14,7 @@ import plus2 from "@/public/assets/svgs/plus1.svg";
 const Gene = () => {
   return (
     <div className="bg-primary-300">
-      <section className="h-auto min-h-[1000px] py-20 lg:py-40 text-primary-50 mx-4 lg:mx-2">
+      <section className="h-auto min-h-[800px] pt-24 lg:pt-24 text-primary-50 mx-4 lg:mx-2">
         <div className="flex justify-center lg:justify-start">
           <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
           <Image src={logo} alt="" />
@@ -22,7 +22,7 @@ const Gene = () => {
         </button>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-end py-10">
+        <div className="flex flex-col lg:flex-row items-center py-10">
           <h2 className="text-xl lg:text-8xl lg:w-full text-center lg:text-left">
             UNLOCK YOUR ACADEMIC POTENTIALS WITH CAMPUS GENE
           </h2>
@@ -43,7 +43,7 @@ const Gene = () => {
         />
       </section>
 
-      <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
+      <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2  lg:py-16">
         <div className="flex justify-center lg:justify-start">
           <button className="border px-6 lg:px-10 py-3 rounded-lg font-thin">
             STUDY COMPANION
@@ -106,8 +106,7 @@ const Gene = () => {
         </div>
         <hr className="opacity-50 font-thin" />
       </section>
-
-      <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
+      <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2">
         <div className="flex justify-center lg:justify-start">
           <button className="border px-6 lg:px-10 py-3 rounded-lg font-thin">
             PRICING
@@ -115,7 +114,7 @@ const Gene = () => {
         </div>
         <div className="w-full lg:w-[45%]  flex flex-col md:flex-row items-center py-6 text-2xl md:text-4xl font-inter">
           <h2 className="text-center md:text-left">
-          DISCOVER THE PERFECT PLAN
+            DISCOVER THE PERFECT PLAN
           </h2>
           <Image
             src={money}
@@ -125,7 +124,7 @@ const Gene = () => {
           />
         </div>
         <hr className="opacity-50 my-8" />
-        <div className="w-full lg:w-3/5 mx-auto flex flex-col md:flex-row justify-between items-center mt-10">
+        <div className="w-full lg:w-3/5 mx-auto md:mx-[30%] lg:mx-[30%]  flex flex-col md:flex-row justify-between items-center mt-10">
           <div className="flex flex-col items-center text-center">
             <Image src={square} alt="square" />
             <p className="mt-8 text-2xl">FREE</p>
@@ -139,36 +138,33 @@ const Gene = () => {
             <p className="mt-8 text-2xl">PREMIUM</p>
           </div>
         </div>
-        <div className="w-full lg:w-3/4 mx-auto flex flex-col md:flex-row justify-around items-center mt-16 gap-2">
-      
+        <div className="w-full lg:w-3/4 mx-auto md:mx-[23%] lg:mx-[23%] flex flex-col md:flex-row justify-around items-center mt-16 gap-2">
           <div className="flex flex-col  mt-10 md:mt-0 lg:ml-20">
             <p className="mt-8 text-2xl">
-            <span className="text-5xl">&#8358;0</span>
+              <span className="text-5xl">&#8358;0</span>
             </p>
             <p className="mt-8">100% FREE TOKENS/MONTH</p>
           </div>
           <div className="flex flex-col  mt-10 md:mt-0  lg:ml-28">
             <p className="mt-8 text-2xl">
-            <span className="text-5xl">&#8358;1,000</span>
+              <span className="text-5xl">&#8358;1,000</span>
             </p>
             <p className="mt-8">100% FREE TOKENS/MONTH</p>
           </div>
           <div className="flex flex-col  mt-10 md:mt-0 lg:ml-24">
             <p className="mt-8 text-2xl">
-            <span className="text-5xl">&#8358;2,000</span>
+              <span className="text-5xl">&#8358;2,000</span>
             </p>
             <p className="mt-8">100% FREE TOKENS/MONTH</p>
           </div>
         </div>
-      </section>
-
       <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
         <div>
-          <p className="py-6 text-center lg:text-left text-2xl lg:text-3xl font-bold">
+          <p className="py-6 text-center lg:text-left text-2xl lg:text-3xl font-inter">
             FEATURES
           </p>
           <hr className="opacity-50 my-4" />
-          <div className="py-8">
+          <div className="py-8 ">
             <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
               <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
                 Basic AI Capabilities
@@ -251,6 +247,7 @@ const Gene = () => {
             </div>
           </div>
         </div>
+      </section>
       </section>
       <section>
         <div className="bg-primary-100 py-4">

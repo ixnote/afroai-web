@@ -75,7 +75,7 @@ const Contact = () => {
         </button>
         <hr className="mt-16 opacity-50" />
       </section>
-      <section className="h-auto min-h-[800px] py-16  lg:py-20  text-primary-50 mx-4 lg:mx-8">
+      <section className="h-auto min-h-[600px] py-4  lg:py-4  text-primary-50 mx-4 lg:mx-8">
         <button className="border px-4 lg:px-10 py-2 rounded-lg font-thin border-primary-50 text-primary-50">
           FAQS
         </button>
@@ -111,7 +111,7 @@ const Contact = () => {
         </div>
       </section>
       <section>
-        <div className="bg-primary-100 py-20">
+        <div className="bg-primary-100 py-8 lg:py-14">
           <div className="flex flex-col md:flex-row items-center justify-around ">
             <div className="w-full md:w-3/5 text-center md:text-left">
               <h2 className="text-3xl md:text-5xl text-black">READY TO MOVE FASTER?</h2>

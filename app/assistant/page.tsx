@@ -14,7 +14,7 @@ import plus2 from "@/public/assets/svgs/plus1.svg";
 const Assistant = () => {
   return (
     <div className="bg-primary-200">
-      <section className="h-auto min-h-[1000px] pt-24 lg:py-32 text-primary-50 mx-4 lg:mx-2">
+      <section className="h-auto min-h-[800px] pt-24  lg:pt-20 text-primary-50 mx-4 lg:mx-4">
         <div className="flex justify-center lg:justify-start">
           <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
             <Image src={logo} alt="" />
@@ -24,14 +24,15 @@ const Assistant = () => {
             </h2>
           </button>
         </div>
-        <div className="flex flex-col lg:flex-row items-end py-10">
+        <div className="flex flex-col lg:flex-row items-center py-10">
           <h2 className="text-xl lg:text-8xl lg:w-full text-center lg:text-left">
             YOUR DYNAMIC AI COMPANION CONVERSATIONS
           </h2>
-          <div className="mt-6 ">
-            <Image src={icon} alt="Icon" width={60} className="" />
+          <div className="mt-6 lg:mt-0 lg:ml-4 flex justify-center lg:justify-start w-full lg:w-auto">
+            <Image src={icon} alt="Icon" width={60} />
           </div>
         </div>
+
         <hr className="opacity-50 my-8" />
         <Image
           src={assistant}
@@ -40,7 +41,7 @@ const Assistant = () => {
         />
       </section>
 
-      <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 lg:py-16">
+      <section className="h-auto min-h-[700px] text-primary-50 mx-4 lg:mx-2 lg:py-14">
         <div className="flex justify-center lg:justify-start">
           <button className="border px-6 lg:px-10 py-3 rounded-lg font-thin">
             EMPOWERMENT
@@ -106,7 +107,7 @@ const Assistant = () => {
         <hr className="opacity-50 my-8" />
       </section>
 
-      <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
+      <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2">
         <div className="flex justify-center lg:justify-start">
           <button className="border px-6 lg:px-10 py-3 rounded-lg font-thin">
             PRICING
@@ -124,7 +125,7 @@ const Assistant = () => {
           />
         </div>
         <hr className="opacity-50 my-8" />
-        <div className="w-full lg:w-3/5 mx-auto flex flex-col md:flex-row justify-between items-center mt-10">
+        <div className="w-full lg:w-3/5 mx-auto md:mx-[30%] lg:mx-[30%]  flex flex-col md:flex-row justify-between items-center mt-10">
           <div className="flex flex-col items-center text-center">
             <Image src={square} alt="square" />
             <p className="mt-8 text-2xl">FREE</p>
@@ -138,7 +139,7 @@ const Assistant = () => {
             <p className="mt-8 text-2xl">PREMIUM</p>
           </div>
         </div>
-        <div className="w-full lg:w-3/4 mx-auto flex flex-col md:flex-row justify-around items-center mt-16 gap-2">
+        <div className="w-full lg:w-3/4 mx-auto md:mx-[23%] lg:mx-[23%] flex flex-col md:flex-row justify-around items-center mt-16 gap-2">
           <div className="flex flex-col  mt-10 md:mt-0 lg:ml-20">
             <p className="mt-8 text-2xl">
               <span className="text-5xl">&#8358;0</span>
@@ -158,15 +159,13 @@ const Assistant = () => {
             <p className="mt-8">100% FREE TOKENS/MONTH</p>
           </div>
         </div>
-      </section>
-
       <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
         <div>
           <p className="py-6 text-center lg:text-left text-2xl lg:text-3xl font-inter">
             FEATURES
           </p>
           <hr className="opacity-50 my-4" />
-          <div className="py-8">
+          <div className="py-8 ">
             <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
               <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
                 Basic AI Capabilities
@@ -250,13 +249,17 @@ const Assistant = () => {
           </div>
         </div>
       </section>
+      </section>
+
       <section>
         <div className="bg-primary-100 py-4">
           <div className="flex flex-col md:flex-row items-center justify-around ">
             <div className="w-full md:w-3/5 text-center md:text-left">
-              <h2 className="text-3xl md:text-6xl md:w-3/4 font-inter">JOIN THE AFRO AI REVOLUTION</h2>
+              <h2 className="text-3xl md:text-6xl md:w-3/4 font-inter">
+                JOIN THE AFRO AI REVOLUTION
+              </h2>
               <p className="mt-8 text-sm md:text-base lg:text-lg">
-              Join the thousands of users who are already experiencing the
+                Join the thousands of users who are already experiencing the
                 difference with Afro AI Assistant. Whether you&apos;re in Lagos,
                 Nairobi, or anywhere in between, Afro AI Assistant is here to
                 empower you on your digital journey.
@@ -264,7 +267,9 @@ const Assistant = () => {
             </div>
 
             <button className="flex items-center mt-3 justify-center gap-2 bg-black w-3/4 max-w-xs md:max-w-sm h-16 rounded-xl px-4">
-              <p className="text-primary-50 text-xl font-inter">TRY AI ASSISTANT  </p>
+              <p className="text-primary-50 text-xl font-inter">
+                TRY AI ASSISTANT{" "}
+              </p>
               <span>
                 <Image src={arrow} alt="Arrow" width={25} />
               </span>
