@@ -22,9 +22,9 @@ const Products = () => {
           </div>
           <hr className=' mt-4 opacity-5' />
         </div>
-        <div className='flex flex-col md:flex-row justify-around mt-12 h-auto gap-8    '>
+        <div className='flex flex-col md:flex-row justify-around mt-12 h-auto gap-8  max-w-6xl mx-auto  '>
           <div className='w-full md:w-auto '>
-            <Image src={product1} alt='' width={800}  className='w-full md:w-auto ' />
+            <Image src={product1} alt='' width={800}  className=' ' />
             <h2 className='py-2 flex justify-between items-center text-xl md:text-[52px] font-inter bg-black text-primary-50 px-6'>
               AI Assistant
               <span className='bg-black border-2 rounded-[100px] p-2'>
@@ -33,10 +33,10 @@ const Products = () => {
             </h2>
           </div>
           <div className='w-full md:w-auto'>
-            <Image src={product2} alt='' width={800}  className='w-full md:w-auto' />
-            <h2 className='py-2 flex justify-between items-center text-xl md:text-[52px] font-inter bg-black text-primary-50 px-6'>
+            <Image src={product2} alt='' width={800}  className='' />
+            <h2 className='py-2 flex justify-between items-center text-xl md:text-[52px] font-inter bg-black text-primary-50 '>
               Campus Genie
-              <span className='bg-black border-2 rounded-[100px] p-2 '>
+              <span className='bg-black border-2 rounded-[100px] p-2'>
                 <Image src={arrow} alt='' className='h-[40px] w-[50px]' />
               </span>
             </h2>

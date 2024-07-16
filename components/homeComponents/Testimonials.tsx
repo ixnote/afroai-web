@@ -120,11 +120,11 @@ const Testimonials = () => {
                 tailored AI solutions.
               </p>
             </div>
-            <button className="flex items-center mt-3 justify-center gap-2 bg-black w-3/4 max-w-xs md:max-w-sm h-16 rounded-xl px-4">
-              <p className="text-primary-50 text-xl font-inter">TRY AI</p>
-              <span>
+            <button className="flex items-center mt-3 font-inter text-xl justify-center gap-2 text-primary-50 hover:bg-primary-50 hover:text-black  bg-black  w-3/4 max-w-xs md:max-w-sm h-16 rounded-xl px-4"> 
+              TRY AI
+              <span className=" hover:text-black">
                 <Image src={arrow} alt="Arrow" width={25} />
-              </span>
+              </span> 
             </button>
           </div>
         </div>
