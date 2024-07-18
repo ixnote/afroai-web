@@ -1,13 +1,12 @@
-"use client";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/sharedComponents/Navbar";
-import Footer from "@/components/sharedComponents/Footer";
-import Hero from "@/components/homeComponents/Hero";
-import Partners from "@/components/homeComponents/Partners";
+'use client';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Navbar from '@/components/sharedComponents/Navbar';
+import Footer from '@/components/sharedComponents/Footer';
+import Hero from '@/components/homeComponents/Hero';
+import Partners from '@/components/homeComponents/Partners';
 
-
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -20,17 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <head>
-        <link rel="icon" href="favicon.ico" />
+        <link rel='icon' href='favicon.ico' />
         <title>AfroAI</title>
       </head>
-      <body className={`${inter.className} w-full  bg-black`}>
-        <Navbar/>
-        <section className="bg-inherit ">
-          {children}
-        </section>    
-        <Footer/>
+      <body className={`${inter.className} max-w-7xl mx-auto bg-black`}>
+        <Navbar />
+        <section className='bg-inherit '>{children}</section>
+        <Footer />
       </body>
     </html>
   );
