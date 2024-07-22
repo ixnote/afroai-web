@@ -10,7 +10,7 @@ import logo6 from '@/public/assets/images/logo6.png';
 
 const Partners = () => {
   return (
-    <div className='flex flex-col py-28'>
+    <div className='flex flex-col py-28  max-w-7xl mx-auto'>
       <div className='flex flex-col text-center md:text-left'>
         <button className='flex border w-fit px-6 py-1 text-primary-50 font-thin rounded-md'>
           OUR PARTNERS
