@@ -24,7 +24,7 @@ export default function RootLayout({
         <link rel='icon' href='favicon.ico' />
         <title>AfroAI</title>
       </head>
-      <body className={`${inter.className} max-w-7xl mx-auto bg-black`}>
+      <body className={`${inter.className}bg-black`}>
         <Navbar />
         <section className='bg-inherit '>{children}</section>
         <Footer />

@@ -6,7 +6,7 @@ import ProductCard from './ProductCard';
 
 const Products = () => {
   return (
-    <div className='w-full px-4 md:px-8 lg:px-16 mb-20'>
+    <div className='w-full px-4 md:px-8 lg:px-16 mb-20  max-w-7xl mx-auto'>
       <div className='text-center md:text-left'>
         <button className='px-6 py-1 rounded-md border-2 font-thin text-primary-50 my-10'>
           PRODUCTS

@@ -10,8 +10,8 @@ import Link from 'next/link';
 
 const Benefits = () => {
   return (
-    <div className='mt-12 mx-4 py-28'>
-      <div className='text-center md:text-left mx-8'>
+    <div className='max-w-7xl mx-auto mt-12'>
+      <div className='text-center md:text-left'>
         <button className='border px-6 py-1 text-primary-50 font-thin  mx-8 rounded-md'>
           Benefits
         </button>

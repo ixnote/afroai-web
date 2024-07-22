@@ -30,10 +30,10 @@ const Navbar = () => {
     <div
       className={`${
         obj[path.split('/')[1]] ?? 'bg-inherit'
-      } py-3   fixed font-inter left-0 right-0 z-20 container mx-auto`}
+      } py-3   fixed font-inter left-0 right-0 z-20`}
     >
       {/* Desktop Nav */}
-      <div className='hidden lg:flex items-center mx-4 list-none'>
+      <div className='hidden lg:flex items-center  list-none  max-w-7xl mx-auto'>
         <div className=''>
           <Link href='/'>
             <Image src={logo} alt='logo' />

@@ -67,7 +67,7 @@ const Testimonials = () => {
 
   return (
     <div>
-      <section className='px-4 mt-8 md:px-8 lg:px-16 md:py-12'>
+      <section className='mt-8  md:py-12  max-w-7xl mx-auto'>
         <div className='text-center md:text-left'>
           <button className='border px-6 py-1 text-primary-50 font-thin rounded-md'>
             TESTIMONIALS
@@ -100,7 +100,7 @@ const Testimonials = () => {
       </section>
       <section>
         <div className='bg-primary-100 py-20'>
-          <div className='flex flex-col md:flex-row items-center justify-around'>
+          <div className='flex flex-col md:flex-row items-center justify-around  max-w-7xl mx-auto'>
             <div className='w-full md:w-3/5 text-center md:text-left'>
               <h2 className='text-3xl md:text-5xl'>READY TO MOVE FASTER?</h2>
               <p className='mt-8 text-sm md:text-base lg:text-lg'>
