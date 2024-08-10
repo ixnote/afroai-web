@@ -37,10 +37,10 @@ const Navbar = () => {
     <div
       className={`${
         obj[path.split('/')[1]] ?? 'bg-inherit'
-      } py-3   fixed font-inter left-0 right-0 z-20`}
+      } py-3 fixed font-inter left-0 right-0 z-20`}
     >
       {/* Desktop Nav */}
-      <div className='hidden lg:flex items-center  list-none  max-w-7xl mx-auto'>
+      <div className='hidden lg:flex items-center  list-none  sm:max-w-7xl sm:mx-auto w-full'>
         <div className=''>
           <Link href='/'>
             <Image src={logo} alt='logo' />
@@ -111,7 +111,7 @@ const Navbar = () => {
         </div>
         <div className='flex grow justify-end gap-[10px]'>
           <li className='text-primary-50 border px-8 py-3 hover:bg-primary-100 hover:text-black  rounded-[13px] hover:border-primary-200'>
-            <Link href=''>LOGIN</Link>
+            <Link href='/login'>LOGIN</Link>
           </li>
           <li className='border bg-primary-50 text-black px-8 py-3 rounded-[13px]'>
             <Link href=''>TRY AI</Link>

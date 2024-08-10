@@ -10,29 +10,29 @@ import logo6 from '@/public/assets/images/logo6.png';
 
 const Partners = () => {
   return (
-    <div className='flex flex-col py-28  max-w-7xl mx-auto'>
+    <div className='flex flex-col sm:py-28  py-10 sm:max-w-7xl sm:mx-auto px-4'>
       <div className='flex flex-col text-center md:text-left'>
         <button className='flex border w-fit px-6 py-1 text-primary-50 font-thin rounded-md'>
           OUR PARTNERS
         </button>
-        <div className='flex flex-col md:flex-row items-center py-4 gap-2 '>
-          <h2 className='text-primary-50 text-[36px] md:text-[48px] lg:text-[66px] font-inter'>
+        <div className='flex sm:flex-col md:flex-row items-center py-4 gap-2 justify-between '>
+          <h2 className='text-primary-50 text-[26px] md:text-[48px] lg:text-[66px] font-inter text-left'>
             TRUSTED BY MILLIONS
           </h2>
           <div className='mt-2 md:mt-0'>
-            <Image src={handIcon} alt='HandIcon' width={60} />
+            <Image src={handIcon} alt='HandIcon' className='w-12 sm:w-20' />
           </div>
         </div>
         <hr className='opacity-50' />
       </div>
-      <div className='mt-16 w-full text-center'>
+      <div className='sm:mt-16 mt-6 w-full text-center'>
         <p className='text-primary-50 text-[18px] md:text-[20px] lg:text-[26px] leading-8 mx-auto lg:w-[900px]'>
           Afro Intelligence, with over 1 million users across 12 African
           Nations, seamlessly integrated into daily life, redefining AI
           potential and shaping African digital landscape.
         </p>
       </div>
-      <div className='flex flex-wrap justify-center mt-12 md:mt-20 gap-4'>
+      <div className='flex flex-wrap justify-center mt-12 md:mt-20 sm:gap-4 gap-8'>
         <div className='w-1/2 md:w-1/3 lg:w-1/6 flex justify-center'>
           <Image src={logo6} alt='logo6' />
         </div>
@@ -52,7 +52,7 @@ const Partners = () => {
           <Image src={logo5} alt='logo5' />
         </div>
       </div>
-      <hr className='opacity-50 mt-32' />
+      <hr className='opacity-50 sm:mt-32 mt-16' />
     </div>
   );
 };

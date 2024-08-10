@@ -7,12 +7,12 @@ export default function AuthLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className='bg-black'>
+    <div className='bg-[#18181A]'>
       <div className='flex w-full h-screen'>
-        <div className='flex relative w-1/2 h-full'>
+        <div className=' hidden sm:flex relative sm:w-1/2 h-full'>
           <Image src='/assets/images/authBg.svg' alt='' fill />
         </div>
-        <div className='flex w-1/2'>{children}</div>
+        <div className='flex sm:w-1/2 w-full'>{children}</div>
       </div>
     </div>
   );

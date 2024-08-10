@@ -10,29 +10,28 @@ import Link from 'next/link';
 
 const Benefits = () => {
   return (
-    <div className='max-w-7xl mx-auto mt-12'>
-      <div className='text-center md:text-left'>
-        <button className='border px-6 py-1 text-primary-50 font-thin  mx-8 rounded-md'>
+    <div className='sm:max-w-7xl sm:mx-auto mt-12'>
+      <div className='flex flex-col md:text-left w-full'>
+        <button className='flex border px-6 py-1 text-primary-50 font-thin  mx-8 rounded-md w-fit'>
           Benefits
         </button>
-        <div className='text-primary-50 text-3xl md:text-5xl lg:text-6xl mx-8 w-full md:w-[80%] font-inter py-9 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start'>
-          <h2 className='text-primary-50 font-inter'>
+        <div className='text-primary-50 sm:text-3xl md:text-5xl lg:text-6xl p-6 w-full md:w-full font-inter py-9 flex md:flex-row items-center md:items-start justify-between md:justify-start'>
+          <h2 className='text-primary-50 font-inter w-[60%] sm:w-[80%]'>
             HOW AFRO ARTIFICIAL INTELLIGENCE ENHANCES YOUR EXPERIENCES
           </h2>
           <Image
             src={handIcon}
             alt='Hand Icon'
-            width={60}
-            className='md:ml-4'
+            className='md:ml-4 w-12 sm:w-20'
           />
         </div>
         <hr className='opacity-50 mx-8' />
       </div>
-      <div className='w-full md:w-[90%] lg:w-[90%] border   rounded-xl grid grid-cols-3 md:grid-cols-3 mx-auto mt-8 '>
-        <div className='text-primary-50 text-xl md:text-2xl lg:text-[45px] w-full md:w-full text-center md:text-left md:py-6 md:px-4'>
+      <div className='w-full md:w-[90%] lg:w-[90%] border rounded-xl grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 mx-auto mt-8 '>
+        <div className='text-primary-50 text-xl md:text-2xl lg:text-[45px] w-full md:w-full text-center md:text-left md:py-6 md:px-4 h-28 sm:h-auto'>
           <h2>WHY AFRO AI?</h2>
         </div>
-        <div className='border-l-2'>
+        <div className='flex sm:border-l-2 border-t-2 justify-between'>
           <div className='pt-4 border-b '>
             <Link href='#'>
               <Image
@@ -71,7 +70,7 @@ const Benefits = () => {
             </div>
           </div>
         </div>
-        <div className='border-l-2'>
+        <div className='flex sm:border-l-2 border-t-2 justify-between'>
           <div className='pt-4 border-b '>
             <Link href='#'>
               <Image src={head} alt='Head Icon' className='mx-4 md:mx-4' />
