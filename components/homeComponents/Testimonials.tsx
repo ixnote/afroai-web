@@ -67,16 +67,16 @@ const Testimonials = () => {
 
   return (
     <div>
-      <section className='mt-8  md:py-12  max-w-7xl mx-auto'>
-        <div className='text-center md:text-left'>
+      <section className=' mt-16  md:py-12  sm:max-w-7xl sm:mx-auto mx-4 mb-10'>
+        <div className=' md:text-left'>
           <button className='border px-6 py-1 text-primary-50 font-thin rounded-md'>
             TESTIMONIALS
           </button>
-          <div className='flex flex-col md:flex-row items-center justify-center md:justify-start w-full py-8 md:w-3/4'>
-            <h2 className='text-primary-50 text-3xl font-inter md:text-6xl w-full md:w-[80%]'>
+          <div className='flex md:flex-row items-center justify-between  w-full py-8 '>
+            <h2 className='text-primary-50 text-lg sm:text-3xl font-inter md:text-6xl  w-[60%] md:w-[80%]'>
               WHAT OUR USERS ARE SAYING ABOUT US
             </h2>
-            <span className='mb-12'>
+            <span className=''>
               <Image src={star} alt='Star' width={60} />
             </span>
           </div>

@@ -16,16 +16,20 @@ const Footer = () => {
         obj[path.split('/')[1]] ?? ''
       } bg-primary-200 w-full px-4 md:px-8 lg:px-16 py-8`}
     >
-      <div className='text-center md:text-left'>
+      <div className='md:text-left'>
         <button className='border mt-6 text-primary-50 px-6 py-2 font-thin rounded-md'>
           CONTACT
         </button>
-        <div className='flex flex-col md:flex-row items-center gap-2 mt-4'>
-          <h2 className='text-primary-50 text-3xl md:text-4xl font-inter'>
+        <div className='flex  md:flex-row items-center justify-between gap-2 mt-4'>
+          <h2 className='text-primary-50 text-lg sm:text-3xl md:text-4xl font-inter'>
             SAY HELLO
           </h2>
           <div className='mt-2 md:mt-0'>
-            <Image src={symbol} alt='materialsymbols' width={60} />
+            <Image
+              src={symbol}
+              alt='materialsymbols'
+              className='md:ml-4 w-12 sm:w-20'
+            />
           </div>
         </div>
         <hr className='opacity-50 mt-4' />
@@ -45,10 +49,10 @@ const Footer = () => {
         </div>
         <div className='w-full md:w-3/4 pb-4 font-inter'>
           <form className='flex flex-wrap gap-8 justify-center md:justify-start'>
-            <div className='flex w-full md:w-full gap-8 '>
+            <div className='flex flex-col sm:flex-row w-full md:w-full gap-8 '>
               <label
                 htmlFor='fullName'
-                className='flex flex-col  items-center md:items-start gap-2 text-primary-50 w-full md:w-1/2'
+                className='flex flex-col  sm:items-center md:items-start gap-2 text-primary-50 w-full md:w-1/2'
               >
                 Full Name
                 <input
@@ -59,7 +63,7 @@ const Footer = () => {
               </label>
               <label
                 htmlFor='email'
-                className='flex flex-col items-center md:items-start gap-2 text-primary-50 w-full md:w-1/2'
+                className='flex flex-col sm:items-center  md:items-start gap-2 text-primary-50 w-full md:w-1/2'
               >
                 Email
                 <input
@@ -71,7 +75,7 @@ const Footer = () => {
             </div>
             <label
               htmlFor='subject'
-              className='flex flex-col items-center md:items-start gap-2 text-primary-50 w-full'
+              className='flex flex-col sm:items-center  md:items-start gap-2 text-primary-50 w-full'
             >
               Subject
               <textarea
@@ -82,7 +86,7 @@ const Footer = () => {
             </label>
             <label
               htmlFor='message'
-              className='flex flex-col  items-center md:items-start gap-2 text-primary-50 w-full'
+              className='flex flex-col  sm:items-center  md:items-start gap-2 text-primary-50 w-full'
             >
               Message
               <textarea

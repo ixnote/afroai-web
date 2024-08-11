@@ -10,12 +10,12 @@ import Link from 'next/link';
 
 const Benefits = () => {
   return (
-    <div className='sm:max-w-7xl sm:mx-auto mt-12'>
+    <div className='sm:max-w-7xl sm:mx-auto mt-12 mx-4'>
       <div className='flex flex-col md:text-left w-full'>
         <button className='flex border px-6 py-1 text-primary-50 font-thin  mx-8 rounded-md w-fit'>
           Benefits
         </button>
-        <div className='text-primary-50 sm:text-3xl md:text-5xl lg:text-6xl p-6 w-full md:w-full font-inter py-9 flex md:flex-row items-center md:items-start justify-between md:justify-start'>
+        <div className='text-primary-50 sm:text-3xl md:text-5xl lg:text-6xl p-6 w-full md:w-full font-inter py-9 flex md:flex-row items-center md:items-start justify-between'>
           <h2 className='text-primary-50 font-inter w-[60%] sm:w-[80%]'>
             HOW AFRO ARTIFICIAL INTELLIGENCE ENHANCES YOUR EXPERIENCES
           </h2>
