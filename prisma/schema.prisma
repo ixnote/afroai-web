@@ -10,22 +10,59 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://afroaiuser:password123@localhost:5433/afroai?schema=public"
+  url      = env("DATABASE_URL")
 }
 
 model User {
-  id         Int      @id @default(autoincrement())
-  username   String   @unique
-  email      String   @unique
-  created_at DateTime @default(now())
-  updated_at DateTime @default(now())
+  id               Int                @id @default(autoincrement())
+  username         String             @unique
+  email            String             @unique
+  created_at       DateTime           @default(now())
+  updated_at       DateTime           @default(now())
+  UserOauthAccount UserOauthAccounts?
+  tokenUsage       tokenUsage[]
 }
 
 model OAuthProvider {
-  id            Int    @id
-  name          String
-  client_id     String
-  client_secret String
+  id               Int                @id
+  name             String
+  client_id        String
+  client_secret    String
+  UserOauthAccount UserOauthAccounts?
+}
+
+model UserOauthAccounts {
+  id           Int           @id
+  accessToken  String
+  refreshToken String
+  user         User          @relation(fields: [userId], references: [id])
+  userId       Int           @unique
+  provider     OAuthProvider @relation(fields: [providerId], references: [id])
+  providerId   Int           @unique
+  expiresAt    String
+  created_at   DateTime      @default(now())
+  updated_at   DateTime      @default(now())
+}
+
+model AiModel {
+  id         Int          @id @default(autoincrement())
+  name       String       @unique
+  tokenUsage tokenUsage[]
+}
+
+model tokenUsage {
+  id         Int      @id @default(autoincrement())
+  user       User     @relation(fields: [userId], references: [id])
+  userId     Int
+  model      AiModel  @relation(fields: [modelId], references: [id])
+  modelId    Int
+  tokensUsed Int
+  date       DateTime @default(now())
+  created_at DateTime @default(now())
+}
+
+model UserSessions {
+  id Int @id @default(autoincrement())
 }
 
 // -- Users table
