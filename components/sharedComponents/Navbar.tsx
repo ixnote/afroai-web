@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import logo from '@/public/assets/images/logo.png';
 import Image from 'next/image';
@@ -19,6 +20,12 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
   const path = usePathname();
 
   const obj: { [key: string]: string } = {
@@ -30,10 +37,10 @@ const Navbar = () => {
     <div
       className={`${
         obj[path.split('/')[1]] ?? 'bg-inherit'
-      } py-3   fixed font-inter left-0 right-0 z-20`}
+      } py-3 fixed font-inter left-0 right-0 z-20`}
     >
       {/* Desktop Nav */}
-      <div className='hidden lg:flex items-center  list-none  max-w-7xl mx-auto'>
+      <div className='hidden lg:flex items-center  list-none  sm:max-w-7xl sm:mx-auto w-full'>
         <div className=''>
           <Link href='/'>
             <Image src={logo} alt='logo' />
@@ -46,39 +53,54 @@ const Navbar = () => {
             <Link href='/about'>ABOUT</Link>
           </li>
 
-          <li className='relative items-center hover:bg-primary-100 cursor-pointer hover:text-black   px-8 py-2 hover:rounded-md'>
-            <div onClick={toggleSubNav} className='flex'>
-              <button className='hover:bg-inherit cursor-pointer   px-8 py-1 hover:rounded-md'>
-                PRODUCTS
-              </button>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='20'
-                height='20'
-                fill='#FFFFFF'
-                viewBox='0 0 256 256'
-                className='opacity-90 mt-2'
-              >
-                <path d='M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z'></path>
-              </svg>
-              <div>
-                <ul
-                  className={`absolute ${
-                    subnav ? 'block' : 'hidden'
-                  } p-3 mt-6  w-[200px]`}
+          <li
+            className='relative group'
+            onMouseEnter={toggleDropdown}
+            onMouseLeave={toggleDropdown}
+          >
+            <a className='flex text-white justify-center gap-2  items-center hover:bg-primary-100 cursor-pointer hover:text-black  px-8 py-2 hover:rounded-md'>
+              <h1> PRODUCTS</h1>
+              <div className='flex items-center pb-2 '>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='20'
+                  height='20'
+                  fill='#FFFFFF'
+                  viewBox='0 0 256 256'
+                  className='opacity-90 mt-2'
                 >
-                  <li className='text-lg'>
-                    <Link href='/assistant'>AI ASSISTANT</Link>
-                  </li>
-                  <li className=' text-lg'>
-                    <Link href='/gene'>CAMPUST GENIE</Link>
-                  </li>
-                  <li className=' text-lg'>
-                    <Link href='/article'>ARTICLE</Link>
-                  </li>
-                </ul>
+                  <path d='M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z'></path>
+                </svg>
               </div>
-            </div>
+            </a>
+            {dropdownOpen && (
+              <ul className='absolute top-full left-0 bg-gray-800  list-none p-0 m-0 min-w-[300px] rounded-sm'>
+                <li>
+                  <a
+                    href='/assistant'
+                    className='text-white px-4 py-2 block hover:bg-gray-700'
+                  >
+                    AI ASSISTANT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href='/gene'
+                    className='text-white px-4 py-2 block hover:bg-gray-700'
+                  >
+                    CAMPUST GENIE
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href='/article'
+                    className='text-white px-4 py-2 block hover:bg-gray-700'
+                  >
+                    ARTICLE
+                  </a>
+                </li>
+              </ul>
+            )}
           </li>
           <li className='hover:bg-primary-100 cursor-pointer hover:text-black   px-8 py-2 hover:rounded-md'>
             <Link href='/resources'>RESOURCES</Link>
@@ -89,7 +111,7 @@ const Navbar = () => {
         </div>
         <div className='flex grow justify-end gap-[10px]'>
           <li className='text-primary-50 border px-8 py-3 hover:bg-primary-100 hover:text-black  rounded-[13px] hover:border-primary-200'>
-            <Link href=''>LOGIN</Link>
+            <Link href='/login'>LOGIN</Link>
           </li>
           <li className='border bg-primary-50 text-black px-8 py-3 rounded-[13px]'>
             <Link href=''>TRY AI</Link>

@@ -72,7 +72,7 @@ const About = () => {
           className="w-full h-auto object-cover rounded-lg mt-8"
         />
       </section> */}
-      <section className='  max-w-7xl mx-auto h-auto min-h-[600px] md:min-h-[800px] py-20 md:py-32 lg:py-32 text-primary-50'>
+      <section className=' max-w-7xl mx-auto h-auto min-h-[600px] md:min-h-[800px] py-20 md:py-32 lg:py-32 text-primary-50'>
         <button className='border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg'>
           <Image src={logo} alt='Logo' />
           <h2 className='flex gap-2'>
@@ -98,7 +98,7 @@ const About = () => {
         />
       </section>
 
-      <section className='h-auto min-h-[600px] text-primary-50 mx-4 lg:mx-4 '>
+      <section className='max-w-7xl mx-auto h-auto min-h-[600px] text-primary-50  lg:mx-4 '>
         <button className='border px-6 lg:px-10 py-3 rounded-lg font-thin'>
           WELCOME
         </button>
@@ -131,7 +131,7 @@ const About = () => {
           </p>
         </div>
       </section>
-      <section className=' text-primary-50  mx-4'>
+      <section className='max-w-7xl mx-auto text-primary-50 '>
         <button className='text-primary-50 font-thin border px-8 py-1 rounded-lg'>
           OUR STORY
         </button>
