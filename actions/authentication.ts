@@ -64,7 +64,7 @@ export const register = action
     return { result: result[1] };
   });
 
-export async function fetchUsers() {
+export const fetchUsers = action.action(async () => {
   try {
     const { db } = await getConnection();
     const userResults: User[] = await db.select().from(users);
@@ -72,24 +72,4 @@ export async function fetchUsers() {
   } catch (err) {
     if (err instanceof Error) console.log(err.stack);
   }
-}
-
-export async function deleteUser(data: FormData) {
-  const { db } = await getConnection();
-  const userIdValue = data.get('userId');
-  if (userIdValue === null || typeof userIdValue !== 'string') {
-    throw new Error('User ID is missing or not a string from FormData');
-  }
-  const userId = parseInt(userIdValue, 10);
-
-  if (typeof userId !== 'number') {
-    throw new Error('User ID is not an integer');
-  }
-
-  try {
-    await db.delete(users).where(eq(users.id, userId));
-    revalidatePath('/');
-  } catch (err) {
-    if (err instanceof Error) console.log(err.stack);
-  }
-}
+});
