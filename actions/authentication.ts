@@ -2,44 +2,63 @@
 
 import { getConnection } from '@/lib/db';
 import { users } from '@/lib/schema';
-import { InferSelectModel, eq } from 'drizzle-orm';
+import { InferSelectModel, eq, and } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
 import { action } from '@/lib/safe-action';
 import { flattenValidationErrors } from 'next-safe-action';
+import bcrypt from 'bcrypt';
 
 export type User = InferSelectModel<typeof users>;
 
 const registerSchema = z.object({
-  username: z.string().min(3).max(10),
+  email: z.string().min(3).max(10),
   password: z.string().min(8).max(100),
 });
 
-export async function login(data: FormData) {
-  const { db } = await getConnection();
-  const nameValue = data.get('name');
-  const emailValue = data.get('email');
+export const login = action
+  .schema(registerSchema, {
+    handleValidationErrorsShape: (ve) =>
+      flattenValidationErrors(ve).fieldErrors,
+  })
+  .action(async ({ parsedInput: { email, password } }) => {
+    const { db } = await getConnection();
 
-  if (typeof nameValue !== 'string' || typeof emailValue !== 'string') {
-    throw new Error('Name and email are not strings');
-  }
+    const result = await db.select().from(users).where(eq(users.email, email));
 
-  await db.insert(users).values({ name: nameValue, email: emailValue });
+    if (result.length === 0) {
+      // Return user not foud error
+    }
 
-  revalidatePath('/');
-}
+    // Compare user password
+    const passwordsMatch = await bcrypt.compare(password, result[0].password);
+
+    if (!passwordsMatch) {
+    }
+
+    revalidatePath('/');
+    return { result: result[0] };
+  });
 
 export const register = action
   .schema(registerSchema, {
     handleValidationErrorsShape: (ve) =>
       flattenValidationErrors(ve).fieldErrors,
   })
-  .action(async ({ parsedInput: { username, password } }) => {
+  .action(async ({ parsedInput: { email, password } }) => {
     const { db } = await getConnection();
+
+    const foundUser = await db
+      .select()
+      .from(users)
+      .where(eq(users.email, email));
+
+    if (foundUser.length > 0) {
+    }
 
     const result = await db
       .insert(users)
-      .values({ name: username, email: password });
+      .values({ email: email, password: password });
 
     revalidatePath('/');
     return { result: result[1] };
