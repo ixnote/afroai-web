@@ -1,7 +1,7 @@
 'use server';
 
 import { getConnection } from '@/lib/db';
-import { users } from '@/lib/schema';
+import { users } from '@/lib/db/schema';
 import { InferSelectModel, eq, and } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
@@ -47,21 +47,6 @@ export const register = action
   })
   .action(async ({ parsedInput: { email, password } }) => {
     const { db } = await getConnection();
-
-    const foundUser = await db
-      .select()
-      .from(users)
-      .where(eq(users.email, email));
-
-    if (foundUser.length > 0) {
-    }
-
-    const result = await db
-      .insert(users)
-      .values({ email: email, password: password });
-
-    revalidatePath('/');
-    return { result: result[1] };
   });
 
 export const fetchUsers = action.action(async () => {
