@@ -6,6 +6,9 @@ export const oauthOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt',
   },
+  pages: {
+    signIn: '/auth/login',
+  },
   providers: [
     CredentialsProvider({
       // The name to display on the sign in form (e.g. 'Sign in with...')
@@ -15,12 +18,8 @@ export const oauthOptions: NextAuthOptions = {
       // e.g. domain, username, password, 2FA token, etc.
       // You can pass any HTML attribute to the <input> tag through the object.
       credentials: {
-        email: {
-          label: 'Email',
-          type: 'text',
-          placeholder: 'johndoe@example.com',
-        },
-        password: { label: 'Password', type: 'password' },
+        email: {},
+        password: {},
       },
       async authorize(credentials, req) {
         // You need to provide your own logic here that takes the credentials
@@ -51,6 +50,8 @@ export const oauthOptions: NextAuthOptions = {
   ],
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
+      console.log(user, account, profile, email, credentials);
+
       //   const isAllowedToSignIn = true;
       //   if (isAllowedToSignIn) {
       //     return true;
@@ -63,6 +64,7 @@ export const oauthOptions: NextAuthOptions = {
 
       return true;
     },
+
     async redirect({ url, baseUrl }) {
       //   // Allows relative callback URLs
       //   if (url.startsWith('/')) return `${baseUrl}${url}`;
@@ -73,12 +75,12 @@ export const oauthOptions: NextAuthOptions = {
 
     async jwt({ token, account, profile }) {
       // Persist the OAuth access_token and or the user id to the token right after signin
-      //   if (account) {
-      //     token.accessToken = account.access_token;
-      //     if (profile) {
-      //       token.id = profile.id;
-      //     }
-      //   }
+      if (account) {
+        token.accessToken = account.access_token;
+        if (profile) {
+          token.user = profile;
+        }
+      }
 
       return token;
     },

@@ -8,6 +8,7 @@ import { z } from 'zod';
 import { action } from '@/lib/safe-action';
 import { flattenValidationErrors } from 'next-safe-action';
 import bcrypt from 'bcrypt';
+import { getServerSession } from 'next-auth';
 
 export type User = InferSelectModel<typeof users>;
 
@@ -22,6 +23,8 @@ export const login = action
       flattenValidationErrors(ve).fieldErrors,
   })
   .action(async ({ parsedInput: { email, password } }) => {
+    const session = getServerSession();
+
     const { db } = await getConnection();
 
     const result = await db.select().from(users).where(eq(users.email, email));
@@ -51,7 +54,10 @@ export const register = action
 
 export const fetchUsers = action.action(async () => {
   try {
+    const session = getServerSession();
+
     const { db } = await getConnection();
+
     const userResults: User[] = await db.select().from(users);
     return userResults;
   } catch (err) {
