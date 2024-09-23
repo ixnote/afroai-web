@@ -2,18 +2,17 @@ import { getConnection } from '@/lib/db';
 import { plans } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
 
-// FETCH ALL PLANS
 export async function GET() {
   try {
     const { db } = await getConnection();
-    const todos = await db.select().from(plans);
-    return new Response(JSON.stringify(todos), {
+    const fetchPlans = await db.select().from(plans);
+    return new Response(JSON.stringify(fetchPlans), {
       headers: {
         'Content-Type': 'application/json',
       },
     });
   } catch (error) {
-    return new Response(JSON.stringify({ error: 'Failed to fetch todos' }), {
+    return new Response(JSON.stringify({ error: 'Failed to fetch Plans' }), {
       status: 500,
       headers: {
         'Content-Type': 'appliaction/json',
@@ -48,7 +47,7 @@ export async function POST(request: Request) {
     } catch (dbError) {
       console.log('Database insertion error: ', dbError);
       return new Response(
-        JSON.stringify({ error: 'Failed to insert new Todo' }),
+        JSON.stringify({ error: 'Failed to insert new Plan' }),
         {
           status: 500,
           headers: {
@@ -68,8 +67,6 @@ export async function POST(request: Request) {
   }
 }
 
-// UPDATE EXISTING PLANS
 export async function PUT(request: Request) {}
 
-// DELETE A PLANS
 export async function DELETE() {}
