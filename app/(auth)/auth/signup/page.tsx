@@ -18,6 +18,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const formSchema = z.object({
   email: z.string().email({ message: 'Valid email address is required' }),
@@ -25,6 +26,7 @@ const formSchema = z.object({
 });
 
 const Signup = () => {
+  const router = useRouter();
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -35,9 +37,32 @@ const Signup = () => {
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    // 3. Call the API.
+    try {
+      const response = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        // setError(data.message || 'Something went wrong');
+        return;
+      }
+
+      // setSuccess('Registration successful');
+      // Redirect to login or homepage
+      router.push('/login');
+    } catch (err) {
+      // setError('An error occurred. Please try again.');
+    }
   }
+
   return (
     <div className='flex flex-col w-full h-full items-center justify-center p-6 bg-[#1d1d1d]'>
       <div className='flex flex-col justify-center items-center h-full w-full gap-10'>
