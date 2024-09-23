@@ -48,30 +48,6 @@ const About = () => {
   }, []);
   return (
     <div>
-      {/* <section className="h-auto min-h-[600px] md:min-h-[800] py-20 md:py-32 lg:py-32 text-primary-50 mx-4 lg:mx-4">
-        <button className="border px-4 lg:px-10 py-2 font-thin  flex gap-2 items-center rounded-lg">
-          <Image src={logo} alt="" />
-          <h2 className="flex gap-2">
-            {" "}
-            <span>/</span>ABOUT
-          </h2>
-        </button>
-
-        <div className="flex flex-col lg:flex-row items-end py-10">
-          <h2 className="text-xl lg:text-8xl lg:w-full text-center lg:text-left">
-            WE EXIST TO EMPOWER AFRICA WITH AI
-          </h2>
-          <div className="mt-6 md:mr-32">
-            <Image src={icon} alt="" width={70} />
-          </div>
-        </div>
-        <hr className="opacity-50" />
-        <Image
-          src={about1}
-          alt="about1"
-          className="w-full h-auto object-cover rounded-lg mt-8"
-        />
-      </section> */}
       <section className=' max-w-7xl mx-auto h-auto min-h-[600px] md:min-h-[800px] py-20 md:py-32 lg:py-32 text-primary-50'>
         <button className='border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg'>
           <Image src={logo} alt='Logo' />
@@ -97,7 +73,6 @@ const About = () => {
           className='w-full h-auto object-cover rounded-lg mt-8'
         />
       </section>
-
       <section className='max-w-7xl mx-auto h-auto min-h-[600px] text-primary-50  lg:mx-4 '>
         <button className='border px-6 lg:px-10 py-3 rounded-lg font-thin'>
           WELCOME

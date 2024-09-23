@@ -155,7 +155,7 @@ const Navbar = () => {
               ABOUT
             </Link>
           </li>
-          <li className='relative items-center'>
+          {/* <li className='relative items-center'>
             <div onClick={toggleSubNav} className='flex gap-1'>
               <button>PRODUCTS</button>
               <div>
@@ -188,6 +188,55 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+          </li> */}
+          <li
+            className='relative group'
+            onMouseEnter={toggleDropdown}
+            onMouseLeave={toggleDropdown}
+          >
+            <a className='flex text-white gap-2 items-center cursor-pointer py-2'>
+              <h1> PRODUCTS</h1>
+              <div className='flex items-center pb-2 '>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='20'
+                  height='20'
+                  fill='#FFFFFF'
+                  viewBox='0 0 256 256'
+                  className='opacity-90 mt-2'
+                >
+                  <path d='M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z'></path>
+                </svg>
+              </div>
+            </a>
+            {dropdownOpen && (
+              <ul className='absolute top-full left-0 bg-gray-800  list-none p-0 m-0 min-w-[300px] rounded-sm'>
+                <li>
+                  <a
+                    href='/assistant'
+                    className='text-white px-4 py-2 block hover:bg-gray-700'
+                  >
+                    AI ASSISTANT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href='/gene'
+                    className='text-white px-4 py-2 block hover:bg-gray-700'
+                  >
+                    CAMPUST GENIE
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href='/article'
+                    className='text-white px-4 py-2 block hover:bg-gray-700'
+                  >
+                    ARTICLE
+                  </a>
+                </li>
+              </ul>
+            )}
           </li>
           <li>
             <Link href='/resources' onClick={closeMenu}>
@@ -207,12 +256,12 @@ const Navbar = () => {
           }`}
         >
           <li className='text-primary-50 border px-6 py-1 rounded-md hover:border-primary-200'>
-            <Link href='' onClick={closeMenu}>
+            <Link href='/login' onClick={closeMenu}>
               LOGIN
             </Link>
           </li>
           <li className='border bg-primary-50 px-6 py-1 rounded-md hover:border-primary-300'>
-            <Link href='' onClick={closeMenu}>
+            <Link href='/signup' onClick={closeMenu}>
               TRY AI
             </Link>
           </li>

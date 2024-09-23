@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { FcGoogle } from 'react-icons/fc';
@@ -10,7 +10,6 @@ import { IoLogoApple } from 'react-icons/io5';
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -18,6 +17,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import Link from 'next/link';
+import { signIn } from 'next-auth/react';
 
 const formSchema = z.object({
   email: z.string().email({ message: 'Valid email address is required' }),
@@ -25,7 +25,7 @@ const formSchema = z.object({
 });
 
 const Login = () => {
-  // 1. Define your form.
+  const [isLoading, setIsLoading] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -35,9 +35,18 @@ const Login = () => {
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsLoading(true);
+    const result = await signIn('credentials', {
+      email: values.email,
+      password: values.password,
+      redirect: false,
+    });
+    if (result?.ok) {
+    }
+    setIsLoading(false);
   }
+
   return (
     <div className='flex flex-col w-full h-full items-center justify-center p-6 bg-[#1d1d1d]'>
       <div className='flex flex-col justify-center items-center h-full w-full gap-10'>
@@ -109,7 +118,8 @@ const Login = () => {
               </div>
               <div className='flex flex-col items-center justify-center gap-4'>
                 <Button
-                  type='submit'
+                  type='button'
+                  onClick={() => signIn('google')}
                   className='flex gap-3 bg-slate-800 w-full h-[50px] hover:bg-black'
                 >
                   <FcGoogle size={25} /> CONTINUE WITH GOOGLE
