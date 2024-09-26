@@ -108,7 +108,7 @@ const Login = () => {
               <div className='flex justify-center items-center'>
                 <p className=''>
                   Don’t have an account?{' '}
-                  <Link href='/signup' className='font-medium'>
+                  <Link href='/register' className='font-medium'>
                     Sign Up
                   </Link>
                 </p>
