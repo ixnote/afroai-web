@@ -11,7 +11,7 @@ import {
 
 export const users = pgTable('users', {
   id: serial('id').primaryKey().notNull(),
-  username: varchar('username', { length: 256 }).notNull(),
+  username: varchar('username', { length: 256 }),
   email: varchar('email', { length: 256 }).unique('email').notNull(),
   password: varchar('password', { length: 256 }).notNull(),
   isActive: boolean('is_active').default(true),
