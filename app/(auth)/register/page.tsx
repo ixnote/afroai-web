@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FcGoogle } from "react-icons/fc";
@@ -25,7 +25,8 @@ const formSchema = z.object({
   password: z.string(),
 });
 
-const Signup = () => {
+const Register = () => {
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
@@ -48,8 +49,6 @@ const Signup = () => {
         body: JSON.stringify(values),
       });
 
-      console.log("🚀 ~ onSubmit ~ response:", response);
-
       const data = await response.json();
 
       if (!response.ok) {
@@ -61,7 +60,6 @@ const Signup = () => {
       // Redirect to login or homepage
       router.push("/login");
     } catch (err) {
-      console.log("🚀 ~ onSubmit ~ err:", err);
       // setError('An error occurred. Please try again.');
     }
   }
@@ -160,4 +158,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Register;
