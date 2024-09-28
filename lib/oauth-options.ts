@@ -1,18 +1,19 @@
-import { NextAuthOptions } from 'next-auth';
-import CredentialsProvider from 'next-auth/providers/credentials';
-import GoogleProvider from 'next-auth/providers/google';
+import { NextAuthOptions } from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
+import axios from "axios";
 
 export const oauthOptions: NextAuthOptions = {
   session: {
-    strategy: 'jwt',
+    strategy: "jwt",
   },
   pages: {
-    signIn: '/auth/login',
+    signIn: "/auth/login",
   },
   providers: [
     CredentialsProvider({
       // The name to display on the sign in form (e.g. 'Sign in with...')
-      name: 'Credentials',
+      name: "Credentials",
       // The credentials is used to generate a suitable form on the sign in page.
       // You can specify whatever fields you are expecting to be submitted.
       // e.g. domain, username, password, 2FA token, etc.
@@ -28,10 +29,10 @@ export const oauthOptions: NextAuthOptions = {
         // e.g. return { id: 1, name: 'J Smith', email: 'jsmith@example.com' }
         // You can also use the `req` object to obtain additional parameters
         // (i.e., the request IP address)
-        const res = await fetch('/api/endpoint', {
-          method: 'POST',
+        const res = await fetch("/your/endpoint", {
+          method: "POST",
           body: JSON.stringify(credentials),
-          headers: { 'Content-Type': 'application/json' },
+          headers: { "Content-Type": "application/json" },
         });
         const user = await res.json();
 
@@ -50,7 +51,32 @@ export const oauthOptions: NextAuthOptions = {
   ],
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
-      console.log(user, account, profile, email, credentials);
+      // console.log(user, account, profile, email, credentials);
+      console.log("🚀 ~ signIn ~ account:", account);
+
+      try {
+        const response = await axios.post(
+          "https://www.afrocentricai.org/auth",
+          {
+            // google_token: account?.access_token, // Ensure this token exists
+            google_token: account?.id_token, // Ensure this token exists
+          },
+          {
+            headers: {
+              "Content-Type": "application/json", // Properly format the headers
+            },
+          }
+        );
+        console.log("🚀 ~ signIn ~ response:", response);
+
+        if (response.status === 200) {
+          console.log("Token successfully sent to backend");
+        } else {
+          console.error("Failed to send token to backend");
+        }
+      } catch (error) {
+        console.error("Error sending token to backend: ", error);
+      }
 
       //   const isAllowedToSignIn = true;
       //   if (isAllowedToSignIn) {

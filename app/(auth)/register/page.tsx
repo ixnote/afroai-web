@@ -39,6 +39,7 @@ const Register = () => {
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log("🚀 ~ onSubmit ~ values:", values);
     // 3. Call the API.
     try {
       const response = await fetch("/api/auth/register", {
@@ -60,6 +61,7 @@ const Register = () => {
       // Redirect to login or homepage
       router.push("/login");
     } catch (err) {
+      console.log("🚀 ~ onSubmit ~ err:", err);
       // setError('An error occurred. Please try again.');
     }
   }
