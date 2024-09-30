@@ -54,7 +54,7 @@ const Footer = () => {
               <span>
                 <IoLocation />
               </span>
-              Flat 2 , Block 25 Karu site, by court roundabout, UND
+              Flat 2 , Block 25 Karu site, by court roundabout, <br /> UND
               Street Karu, Abuja.
             </span>
             <span className="text-primary-50 mt-4 font-inter flex items-center gap-4">
