@@ -54,29 +54,29 @@ export const oauthOptions: NextAuthOptions = {
       // console.log(user, account, profile, email, credentials);
       console.log("🚀 ~ signIn ~ account:", account);
 
-      try {
-        const response = await axios.post(
-          "https://www.afrocentricai.org/auth",
-          {
-            // google_token: account?.access_token, // Ensure this token exists
-            google_token: account?.id_token, // Ensure this token exists
-          },
-          {
-            headers: {
-              "Content-Type": "application/json", // Properly format the headers
-            },
-          }
-        );
-        console.log("🚀 ~ signIn ~ response:", response);
+      // try {
+      //   const response = await axios.post(
+      //     "https://www.afrocentricai.org/auth",
+      //     {
+      //       // google_token: account?.access_token, // Ensure this token exists
+      //       google_token: account?.id_token, // Ensure this token exists
+      //     },
+      //     {
+      //       headers: {
+      //         "Content-Type": "application/json", // Properly format the headers
+      //       },
+      //     }
+      //   );
+      //   console.log("🚀 ~ signIn ~ response:", response);
 
-        if (response.status === 200) {
-          console.log("Token successfully sent to backend");
-        } else {
-          console.error("Failed to send token to backend");
-        }
-      } catch (error) {
-        console.error("Error sending token to backend: ", error);
-      }
+      //   if (response.status === 200) {
+      //     console.log("Token successfully sent to backend");
+      //   } else {
+      //     console.error("Failed to send token to backend");
+      //   }
+      // } catch (error) {
+      //   console.error("Error sending token to backend: ", error);
+      // }
 
       //   const isAllowedToSignIn = true;
       //   if (isAllowedToSignIn) {
