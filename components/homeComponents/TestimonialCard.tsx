@@ -7,7 +7,7 @@ type TestimonialCard = {
 function TestimonialCard({ item }: TestimonialCard) {
   return (
     // <div className=' flex flex-col min-w-[400px] max-w-[300px] gap-6  p-6 border-2 border-gray-600 rounded-lg mx-2'>
-    <div className=" flex flex-col min-w-[430px] max-w-[300px] gap-6  p-6 border-2 border-gray-600 rounded-lg mx-2">
+    <div className=" flex flex-col min-w-[380px] max-w-[300px] gap-6  p-6 border-2 border-gray-600 rounded-lg mx-2">
       <Image src={item.src} alt={item.alt} width={90} />
       <div className="flex flex-col justify-between h-full">
         <p className="text-primary-50 text-[20px]">{item.text}</p>
