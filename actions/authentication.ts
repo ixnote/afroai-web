@@ -1,13 +1,14 @@
 "use server";
 
 import { getConnection } from "@/lib/db";
-import { users } from "@/lib/schema";
+import { users } from "@/lib/db/schema";
 import { InferSelectModel, eq, and } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { action } from "@/lib/safe-action";
 import { flattenValidationErrors } from "next-safe-action";
 import bcrypt from "bcrypt";
+import { getServerSession } from "next-auth";
 
 export type User = InferSelectModel<typeof users>;
 
@@ -22,6 +23,8 @@ export const login = action
       flattenValidationErrors(ve).fieldErrors,
   })
   .action(async ({ parsedInput: { email, password } }) => {
+    const session = getServerSession();
+
     const { db } = await getConnection();
 
     const result = await db.select().from(users).where(eq(users.email, email));
@@ -40,31 +43,21 @@ export const login = action
     return { result: result[0] };
   });
 
-export const register = action.schema(registerSchema, {
-  handleValidationErrorsShape: (ve) => flattenValidationErrors(ve).fieldErrors,
-});
-// .action(async ({ parsedInput: { email, password } }) => {
-//   const { db } = await getConnection();
-
-//   const foundUser = await db
-//     .select()
-//     .from(users)
-//     .where(eq(users.email, email));
-
-//   if (foundUser.length > 0) {
-//   }
-
-//   const result = await db
-//     .insert(users)
-//     .values({ email: email, password: password });
-
-//   revalidatePath('/');
-//   return { result: result[1] };
-// });
+export const register = action
+  .schema(registerSchema, {
+    handleValidationErrorsShape: (ve) =>
+      flattenValidationErrors(ve).fieldErrors,
+  })
+  .action(async ({ parsedInput: { email, password } }) => {
+    const { db } = await getConnection();
+  });
 
 export const fetchUsers = action.action(async () => {
   try {
+    const session = getServerSession();
+
     const { db } = await getConnection();
+
     const userResults: User[] = await db.select().from(users);
     return userResults;
   } catch (err) {

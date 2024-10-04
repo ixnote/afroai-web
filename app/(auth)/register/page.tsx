@@ -10,6 +10,7 @@ import { IoLogoApple } from "react-icons/io5";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -17,15 +18,17 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   email: z.string().email({ message: "Valid email address is required" }),
   password: z.string(),
 });
 
-const Login = () => {
-  const [isLoading, setIsLoading] = useState(false);
+const Register = () => {
+  const [mounted, setMounted] = useState(false);
+  const router = useRouter();
+  // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -36,15 +39,31 @@ const Login = () => {
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsLoading(true);
-    const result = await signIn("credentials", {
-      email: values.email,
-      password: values.password,
-      redirect: false,
-    });
-    if (result?.ok) {
+    console.log("🚀 ~ onSubmit ~ values:", values);
+    // 3. Call the API.
+    try {
+      const response = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        // setError(data.message || 'Something went wrong');
+        return;
+      }
+
+      // setSuccess('Registration successful');
+      // Redirect to login or homepage
+      router.push("/login");
+    } catch (err) {
+      console.log("🚀 ~ onSubmit ~ err:", err);
+      // setError('An error occurred. Please try again.');
     }
-    setIsLoading(false);
   }
 
   return (
@@ -57,17 +76,17 @@ const Login = () => {
             </Link>
           </div>
           <div className="flex flex-col gap-2 justify-center items-center">
-            <h1 className=" font-medium text-3xl">Welcome Back!</h1>
-            <p className=" font-normal text-lg">
-              Sign into your account to continue
+            <h1 className=" font-medium text-3xl">Sign up with free trial</h1>
+            <p className=" font-normal text-lg text-center">
+              Empower your experience, Sign up for a free trial
             </p>
           </div>
         </div>
-        <div className="flex flex-col w-full items-center text-white justify-center">
+        <div className="flex flex-col w-full items-center text-white">
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="flex flex-col gap-6 w-full sm:px-16 px-4 "
+              className="flex flex-col gap-6 w-full sm:px-16 px-4"
             >
               <FormField
                 control={form.control}
@@ -101,15 +120,15 @@ const Login = () => {
               />
               <Button
                 type="submit"
-                className=" bg-white text-black w-full sm:h-[50px] text-xl"
+                className=" bg-white text-black w-full sm:h-[50px] text-lg"
               >
-                Continue
+                GET STARTED
               </Button>
               <div className="flex justify-center items-center">
                 <p className="">
-                  Don’t have an account?{" "}
-                  <Link href="/register" className="font-medium">
-                    Sign Up
+                  Already have an account?{" "}
+                  <Link href="/login" className="font-medium">
+                    Login
                   </Link>
                 </p>
               </div>
@@ -118,8 +137,7 @@ const Login = () => {
               </div>
               <div className="flex flex-col items-center justify-center gap-4">
                 <Button
-                  type="button"
-                  onClick={() => signIn("google")}
+                  type="submit"
                   className="flex gap-3 bg-slate-800 w-full h-[50px] hover:bg-black"
                 >
                   <FcGoogle size={25} /> CONTINUE WITH GOOGLE
@@ -142,4 +160,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
