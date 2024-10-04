@@ -67,8 +67,8 @@ const Testimonials = () => {
 
   return (
     <div>
-      <section className=" mt-16  md:py-12  sm:max-w-7xl sm:mx-auto mx-4 mb-10">
-        <div className=" md:text-left">
+      <section className="mt-16  md:py-12  sm:max-w-7xl sm:mx-auto mx-4 mb-10">
+        <div className="md:text-left">
           <button className="border px-6 py-1 text-primary-50 font-thin rounded-md">
             TESTIMONIALS
           </button>
