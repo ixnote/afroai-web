@@ -1,17 +1,26 @@
 "use client";
 import Image from "next/image";
 import eye from "@/public/assets/svgs/eye.svg";
+import Link from "next/link";
 
 const About = () => {
   return (
     <div>
       <section className=" max-w-7xl mx-auto h-auto min-h-[600px] md:min-h-[800px] py-20 md:py-32 lg:py-32 lg:pt-[200px] text-primary-50">
-        <button className="border px-4 py-2 font-thin flex gap-2 items-center rounded-lg">
-          {/* <Image src={logo} alt="Logo" /> */}
-          <h2 className="flex gap-2">
-            Last updated: <span>1st Oct. 2024</span>
-          </h2>
-        </button>
+        <div className="w-full flex justify-between items-center">
+          <button className="border px-4 py-2 font-thin flex gap-2 items-center rounded-lg">
+            {/* <Image src={logo} alt="Logo" /> */}
+            <h2 className="flex gap-2">
+              Last updated: <span>1st Oct. 2024</span>
+            </h2>
+          </button>
+          <Link
+            href={"/disclaimer"}
+            className="text-xl cursor-pointer hover:text-primary-100"
+          >
+            Read Disclaimer
+          </Link>
+        </div>
 
         <div className="flex flex-col items-center lg:flex-row lg:items-end py-10">
           <h2 className="text-xl lg:text-8xl lg:w-full text-center lg:text-left">
