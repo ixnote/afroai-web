@@ -1,51 +1,8 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
-import icon from "@/public/assets/images/Animated Icon.png";
-import logo from "@/public/assets/svgs/about.svg";
-import about1 from "@/public/assets/images/about1.png";
-import muscles from "@/public/assets/svgs/muscles.svg";
-import message from "@/public/assets/svgs/message.svg";
-import arrow from "@/public/assets/images/arrowUp.png";
-import values from "@/public/assets/svgs/park.svg";
 import eye from "@/public/assets/svgs/eye.svg";
-import map from "@/public/assets/svgs/map.svg";
-import quote from "@/public/assets/svgs/qoute.svg";
-import team from "@/public/assets/images/about2.png";
-import group from "@/public/assets/svgs/team.svg";
-import mission from "@/public/assets/images/about3.png";
 
 const About = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const observerOptions = {
-      threshold: 0.1,
-    };
-
-    const observerCallback: IntersectionObserverCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fade-in");
-        } else {
-          entry.target.classList.remove("fade-in");
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
-    );
-
-    const sections = container.querySelectorAll(".fade-section");
-    sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
-  }, []);
   return (
     <div>
       <section className=" max-w-7xl mx-auto h-auto min-h-[600px] md:min-h-[800px] py-20 md:py-32 lg:py-32 lg:pt-[200px] text-primary-50">
