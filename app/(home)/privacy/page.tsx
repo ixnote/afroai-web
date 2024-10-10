@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div>
       <section className=" max-w-7xl mx-auto h-auto min-h-[600px] md:min-h-[800px] py-20 md:py-32 lg:py-32 lg:pt-[200px] text-primary-50">
-        <div className="w-[90%] mx-auto flex  gap-4 justify-between items-center">
+        <div className="w-[90%] mx-auto flex  gap-4 justify-between items-center lg:w-full">
           <button className="border px-4 py-2 font-thin flex gap-2 items-center rounded-lg">
             <h2 className="flex gap-2">
               Last updated: <span>1st Oct. 2024</span>
