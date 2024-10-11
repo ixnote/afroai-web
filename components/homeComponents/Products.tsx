@@ -1,6 +1,7 @@
 import Image from "next/image";
-import product1 from "@/public/assets/images/product1.png";
-import product2 from "@/public/assets/images/product2.png";
+import product1 from "@/public/assets/images/products/campus1.jpg";
+import product2 from "@/public/assets/images/products/campus2.jpg";
+import product3 from "@/public/assets/images/products/nurse.jpg";
 import star from "@/public/assets/images/star.png";
 import ProductCard from "./ProductCard";
 
@@ -34,7 +35,7 @@ const Products = () => {
       <div className="flex flex-col md:flex-row justify-around sm:mt-12 h-auto gap-8">
         <ProductCard title="AFRO AI" image={product1} link={"/assistant"} />
         <ProductCard title="Campus Genie" image={product2} link={"/genie"} />
-        <ProductCard title="Wise Nurse" image={product2} link={"/article"} />
+        <ProductCard title="Wise Nurse" image={product3} link={"/article"} />
       </div>
     </div>
   );

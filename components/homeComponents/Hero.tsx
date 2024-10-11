@@ -20,9 +20,14 @@ const Hero = () => {
         <hr className="w-full mt-4 md:mt-8 opacity-50" />
         <div className="flex relative sm:mt-10 sm:px-8 w-full sm:h-[704px] h-[220px]">
           <Image src={pics} alt="Icon" fill className="rounded-lg" />
-          <div className="w-[50%] flex items-center justify-center p-8 bg-[#18181A] absolute top-6 left-6 rounded-lg text-primary-50 ">
-            Access premium AI tools like ChatGPT 4 in local currencies. Boost
-            your learning and productivity.
+          <div className="w-[50%] flex flex-col gap-6 items-center justify-start p-8 bg-[#18181A] absolute top-6 left-6 rounded-lg text-primary-50 ">
+            <span className="font-normal text-xl text-primary-50 border-l-2 border-primary-100 pl-4">
+              Access premium AI tools like ChatGPT 4 in local currencies. Boost
+              your learning and productivity.
+            </span>
+            <span className="font-normal text-xl text-primary-50 border-l-2 border-primary-100 pl-4">
+              Our Offerings
+            </span>
           </div>
         </div>
       </div>
