@@ -114,7 +114,7 @@ const Navbar = () => {
         </div>
         <div className="flex grow justify-end gap-[10px]">
           <li className="text-primary-50 border px-8 py-3 hover:bg-primary-100 hover:text-black  rounded-[13px] hover:border-primary-200">
-            <Link href="/login">LOGIN</Link>
+            <Link href="/auth/login">LOGIN</Link>
           </li>
           {/* <li className="border bg-primary-50 text-black px-8 py-3 rounded-[13px]">
             <Link href="">TRY AI</Link>

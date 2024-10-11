@@ -20,10 +20,9 @@ const Hero = () => {
         <hr className="w-full mt-4 md:mt-8 opacity-50" />
         <div className="flex relative sm:mt-10 sm:px-8 w-full sm:h-[704px] h-[220px]">
           <Image src={pics} alt="Icon" fill className="rounded-lg" />
-          <div className="w-50 flex p-8 bg-red-300 absolute top-4 left-4 rounded-lg">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
-            vitae quisquam totam laboriosam nesciunt, aliquid ad! Nostrum eos
-            assumenda placeat ad sequi ab.
+          <div className="w-[50%] flex items-center justify-center p-8 bg-[#18181A] absolute top-6 left-6 rounded-lg text-primary-50 ">
+            Access premium AI tools like ChatGPT 4 in local currencies. Boost
+            your learning and productivity.
           </div>
         </div>
       </div>
