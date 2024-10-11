@@ -13,11 +13,18 @@ type ProductCardProps = {
 const ProductCard = ({ title, image, link }: ProductCardProps) => {
   return (
     <Link
+      // href={`https://app.afrocentricai.org/${link}`}
       href={link}
       className="flex flex-col w-full md:w-full group cursor-pointer rounded-3xl overflow-hidden"
     >
       <div className="flex relative w-full">
-        <Image src={image} alt="" width={800} className=" " />
+        <Image
+          src={image}
+          alt={title}
+          width={800}
+          height={450}
+          className="object-cover h-[450px] w-full"
+        />
       </div>
 
       <div className="group flex w-full justify-between group-hover:bg-white py-4 px-4 transition duration-300 items-center">

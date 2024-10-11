@@ -80,12 +80,12 @@ const Navbar = () => {
                     href="/assistant"
                     className="text-white px-4 py-2 block hover:bg-gray-700"
                   >
-                    AI ASSISTANT
+                    AFRO AI
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/gene"
+                    href="/genie"
                     className="text-white px-4 py-2 block hover:bg-gray-700"
                   >
                     CAMPUST GENIE
@@ -96,7 +96,7 @@ const Navbar = () => {
                     href="/article"
                     className="text-white px-4 py-2 block hover:bg-gray-700"
                   >
-                    ARTICLE
+                    WISE NURSE
                   </a>
                 </li>
               </ul>

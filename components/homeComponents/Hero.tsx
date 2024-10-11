@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="w-full flex flex-col items-center md:items-start">
         <div className="text-primary-50 px-4 sm:px-10 font-inter flex justify-between items-center md:items-end w-full">
           <div className="text-[26px] sm:text-[48px] flex gap-1  md:text-[78px] lg:text-[80px] text-left md:text-left mt-0 md:mt-20 leading-tight md:leading-[100px]">
-            Unlock AI Power, <br /> Tailored for Africa
+            Unlock the Power of AI, <br /> Tailored for Africa{" "}
           </div>
           <div className=" sm:mt-20 py-4 ">
             <Image src={Icon} alt="Icon" className="w-14 md:w-18 " />
@@ -20,13 +20,35 @@ const Hero = () => {
         <hr className="w-full mt-4 md:mt-8 opacity-50" />
         <div className="flex relative sm:mt-10 sm:px-8 w-full sm:h-[704px] h-[220px]">
           <Image src={pics} alt="Icon" fill className="rounded-lg" />
-          <div className="w-[50%] flex flex-col gap-6 items-center justify-start p-8 bg-[#18181A] absolute top-6 left-6 rounded-lg text-primary-50 ">
+          <div className="w-[50%] flex flex-col gap-8 items-start justify-start p-8 bg-[#18181A] absolute top-6 left-6 rounded-lg text-primary-50 ">
             <span className="font-normal text-xl text-primary-50 border-l-2 border-primary-100 pl-4">
-              Access premium AI tools like ChatGPT 4 in local currencies. Boost
-              your learning and productivity.
+              Unlock your academic potential with Afro AI. Boost your study
+              efficiency and enhance your learning outcomes, potentially leading
+              to a 5-10x improvement in academic performance.
             </span>
-            <span className="font-normal text-xl text-primary-50 border-l-2 border-primary-100 pl-4">
-              Our Offerings
+            <span className="flex flex-col gap-2 font-normal text-primary-50 border-l-2 border-primary-100 pl-4">
+              <span className="text-xl border-b-2 border-primary-100 w-max pb-2">
+                Our Offerings
+              </span>
+              <h3>
+                Interact with your lecture notes and past exam questions using:
+              </h3>
+              <div className="flex flex-col gap-2 pl-4">
+                <h4 className="flex items-start">
+                  <div className="mr-6">●</div> Campus Genie: AI-powered
+                  assistant for university, polytechnic, and college of
+                  education students.
+                </h4>
+                <h4 className="flex items-start">
+                  <div className="mr-6">●</div> Wise Nurse: Specialized AI tutor
+                  for nursing and medical students, focusing on anatomy,
+                  physiology, and more.
+                </h4>
+                <h4 className="flex items-start">
+                  <div className="mr-6">●</div> Affordable access to ChatGPT 4o
+                  through our AI assistant &quot;Afro&quot;
+                </h4>
+              </div>
             </span>
           </div>
         </div>
