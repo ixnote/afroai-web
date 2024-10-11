@@ -69,7 +69,7 @@ const Login = () => {
               onSubmit={form.handleSubmit(onSubmit)}
               className="flex flex-col gap-6 w-full sm:px-16 px-4 "
             >
-              <FormField
+              {/* <FormField
                 control={form.control}
                 name="email"
                 render={({ field }) => (
@@ -115,7 +115,7 @@ const Login = () => {
               </div>
               <div className="flex justify-center items-center w-full h-[0.5px] bg-slate-300 ">
                 <span className=" bg-black p-2">Or</span>
-              </div>
+              </div> */}
               <div className="flex flex-col items-center justify-center gap-4">
                 <Button
                   type="button"
