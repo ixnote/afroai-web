@@ -13,20 +13,24 @@ import plus2 from "@/public/assets/svgs/plus1.svg";
 
 const Gene = () => {
   return (
-    <div className="bg-primary-300">
+    // <div className="bg-primary-300">
+    <div className="pt-24 items-center list-none max-w-7xl mx-auto w-full lg:flex lg:flex-col lg:gap-8">
       <section className="h-auto min-h-[800px] pt-24 lg:pt-24 text-primary-50 mx-4 lg:mx-2">
         <div className="flex justify-center lg:justify-start">
           <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
-          <Image src={logo} alt="" />
-          <h2 className="flex gap-2"> <span>/</span>CAMPUS GENIE</h2>
-        </button>
+            <Image src={logo} alt="" />
+            <h2 className="flex gap-2">
+              {" "}
+              <span>/</span>CAMPUS GENIE
+            </h2>
+          </button>
         </div>
 
         <div className="flex flex-col lg:flex-row items-center py-10">
           <h2 className="text-xl lg:text-8xl lg:w-full text-center lg:text-left">
             UNLOCK YOUR ACADEMIC POTENTIALS WITH CAMPUS GENE
           </h2>
-          <hr  className="opacity-50"/>
+          <hr className="opacity-50" />
           <div className="mt-6 lg:mt-0">
             <Image
               src={icon}
@@ -106,7 +110,7 @@ const Gene = () => {
         </div>
         <hr className="opacity-50 font-thin" />
       </section>
-      <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2">
+      <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 w-full">
         <div className="flex justify-center lg:justify-start">
           <button className="border px-6 lg:px-10 py-3 rounded-lg font-thin">
             PRICING
@@ -158,115 +162,117 @@ const Gene = () => {
             <p className="mt-8">100% FREE TOKENS/MONTH</p>
           </div>
         </div>
-      <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
-        <div>
-          <p className="py-6 text-center lg:text-left text-2xl lg:text-3xl font-inter">
-            FEATURES
-          </p>
-          <hr className="opacity-50 my-4" />
-          <div className="py-8 ">
-            <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-              <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                Basic AI Capabilities
-              </p>
-              <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+        <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
+          <div>
+            <p className="py-6 text-center lg:text-left text-2xl lg:text-3xl font-inter">
+              FEATURES
+            </p>
+            <hr className="opacity-50 my-4" />
+            <div className="py-8 ">
+              <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
+                <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
+                  Basic AI Capabilities
+                </p>
+                <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-              <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                Essential Tools
-              </p>
-              <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+              <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
+                <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
+                  Essential Tools
+                </p>
+                <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-              <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                Limited Usage
-              </p>
-              <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus2} alt="plus svg" className="w-8 h-8" />
+              <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
+                <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
+                  Limited Usage
+                </p>
+                <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus2} alt="plus svg" className="w-8 h-8" />
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-              <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                Priority Support
-              </p>
-              <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                <Image src={plus2} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+              <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
+                <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
+                  Priority Support
+                </p>
+                <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
+                  <Image src={plus2} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-              <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                Expanded Features
-              </p>
-              <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                <Image src={plus2} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+              <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
+                <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
+                  Expanded Features
+                </p>
+                <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
+                  <Image src={plus2} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-              <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                Premium AI
-              </p>
-              <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                <Image src={plus2} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+              <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
+                <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
+                  Premium AI
+                </p>
+                <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
+                  <Image src={plus2} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-              <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                Unlimited Usage
-              </p>
-              <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                <Image src={plus2} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+              <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
+                <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
+                  Unlimited Usage
+                </p>
+                <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
+                  <Image src={plus2} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-              <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                Dedicated Support
-              </p>
-              <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                <Image src={plus2} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+              <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
+                <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
+                  Dedicated Support
+                </p>
+                <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
+                  <Image src={plus2} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                  <Image src={plus1} alt="plus svg" className="w-8 h-8" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       </section>
       <section>
         <div className="bg-primary-100 py-4">
           <div className="flex flex-col md:flex-row items-center justify-around ">
             <div className="w-full md:w-3/5 text-center md:text-left">
-              <h2 className="text-3xl md:text-6xl md:w-3/4 font-inter">JOIN THE CAMPUS GENIE COMMUNITY</h2>
+              <h2 className="text-3xl md:text-6xl md:w-3/4 font-inter">
+                JOIN THE CAMPUS GENIE COMMUNITY
+              </h2>
               <p className="mt-8 text-sm md:text-base lg:text-lg">
-              Join the thousands of users who are already experiencing the
+                Join the thousands of users who are already experiencing the
                 difference with Afro AI Assistant. Whether you&apos;re in Lagos,
                 Nairobi, or anywhere in between, Afro AI Assistant is here to
                 empower you on your digital journey.
               </p>
             </div>
 
-            <button className="flex items-center mt-3 font-inter text-xl justify-center gap-2 text-primary-50 hover:bg-primary-50 hover:text-black  bg-black  w-3/4 max-w-xs md:max-w-sm h-16 rounded-xl px-4"> 
+            <button className="flex items-center mt-3 font-inter text-xl justify-center gap-2 text-primary-50 hover:bg-primary-50 hover:text-black  bg-black  w-3/4 max-w-xs md:max-w-sm h-16 rounded-xl px-4">
               TRY CAMPUS GENIE
               <span className=" hover:text-black">
                 <Image src={arrow} alt="Arrow" width={25} />
-              </span> 
+              </span>
             </button>
           </div>
         </div>
