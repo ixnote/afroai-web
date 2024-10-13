@@ -3,7 +3,15 @@ import Image from "next/image";
 import React from "react";
 import symbol from "@/public/assets/images/symbol.png";
 import { usePathname } from "next/navigation";
-import { IoLocation, IoMail, IoNavigate } from "react-icons/io5";
+import {
+  IoGlobe,
+  IoLocation,
+  IoLogoFacebook,
+  IoLogoInstagram,
+  IoLogoTwitter,
+  IoMail,
+  IoNavigate,
+} from "react-icons/io5";
 
 const Footer = () => {
   const path = usePathname();
@@ -49,7 +57,7 @@ const Footer = () => {
               help you with all your enquiries.
             </p>
           </div>
-          <div>
+          <div className="flex flex-col gap-4">
             <span className="text-primary-50 mt-4 font-inter flex items-center gap-4">
               <span>
                 <IoLocation />
@@ -62,6 +70,34 @@ const Footer = () => {
                 <IoMail />
               </span>
               support@afrocentricai.com
+            </span>
+            <span className="text-primary-50 mt-4 font-inter flex flex-col justify-start items-start gap-4">
+              <div className="flex gap-4 items-center">
+                <span>
+                  <IoGlobe />
+                </span>
+                Follow us:
+              </div>
+              <div className="flex flex-col items-start justify-start gap-1 ml-8">
+                <span className="text-primary-50/70 mt-4 font-inter flex items-center gap-4">
+                  <span>
+                    <IoLogoTwitter />
+                  </span>
+                  AfroAI
+                </span>
+                <span className="text-primary-50/70 mt-4 font-inter flex items-center gap-4">
+                  <span>
+                    <IoLogoFacebook />
+                  </span>
+                  AfroAIOfficial
+                </span>
+                <span className="text-primary-50/70 mt-4 font-inter flex items-center gap-4">
+                  <span>
+                    <IoLogoInstagram />
+                  </span>
+                  afro.ai
+                </span>
+              </div>
             </span>
           </div>
         </div>
@@ -116,7 +152,7 @@ const Footer = () => {
           </form>
         </div>
       </div>
-      <div>
+      <div className="mt-12">
         <h1 className=" text-white text-xl">
           powered by Blathium Technologies
         </h1>
