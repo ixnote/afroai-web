@@ -42,8 +42,9 @@ const Navbar = () => {
       {/* Desktop Nav */}
       <div className="hidden lg:flex items-center  list-none  sm:max-w-7xl sm:mx-auto w-full">
         <div className="">
-          <Link href="/">
-            <Image src={logo} alt="logo" />
+          <Link href="/" className="flex items-end justify-center gap-1">
+            <Image src={logo} className="w-[32px]" alt="logo" />
+            <span className="text-primary-100 text-xs font-sans">AFRO AI</span>
           </Link>
         </div>
         <div
