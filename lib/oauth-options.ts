@@ -8,6 +8,7 @@ export const oauthOptions: NextAuthOptions = {
     strategy: "jwt",
   },
   pages: {
+    // signIn: "/auth/login",
     signIn: "/auth/login",
   },
   providers: [
@@ -96,7 +97,8 @@ export const oauthOptions: NextAuthOptions = {
       //   if (url.startsWith('/')) return `${baseUrl}${url}`;
       //   // Allows callback URLs on the same origin
       //   else if (new URL(url).origin === baseUrl) return url;
-      return baseUrl;
+      // return baseUrl;
+      return "https://app.afrocentricai.org";
     },
 
     async jwt({ token, account, profile }) {
