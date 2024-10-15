@@ -106,7 +106,7 @@ const Navbar = () => {
             <Link href="/resources">RESOURCES</Link>
           </li>
           <li className="hover:bg-primary-100 cursor-pointer hover:text-black   px-8 py-2 hover:rounded-md">
-            <Link href="/privacy">PRIVACY</Link>
+            <Link href="/community">COMMUNITY</Link>
           </li>
           <li className="hover:bg-primary-100 cursor-pointer hover:text-black   px-8 py-2 hover:rounded-md">
             <Link href="/contact">CONTACT</Link>

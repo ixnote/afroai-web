@@ -109,19 +109,35 @@ const Contact = () => {
                     <span>
                       <IoLogoTwitter />
                     </span>
-                    AfroAI
+                    <Link
+                      href={"https://x.com/afroai"}
+                      className="hover:text-primary-100"
+                    >
+                      AfroAI
+                    </Link>
                   </span>
                   <span className="text-primary-50/70 mt-4 font-inter flex items-center gap-4">
                     <span>
                       <IoLogoFacebook />
                     </span>
-                    AfroAIOfficial
+                    <Link
+                      href={"https://www.facebook.com/"}
+                      className="hover:text-primary-100"
+                    >
+                      AfroAIOfficial
+                    </Link>
                   </span>
                   <span className="text-primary-50/70 mt-4 font-inter flex items-center gap-4">
                     <span>
                       <IoLogoInstagram />
                     </span>
-                    afro.ai
+
+                    <Link
+                      href={"https://www.instagram.com/afro.ai"}
+                      className="hover:text-primary-100"
+                    >
+                      afro.ai
+                    </Link>
                   </span>
                 </div>
               </span>
@@ -189,7 +205,10 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="h-max my-12 min-h-[600px] py-4 text-primary-50 max-w-7xl mx-auto">
+      <section
+        id="faq"
+        className="h-max my-12 min-h-[600px] py-4 text-primary-50 max-w-7xl mx-auto"
+      >
         <button className="border px-4 lg:px-10 py-2 rounded-lg font-thin">
           FAQS
         </button>

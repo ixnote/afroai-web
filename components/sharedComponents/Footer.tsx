@@ -12,6 +12,7 @@ import {
   IoMail,
   IoNavigate,
 } from "react-icons/io5";
+import Link from "next/link";
 
 const Footer = () => {
   const path = usePathname();
@@ -152,10 +153,27 @@ const Footer = () => {
           </form>
         </div>
       </div>
-      <div className="mt-12">
+      <div className="mt-12 w-full flex justify-between">
         <h1 className=" text-white text-xl">
-          powered by Blathium Technologies
+          Powered by Blathium Technologies
         </h1>
+        <div className="flex items-center gap-4">
+          <Link
+            href={"/privacy"}
+            className="text-base cursor-pointer text-primary-100 hover:text-primary-100/60 lg:text-xl"
+          >
+            Privacy Policy
+          </Link>
+          <span className="text-base cursor-pointer text-primary-100 lg:text-xl">
+            /
+          </span>
+          <Link
+            href={"/disclaimer"}
+            className="text-base cursor-pointer text-primary-100 hover:text-primary-100/60 lg:text-xl"
+          >
+            Disclaimer
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -32,8 +32,8 @@ const Resources = () => {
           </div>
         </div>
         <hr className="opacity-50 my-8 w-full" />
-        <div className="flex flex-col md:flex-row justify-around mt-12 h-auto gap-6 ">
-          <Link
+        <div className="flex flex-col md:flex-row justify-start mt-12 h-auto gap-6 ">
+          {/* <Link
             href={"/article/12"}
             className="w-full md:w-2/4 border rounded-xl cursor-pointer"
           >
@@ -50,7 +50,7 @@ const Resources = () => {
                 Engage with Afro AI Experts
               </h2>
             </div>
-          </Link>
+          </Link> */}
           <Link
             href={"/article/12"}
             className="w-full md:w-2/4 border rounded-xl cursor-pointer"
