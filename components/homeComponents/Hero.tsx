@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="w-full flex flex-col items-center md:items-start">
         <div className="text-primary-50 px-4 sm:px-10 font-inter flex justify-between items-center md:items-end w-full">
           <div className="text-[26px] sm:text-[48px] flex gap-1  md:text-[78px] lg:text-[80px] text-left md:text-left mt-0 md:mt-20 leading-tight md:leading-[100px]">
-            Unlock AI Power, <br /> Tailored for Africa{" "}
+            Unlock AI Power <br /> Tailored for Africa{" "}
           </div>
           <div className=" sm:mt-20 py-4 ">
             <Image src={Icon} alt="Icon" className="w-14 md:w-18 " />
