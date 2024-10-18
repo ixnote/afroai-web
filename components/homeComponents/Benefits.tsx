@@ -28,8 +28,8 @@ const Benefits = () => {
         <hr className="opacity-50 mx-8" />
       </div>
       <div className="flex flex-col sm:flex-row w-full border rounded-xl mt-8  overflow-hidden">
-        <div className="flex flex-col items-start justify-start gap-4 text-primary-50 w-full sm:w-1/3 text-xl md:text-2xl lg:text-[45px]  text-center md:text-left py-10 md:py-6 md:px-4 sm:h-auto ">
-          <h2>WHY AFRO AI?</h2>
+        <div className="flex flex-col items-start justify-start gap-4 text-primary-50 p-8 w-full sm:w-1/3 text-xl md:text-2xl lg:text-[45px]  text-center md:text-left py-10 md:py-8 md:px-8 sm:h-auto ">
+          <h2 className="w-full">WHY AFRO AI?</h2>
           <p className="mt-8 text-sm md:text-base lg:text-lg">
             AFFORDABLE: You you can access the premium version of ChatGpt 4o
             through our AI assistant Afro AI for just N2,800 (about 28 Ghanaian

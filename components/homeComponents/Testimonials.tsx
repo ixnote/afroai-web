@@ -55,13 +55,13 @@ const Testimonials = () => {
 
   const scrollLeft = () => {
     if (containerRef.current) {
-      containerRef.current.scrollBy({ left: -397, behavior: "smooth" });
+      containerRef.current.scrollBy({ left: -335, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (containerRef.current) {
-      containerRef.current.scrollBy({ left: 397, behavior: "smooth" });
+      containerRef.current.scrollBy({ left: 335, behavior: "smooth" });
     }
   };
 
