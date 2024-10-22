@@ -128,8 +128,11 @@ const Navbar = () => {
       <div className="lg:hidden">
         <div className="py-2 px-2 flex justify-between items-center mx-4 list-none">
           <div>
-            <Link href="/">
-              <Image src={logo} alt="logo" />
+            <Link href="/" className="flex items-end justify-center gap-1">
+              <Image src={logo} className="w-[32px]" alt="logo" />
+              <span className="text-primary-100 text-xs font-sans">
+                AFRO AI
+              </span>
             </Link>
           </div>
           {/* Hamburger Menu */}
@@ -159,40 +162,6 @@ const Navbar = () => {
               ABOUT
             </Link>
           </li>
-          {/* <li className='relative items-center'>
-            <div onClick={toggleSubNav} className='flex gap-1'>
-              <button>PRODUCTS</button>
-              <div>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='30'
-                  height='30'
-                  fill='#FFFFFF'
-                  viewBox='0 0 256 256'
-                  className='opacity-90'
-                >
-                  <path d='M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z'></path>
-                </svg>
-                <div>
-                  <ul
-                    className={`absolute ${
-                      subnav ? 'block' : 'hidden'
-                    } w-38  ml-4 p-4`}
-                  >
-                    <li className=''>
-                      <Link href='/about'>AI ASSISTANT</Link>
-                    </li>
-                    <li>
-                      <Link href='/about'>CAMPUST GENIE</Link>
-                    </li>
-                    <li>
-                      <Link href='/about'>ARTICLE</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li> */}
           <li
             className="relative group"
             onMouseEnter={toggleDropdown}
@@ -225,7 +194,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    href="/gene"
+                    href="/genie"
                     className="text-white px-4 py-2 block hover:bg-gray-700"
                   >
                     CAMPUST GENIE
@@ -233,10 +202,10 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    href="/article"
+                    href="/wisenurse"
                     className="text-white px-4 py-2 block hover:bg-gray-700"
                   >
-                    ARTICLE
+                    WISE NURSE
                   </a>
                 </li>
               </ul>
@@ -245,6 +214,11 @@ const Navbar = () => {
           <li>
             <Link href="/resources" onClick={closeMenu}>
               RESOURCES
+            </Link>
+          </li>
+          <li>
+            <Link href="/community" onClick={closeMenu}>
+              COMMUNITY
             </Link>
           </li>
           <li>
@@ -259,14 +233,14 @@ const Navbar = () => {
             isOpen ? "block" : "hidden"
           }`}
         >
-          <li className="text-primary-50 border px-6 py-1 rounded-md hover:border-primary-200">
+          {/* <li className="text-primary-50 border px-6 py-1 rounded-md hover:border-primary-200">
             <Link href="/login" onClick={closeMenu}>
               LOGIN
             </Link>
-          </li>
+          </li> */}
           <li className="border bg-primary-50 px-6 py-1 rounded-md hover:border-primary-300">
-            <Link href="/signup" onClick={closeMenu}>
-              TRY AI
+            <Link href="/login" onClick={closeMenu}>
+              LOGIN
             </Link>
           </li>
         </div>

@@ -10,13 +10,14 @@ import circle from "@/public/assets/svgs/circle.svg";
 import diamond from "@/public/assets/svgs/diamond.svg";
 import plus1 from "@/public/assets/svgs/plus2.svg";
 import plus2 from "@/public/assets/svgs/plus1.svg";
+import FeatureItem from "@/components/ui/FeatureItem";
 
 const Gene = () => {
   return (
     // <div className="bg-primary-300">
     <>
       <div className="pt-24 items-center list-none max-w-7xl mx-auto w-full lg:flex lg:flex-col lg:gap-8">
-        <section className="h-auto min-h-[800px] pt-24 lg:pt-24 text-primary-50 mx-4 lg:mx-2">
+        <section className="h-auto min-h-[800px] pt-24 lg:pt-20 text-primary-50 mx-4 lg:mx-4">
           <div className="flex justify-center lg:justify-start">
             <button className="border px-4 lg:px-10 py-2 font-thin flex gap-2 items-center rounded-lg">
               <Image src={logo} alt="" />
@@ -28,10 +29,9 @@ const Gene = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row items-center py-10">
-            <h2 className="text-xl lg:text-8xl lg:w-full text-center lg:text-left uppercase">
+            <h2 className="text-xl lg:text-8xl lg:w-full text-center lg:text-left">
               Wise Nurse: Your AI Health Education Companion
             </h2>
-            <hr className="opacity-50" />
             <div className="mt-6 lg:mt-0">
               <Image
                 src={icon}
@@ -41,7 +41,7 @@ const Gene = () => {
             </div>
           </div>
           <hr className="opacity-50 my-8 " />
-          <p className="w-full mx-auto text-2xl text-center my-2">
+          <p className="w-full mx-auto text-xl text-center my-2 lg:text-2xl">
             Imagine having a brilliant healthcare mentor available 24/7 to help
             you understand complex medical concepts, review case studies, and
             prepare for exams. That&apos;s Wise Nurse! It&apos;s an innovative
@@ -50,32 +50,33 @@ const Gene = () => {
             educational journey.
           </p>
 
-          <Image
-            src={wise_nurse}
-            alt="wise nurse"
-            className="w-[1376px] h-[704px] object-cover rounded-lg mt-8"
-          />
+          <div className="relative w-full max-w-[1376px] mt-8">
+            <Image
+              src={wise_nurse}
+              alt="wise nurse"
+              className="w-full h-auto max-h-[80vh] object-cover rounded-lg"
+            />
+          </div>
         </section>
 
-        <section className="w-full h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2  lg:py-16">
+        <section className="w-full my-12 h-auto min-h-[700px] text-primary-50 px-4 lg:px-2  lg:py-16">
           <div className="flex justify-center lg:justify-start">
             <button className="border px-6 lg:px-10 py-3 rounded-lg font-thin">
               STUDY COMPANION
             </button>
           </div>
-          <div className="w-full lg:w-[40%] flex flex-col md:flex-row items-center py-6 text-2xl md:text-4xl font-inter">
-            <h2 className="text-center md:text-left uppercase mr-4">
-              How Wise Nurse Works
-            </h2>
+          <div className="flex items-center justify-center text-left py-10 text-2xl md:text-4xl font-inter space-x-4 lg:justify-start">
+            <h2 className="uppercase">How wise nurse works</h2>
             <Image
               src={light}
               alt="message icon"
-              width={60}
-              className="lg:mb-10 md:mr-32"
+              width={32}
+              height={32}
+              className="object-contain"
             />
           </div>
           <hr className="opacity-50 my-8" />
-          <div className="flex flex-col md:flex-row items-center gap-8 py-8">
+          <div className="flex flex-col md:flex-row items-center gap-8 py-8 w-full">
             <p className="w-full md:w-1/2 text-2xl lg:text-3xl">
               Upload Your Medical Materials
             </p>
@@ -92,7 +93,7 @@ const Gene = () => {
             </div>
           </div>
           <hr className="opacity-50 my-8" />
-          <div className="flex flex-col md:flex-row items-center gap-8 py-8">
+          <div className="flex flex-col md:flex-row items-center gap-8 py-8 w-full">
             <p className="w-full md:w-1/2 text-2xl lg:text-3xl">
               We Process Your Documents
             </p>
@@ -108,7 +109,7 @@ const Gene = () => {
             </div>
           </div>
           <hr className="opacity-50 my-8" />
-          <div className="flex flex-col md:flex-row items-center gap-8 py-8">
+          <div className="flex flex-col md:flex-row items-center gap-8 py-8 w-full">
             <p className="w-full md:w-1/2 text-2xl lg:text-3xl">
               Get Set for Enhanced Learning
             </p>
@@ -124,7 +125,7 @@ const Gene = () => {
             </div>
           </div>
           <hr className="opacity-50 my-8" />
-          <div className="flex flex-col md:flex-row items-center gap-8 py-8">
+          <div className="flex flex-col md:flex-row items-center gap-8 py-8 w-full">
             <p className="w-full md:w-1/2 text-2xl lg:text-3xl">
               Start Your AI-Assisted Medical Learning
             </p>
@@ -143,25 +144,24 @@ const Gene = () => {
           <hr className="opacity-50 font-thin" />
         </section>
 
-        <section className="w-full h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2  lg:py-16">
+        <section className="w-full my-12 h-auto min-h-[700px] text-primary-50 px-4 lg:px-2  lg:py-16">
           <div className="flex justify-center lg:justify-start">
             <button className="border px-6 lg:px-10 py-3 rounded-lg font-thin uppercase">
               Did you know?
             </button>
           </div>
-          <div className="w-full lg:w-[40%] flex flex-col md:flex-row items-center py-6 text-2xl md:text-4xl font-inter">
-            <h2 className="text-center md:text-left uppercase mr-4">
-              Key Features
-            </h2>
+          <div className="flex items-center justify-center text-left py-10 text-2xl md:text-4xl font-inter space-x-4 lg:justify-start">
+            <h2 className="uppercase">Key features</h2>
             <Image
               src={light}
               alt="message icon"
-              width={60}
-              className="lg:mb-10 md:mr-32"
+              width={32}
+              height={32}
+              className="object-contain"
             />
           </div>
           <hr className="opacity-50 my-8" />
-          <div className="flex flex-col md:flex-row items-center gap-8 py-8">
+          <div className="flex flex-col md:flex-row items-center gap-8 py-8 w-full">
             <p className="w-full md:w-1/2 text-2xl lg:text-3xl">Time-Saving</p>
             <p className="w-full md:w-1/2 text-md">
               Check our database of pre-loaded medical courses. Your materials
@@ -169,7 +169,7 @@ const Gene = () => {
             </p>
           </div>
           <hr className="opacity-50 my-8" />
-          <div className="flex flex-col md:flex-row items-center gap-8 py-8">
+          <div className="flex flex-col md:flex-row items-center gap-8 py-8 w-full">
             <p className="w-full md:w-1/2 text-2xl lg:text-3xl">
               Learn to Maximize Wise Nurse
             </p>
@@ -179,7 +179,7 @@ const Gene = () => {
             </p>
           </div>
           <hr className="opacity-50 my-8" />
-          <div className="flex flex-col md:flex-row items-center gap-8 py-8">
+          <div className="flex flex-col md:flex-row items-center gap-8 py-8 w-full">
             <p className="w-full md:w-1/2 text-2xl lg:text-3xl">
               AI Flexibility
             </p>
@@ -204,148 +204,72 @@ const Gene = () => {
           </p>
         </div>
 
-        <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 w-full">
+        <section className="w-full h-auto min-h-[800px] mb-20 text-primary-50 px-4 lg:px-2">
           <div className="flex justify-center lg:justify-start">
             <button className="border px-6 lg:px-10 py-3 rounded-lg font-thin">
               PRICING
             </button>
           </div>
-          <div className="w-full lg:w-[45%]  flex flex-col md:flex-row items-center py-6 text-2xl md:text-4xl font-inter">
-            <h2 className="text-center md:text-left">
-              DISCOVER THE PERFECT PLAN
-            </h2>
+
+          <div className="flex items-center justify-center text-left py-6 text-2xl md:text-4xl font-inter space-x-4 lg:justify-start">
+            <h2 className="uppercase">DISCOVER THE PERFECT PLAN</h2>
             <Image
               src={money}
               alt="message icon"
-              width={60}
-              className="lg:mb-10 md:mr-40 lg:mr-56"
+              width={32}
+              height={32}
+              className="object-contain"
             />
           </div>
+
           <hr className="opacity-50 my-8" />
-          <div className="w-full lg:w-3/5 mx-auto md:mx-[30%] lg:mx-[30%]  flex flex-col md:flex-row justify-between items-center mt-10">
-            <div className="flex flex-col items-center text-center">
-              <Image src={square} alt="square" />
-              <p className="mt-8 text-2xl">FREE</p>
-            </div>
-            <div className="flex flex-col items-center text-center mt-10 md:mt-0">
-              <Image src={circle} alt="circle" />
-              <p className="mt-8 text-2xl">PRO</p>
-            </div>
-            <div className="flex flex-col items-center text-center mt-10 md:mt-0">
-              <Image src={diamond} alt="diamond" />
-              <p className="mt-8 text-2xl">PREMIUM</p>
-            </div>
-          </div>
-          <div className="w-full lg:w-3/4 mx-auto md:mx-[23%] lg:mx-[23%] flex flex-col md:flex-row justify-around items-center mt-16 gap-2">
-            <div className="flex flex-col  mt-10 md:mt-0 lg:ml-20">
-              <p className="mt-8 text-2xl">
-                <span className="text-5xl">&#8358;0</span>
-              </p>
-              <p className="mt-8">100% FREE TOKENS/MONTH</p>
-            </div>
-            <div className="flex flex-col  mt-10 md:mt-0  lg:ml-28">
-              <p className="mt-8 text-2xl">
-                <span className="text-5xl">&#8358;1,000</span>
-              </p>
-              <p className="mt-8">100% FREE TOKENS/MONTH</p>
-            </div>
-            <div className="flex flex-col  mt-10 md:mt-0 lg:ml-24">
-              <p className="mt-8 text-2xl">
-                <span className="text-5xl">&#8358;2,000</span>
-              </p>
-              <p className="mt-8">100% FREE TOKENS/MONTH</p>
-            </div>
-          </div>
-          <section className="h-auto min-h-[800px] text-primary-50 mx-4 lg:mx-2 py-8 lg:py-16">
-            <div>
-              <p className="py-6 text-center lg:text-left text-2xl lg:text-3xl font-inter">
-                FEATURES
-              </p>
-              <hr className="opacity-50 my-4" />
-              <div className="py-8 ">
-                <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-                  <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                    Basic AI Capabilities
-                  </p>
-                  <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                  </div>
-                </div>
-                <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-                  <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                    Essential Tools
-                  </p>
-                  <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                  </div>
-                </div>
-                <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-                  <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                    Limited Usage
-                  </p>
-                  <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus2} alt="plus svg" className="w-8 h-8" />
-                  </div>
-                </div>
-                <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-                  <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                    Priority Support
-                  </p>
-                  <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                    <Image src={plus2} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                  </div>
-                </div>
-                <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-                  <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                    Expanded Features
-                  </p>
-                  <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                    <Image src={plus2} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                  </div>
-                </div>
-                <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-                  <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                    Premium AI
-                  </p>
-                  <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                    <Image src={plus2} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                  </div>
-                </div>
-                <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-                  <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                    Unlimited Usage
-                  </p>
-                  <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                    <Image src={plus2} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                  </div>
-                </div>
-                <div className="flex flex-col lg:flex-row justify-between items-center py-4 w-full">
-                  <p className="w-full lg:w-1/4 text-center lg:text-left text-xl lg:text-2xl">
-                    Dedicated Support
-                  </p>
-                  <div className="flex justify-center lg:justify-around w-full lg:w-3/4 gap-4">
-                    <Image src={plus2} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                    <Image src={plus1} alt="plus svg" className="w-8 h-8" />
-                  </div>
-                </div>
+
+          {/* Responsive Card Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full lg:w-4/5 mx-auto mt-10">
+            {/* Plan Card - PRO */}
+            <div className="flex flex-col items-center p-6 border rounded-lg bg-white/10 w-full">
+              <Image
+                src={circle}
+                alt="circle"
+                className="w-20 h-20 object-contain"
+              />
+              <p className="mt-4 text-2xl font-semibold">PRO</p>
+              <p className="mt-2 text-4xl md:text-5xl">&#8358;1,000</p>
+              <p className="mt-4 text-center">100% FREE TOKENS/MONTH</p>
+              <hr className="opacity-50 my-4 w-full" />
+              <div className="flex flex-col gap-2">
+                <FeatureItem text="Basic AI Capabilities" active />
+                <FeatureItem text="Essential Tools" active />
+                <FeatureItem text="Priority Support" active />
+                <FeatureItem text="Expanded Features" active />
+                <FeatureItem text="Premium AI" active />
+                <FeatureItem text="Unlimited Usage" />
+                <FeatureItem text="Dedicated Support" active />
               </div>
             </div>
-          </section>
+
+            {/* Plan Card - PREMIUM */}
+            <div className="flex flex-col items-center p-6 border border-primary-100 rounded-lg bg-white/10 w-full">
+              <Image
+                src={diamond}
+                alt="diamond"
+                className="w-20 h-20 object-contain"
+              />
+              <p className="mt-4 text-2xl font-semibold">PREMIUM</p>
+              <p className="mt-2 text-4xl md:text-5xl">&#8358;2,000</p>
+              <p className="mt-4 text-center">100% FREE TOKENS/MONTH</p>
+              <hr className="opacity-50 my-4 w-full" />
+              <div className="flex flex-col gap-2">
+                <FeatureItem text="Basic AI Capabilities" active />
+                <FeatureItem text="Essential Tools" active />
+                <FeatureItem text="Priority Support" active />
+                <FeatureItem text="Expanded Features" active />
+                <FeatureItem text="Premium AI" active />
+                <FeatureItem text="Unlimited Usage" active />
+                <FeatureItem text="Dedicated Support" active />
+              </div>
+            </div>
+          </div>
         </section>
       </div>
       <section>
