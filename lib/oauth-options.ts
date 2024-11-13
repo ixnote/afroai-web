@@ -98,7 +98,8 @@ export const oauthOptions: NextAuthOptions = {
       //   // Allows callback URLs on the same origin
       //   else if (new URL(url).origin === baseUrl) return url;
       // return baseUrl;
-      return "https://app.afrocentricai.org";
+      // return "https://app.afrocentricai.org";
+      return "/plans";
     },
 
     async jwt({ token, account, profile }) {
