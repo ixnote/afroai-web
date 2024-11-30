@@ -7,9 +7,13 @@ import FeatureItem from "@/components/ui/FeatureItem";
 import money from "@/public/assets/svgs/money.svg";
 import circle from "@/public/assets/svgs/circle.svg";
 import diamond from "@/public/assets/svgs/diamond.svg";
+import { useGeneralContext } from "@/context/GenralContext";
+import Spinner from "@/components/spinner/Spinner";
 
 const Plans = () => {
   const [selectedDisplay, setSelectedDisplay] = useState("afro");
+  const { allPlans, setPlanDetail, planLoading }: any = useGeneralContext();
+  console.log("🚀 ~ Plans ~ allPlans:", allPlans);
 
   return (
     <>
@@ -34,7 +38,7 @@ const Plans = () => {
 
           <hr className="opacity-50 my-8" />
 
-          <div className="w-max my-8 rounded-3xl mx-auto bg-white/10  p-2 px-4 flex items-center justify-center">
+          {/* <div className="w-max my-8 rounded-3xl mx-auto bg-white/10  p-2 px-4 flex items-center justify-center">
             <span
               onClick={() => setSelectedDisplay("afro")}
               className={`transition-all duration-300 ease-in-out p-2 px-4 rounded-l-3xl cursor-pointer capitalize hover:bg-black ${
@@ -69,9 +73,7 @@ const Plans = () => {
 
           {selectedDisplay === "afro" && (
             <>
-              {/* Afro */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full lg:w-4/5 mx-auto mt-10">
-                {/* Plan Card - PRO */}
                 <div className="flex flex-col items-center p-6 border rounded-lg bg-white/10 w-full cursor-pointer hover:border-primary-100">
                   <Image
                     src={circle}
@@ -93,7 +95,6 @@ const Plans = () => {
                   </div>
                 </div>
 
-                {/* Plan Card - PREMIUM */}
                 <div className="flex flex-col items-center p-6 border rounded-lg bg-white/10 w-full cursor-pointer hover:border-primary-100">
                   <Image
                     src={diamond}
@@ -120,9 +121,7 @@ const Plans = () => {
 
           {selectedDisplay === "campus" && (
             <>
-              {/* campus */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full lg:w-4/5 mx-auto mt-10">
-                {/* Plan Card - PRO */}
                 <div className="flex flex-col items-center p-6 border rounded-lg bg-white/10 w-full cursor-pointer hover:border-green-500 hover:border-[1px]">
                   <Image
                     src={circle}
@@ -144,7 +143,6 @@ const Plans = () => {
                   </div>
                 </div>
 
-                {/* Plan Card - PREMIUM */}
                 <div className="flex flex-col items-center p-6 border rounded-lg bg-white/10 w-full cursor-pointer hover:border-primary-100">
                   <Image
                     src={diamond}
@@ -171,9 +169,7 @@ const Plans = () => {
 
           {selectedDisplay === "nurse" && (
             <>
-              {/* Nurse */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full lg:w-4/5 mx-auto mt-10">
-                {/* Plan Card - PRO */}
                 <div className="flex flex-col items-center p-6 border rounded-lg bg-white/10 w-full cursor-pointer hover:border-green-500 hover:border-[1px]">
                   <Image
                     src={circle}
@@ -195,7 +191,6 @@ const Plans = () => {
                   </div>
                 </div>
 
-                {/* Plan Card - PREMIUM */}
                 <div className="flex flex-col items-center p-6 border rounded-lg bg-white/10 w-full cursor-pointer hover:border-primary-100">
                   <Image
                     src={diamond}
@@ -216,6 +211,47 @@ const Plans = () => {
                     <FeatureItem text="Dedicated Support" active />
                   </div>
                 </div>
+              </div>
+            </>
+          )} */}
+
+          {planLoading ? (
+            <div className="w-full h-[50vh] flex items-center justify-center">
+              <Spinner />
+            </div>
+          ) : (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 w-full mx-auto mt-10">
+                {allPlans?.map((plan: any, i: number) => (
+                  <div
+                    key={i}
+                    onClick={() => setPlanDetail(plan.id)}
+                    className="flex flex-col items-center p-6 border rounded-lg bg-white/10 w-full cursor-pointer hover:border-green-500 hover:border-[1px]"
+                  >
+                    <Image
+                      src={circle}
+                      alt="circle"
+                      className="w-20 h-20 object-contain"
+                    />
+                    <p className="mt-4 text-2xl font-semibold capitalize">
+                      {plan.plan_name}
+                    </p>
+                    <p className="mt-2 text-4xl md:text-5xl">
+                      &#8358;{plan.amount}
+                    </p>
+                    <p className="mt-4 text-center">{plan.description}</p>
+                    <hr className="opacity-50 my-4 w-full" />
+                    <div className="flex flex-col gap-2">
+                      <FeatureItem text="Basic AI Capabilities" active />
+                      <FeatureItem text="Essential Tools" active />
+                      <FeatureItem text="Priority Support" active />
+                      <FeatureItem text="Expanded Features" active />
+                      <FeatureItem text="Premium AI" active />
+                      <FeatureItem text="Unlimited Usage" />
+                      <FeatureItem text="Dedicated Support" active />
+                    </div>
+                  </div>
+                ))}
               </div>
             </>
           )}
