@@ -1,3 +1,8 @@
+// ********************* //
+// ********************* //
+// ********************* //
+// ********************* //
+
 import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
@@ -69,11 +74,14 @@ export const oauthOptions: NextAuthOptions = {
               },
             }
           );
-          console.log("🚀 ~ signIn ~ response:", response);
+          // console.log("🚀 ~ signIn ~ response:", response.data.data);
 
           if (response.status === 200) {
             // user.token = response.data.token; // Attach token to user object
             user.token = response.data.data.jwt; // Attach token to user object
+            user.googleId = user.id;
+            user.id = response.data.data.user.id;
+            user.availableToken = response.data.data.user.availableToken;
           } else {
             console.error("Google authentication failed.");
             return false; // Deny sign-in if Google auth fails
@@ -111,11 +119,19 @@ export const oauthOptions: NextAuthOptions = {
       session.accessToken = session.user.token;
       session.user = token.user;
       // session.JWT = session.user.token; // Add the entire JWT to the session
+      console.log("🚀 ~ session ~ session:", session);
       return session;
     },
   },
 };
 
+// *********************** //
+// *********************** //
+// *********************** //
+// *********************** //
+// *********************** //
+
+// OLD STUFF
 // import { NextAuthOptions } from "next-auth";
 // import CredentialsProvider from "next-auth/providers/credentials";
 // import GoogleProvider from "next-auth/providers/google";

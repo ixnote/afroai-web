@@ -4,6 +4,7 @@ const nextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true,
+    domains: ["lh3.googleusercontent.com"],
   },
   transpilePackages: ["@mui/x-charts"],
   webpack: (config) => {

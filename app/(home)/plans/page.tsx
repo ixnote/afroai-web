@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 
 import FeatureItem from "@/components/ui/FeatureItem";
 import money from "@/public/assets/svgs/money.svg";
@@ -9,11 +9,50 @@ import circle from "@/public/assets/svgs/circle.svg";
 import diamond from "@/public/assets/svgs/diamond.svg";
 import { useGeneralContext } from "@/context/GenralContext";
 import Spinner from "@/components/spinner/Spinner";
+import { useSearchParams } from "next/navigation";
 
 const Plans = () => {
   const [selectedDisplay, setSelectedDisplay] = useState("afro");
-  const { allPlans, setPlanDetail, planLoading }: any = useGeneralContext();
-  console.log("🚀 ~ Plans ~ allPlans:", allPlans);
+  const {
+    allPlans,
+    setPlanDetail,
+    planLoading,
+    transactionDetails,
+    setTransactionDetails,
+  }: any = useGeneralContext();
+  // console.log("🚀 ~ Plans ~ allPlans:", allPlans);
+
+  const searchParams = useSearchParams();
+  const status = searchParams.get("status");
+  const tx_ref = searchParams.get("tx_ref");
+  const transaction_id = searchParams.get("transaction_id");
+
+  // useEffect(() => {
+  //   // Extract query parameters from URL
+  //   const urlParams = new URLSearchParams(window.location.search);
+  //   const status = urlParams.get("status") as any;
+  //   const tx_ref = urlParams.get("tx_ref") as any;
+  //   const transaction_id = urlParams.get("transaction_id") as any;
+  //   if (status === "completed") {
+  //     setTransactionDetails((item: any) => ({
+  //       ...item,
+  //       status: status,
+  //       tx_ref: tx_ref,
+  //       transaction_id: transaction_id,
+  //     }));
+  //   }
+  // }, []);
+
+  useEffect(() => {
+    if (status === "completed") {
+      setTransactionDetails((item: any) => ({
+        ...item,
+        status: status,
+        tx_ref: tx_ref,
+        transaction_id: transaction_id,
+      }));
+    }
+  }, [transaction_id]);
 
   return (
     <>
@@ -261,4 +300,12 @@ const Plans = () => {
   );
 };
 
-export default Plans;
+// export default Plans;
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Plans />
+    </Suspense>
+  );
+}
