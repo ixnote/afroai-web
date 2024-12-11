@@ -6,14 +6,16 @@ import React, { Suspense, useEffect, useState } from "react";
 import FeatureItem from "@/components/ui/FeatureItem";
 import money from "@/public/assets/svgs/money.svg";
 import circle from "@/public/assets/svgs/circle.svg";
+import light from "@/public/assets/svgs/light.svg";
 import diamond from "@/public/assets/svgs/diamond.svg";
 import { useGeneralContext } from "@/context/GenralContext";
 import Spinner from "@/components/spinner/Spinner";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const Plans = () => {
-  const [selectedDisplay, setSelectedDisplay] = useState("afro");
+  const [selectedDisplay, setSelectedDisplay] = useState("plans");
   const {
+    user,
     allPlans,
     setPlanDetail,
     planLoading,
@@ -26,6 +28,20 @@ const Plans = () => {
   const status = searchParams.get("status");
   const tx_ref = searchParams.get("tx_ref");
   const transaction_id = searchParams.get("transaction_id");
+
+  const router = useRouter();
+
+  const gotoPlans = () => {
+    setSelectedDisplay("plans");
+  };
+
+  const gotoDashboard = () => {
+    window.location.href = "https://app.afrocentricai.org";
+  };
+
+  const goBack = () => {
+    setSelectedDisplay("menu");
+  };
 
   // useEffect(() => {
   //   // Extract query parameters from URL
@@ -54,25 +70,27 @@ const Plans = () => {
     }
   }, [transaction_id]);
 
+  useEffect(() => {
+    if (user?.availableToken > 0 || user?.token > 0) {
+      setSelectedDisplay("menu");
+    }
+  }, [user]);
+
   return (
     <>
       <div className="pt-24 items-center list-none max-w-7xl mx-auto w-full lg:flex lg:flex-col lg:gap-8">
-        <section className="w-full h-auto min-h-[800px] mb-20 text-primary-50 px-4 lg:px-2">
-          <div className="flex justify-center lg:justify-start">
-            <span className="border px-6 lg:px-10 py-3 rounded-lg font-thin cursor-not-allowed">
-              OUR PLANS
+        <section className="w-full h-auto mb-20 text-primary-50 px-4 lg:px-2">
+          <div className="flex flex-col items-center justify-center text-left py-6 font-inter space-x-4 lg:justify-between lg:flex-row">
+            <span className="flex items-center gap-2">
+              <span className="capitalize text-sm lg:text-lg">WELCOME, </span>
+              <span className="uppercase text-base lg:text-2xl">
+                {user?.user?.name}
+              </span>
             </span>
-          </div>
-
-          <div className="flex items-center justify-center text-left py-6 text-2xl md:text-4xl font-inter space-x-4 lg:justify-start">
-            <h2 className="uppercase">DISCOVER THE PERFECT PLAN</h2>
-            <Image
-              src={money}
-              alt="message icon"
-              width={32}
-              height={32}
-              className="object-contain"
-            />
+            <span className="px-4 text-sm text-primary-50 lg:text-lg">
+              Available Tokens:{" "}
+              {(user?.availableToken || user?.token)?.toLocaleString()}
+            </span>
           </div>
 
           <hr className="opacity-50 my-8" />
@@ -260,38 +278,84 @@ const Plans = () => {
             </div>
           ) : (
             <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 w-full mx-auto mt-10">
-                {allPlans?.map((plan: any, i: number) => (
+              {selectedDisplay === "menu" && (
+                <div className="w-full flex flex-col items-center gap-10 justify-between lg:pt-24 md:flex-row">
                   <div
-                    key={i}
-                    onClick={() => setPlanDetail(plan.id)}
-                    className="flex flex-col items-center p-6 border rounded-lg bg-white/10 w-full cursor-pointer hover:border-green-500 hover:border-[1px]"
+                    onClick={gotoPlans}
+                    className="w-full flex flex-col items-center p-6 py-10 border rounded-lg bg-white/10 cursor-pointer hover:border-green-500 hover:border-[1px] lg:w-[50%]"
                   >
                     <Image
-                      src={circle}
+                      src={money}
                       alt="circle"
                       className="w-20 h-20 object-contain"
                     />
                     <p className="mt-4 text-2xl font-semibold capitalize">
-                      {plan.plan_name}
+                      Top Up
                     </p>
-                    <p className="mt-2 text-4xl md:text-5xl">
-                      &#8358;{plan.amount}
-                    </p>
-                    <p className="mt-4 text-center">{plan.description}</p>
                     <hr className="opacity-50 my-4 w-full" />
-                    <div className="flex flex-col gap-2">
-                      <FeatureItem text="Basic AI Capabilities" active />
-                      <FeatureItem text="Essential Tools" active />
-                      <FeatureItem text="Priority Support" active />
-                      <FeatureItem text="Expanded Features" active />
-                      <FeatureItem text="Premium AI" active />
-                      <FeatureItem text="Unlimited Usage" />
-                      <FeatureItem text="Dedicated Support" active />
-                    </div>
                   </div>
-                ))}
-              </div>
+                  <div
+                    onClick={gotoDashboard}
+                    className="w-full flex flex-col items-center p-6 py-10 border rounded-lg bg-white/10 cursor-pointer hover:border-green-500 hover:border-[1px] lg:w-[50%]"
+                  >
+                    <Image
+                      src={light}
+                      alt="circle"
+                      className="w-20 h-20 object-contain"
+                    />
+                    <p className="mt-4 text-2xl font-semibold capitalize">
+                      Go to AI
+                    </p>
+                    <hr className="opacity-50 my-4 w-full" />
+                  </div>
+                </div>
+              )}
+
+              {selectedDisplay === "plans" && (
+                <div className="flex flex-col gap-2 items-start justify-center">
+                  {user?.availableToken > 0 ||
+                    (user?.token > 0 && (
+                      <span
+                        onClick={goBack}
+                        className="flex flex-col items-center py-2 px-4 border rounded-lg bg-white/10 cursor-pointer hover:border-green-500 hover:border-[1px]"
+                      >
+                        Go back
+                      </span>
+                    ))}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 w-full mx-auto mt-10">
+                    {allPlans?.map((plan: any, i: number) => (
+                      <div
+                        key={i}
+                        onClick={() => setPlanDetail(plan.id)}
+                        className="flex flex-col items-center p-6 border rounded-lg bg-white/10 w-full cursor-pointer hover:border-green-500 hover:border-[1px]"
+                      >
+                        <Image
+                          src={circle}
+                          alt="circle"
+                          className="w-20 h-20 object-contain"
+                        />
+                        <p className="mt-4 text-2xl font-semibold capitalize">
+                          {plan.plan_name}
+                        </p>
+                        <p className="mt-2 text-4xl md:text-5xl">
+                          &#8358;{plan.amount}
+                        </p>
+                        <p className="mt-4 text-center">{plan.description}</p>
+                        <hr className="opacity-50 my-4 w-full" />
+                        <div className="flex flex-col gap-2">
+                          <FeatureItem text="Basic AI Capabilities" active />
+                          <FeatureItem text="Essential Tools" active />
+                          <FeatureItem text="Priority Support" active />
+                          <FeatureItem text="Expanded Features" active />
+                          <FeatureItem text="Premium AI" active />
+                          <FeatureItem text="Unlimited Usage" />
+                          <FeatureItem text="Dedicated Support" active />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </>
           )}
         </section>

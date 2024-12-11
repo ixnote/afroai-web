@@ -36,7 +36,7 @@ const GeneralProvider = (props: any) => {
   // ((( ******FUNCTIONS******* ))) //
   const getUser = async () => {
     try {
-      // setPlanLoading(true);
+      setPlanLoading(true);
       const response = await axios.get(
         `${process.env.NEXT_PUBLIC_BASE_URL}/user/${user?.id}`,
         {
@@ -46,13 +46,13 @@ const GeneralProvider = (props: any) => {
           },
         }
       );
-      // setPlanLoading(false);
+      setPlanLoading(false);
       setUser(response.data.data);
     } catch (err: any) {
       // error(`"Error fetching user: ", ${err.response?.data || err.message}`);
       console.error("Error fetching user:", err.response?.data || err.message);
     } finally {
-      // setPlanLoading(false);
+      setPlanLoading(false);
     }
   };
 
@@ -142,10 +142,12 @@ const GeneralProvider = (props: any) => {
       );
       // console.log("🚀 ~ callTransactonWebhook ~ response:", response);
 
+      setPlanLoading(false);
       if (response.status === 200) {
         success(response?.data?.message);
         getUser();
-        router.push("/");
+        // window.reload(false);
+        router.push("/plans");
       }
     } catch (err: any) {
       console.log("🚀 ~ callTransactonWebhook ~ err:", err);

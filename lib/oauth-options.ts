@@ -61,12 +61,15 @@ export const oauthOptions: NextAuthOptions = {
   ],
   callbacks: {
     async signIn({ user, account, profile }: any) {
+      console.log("🚀 ~ signIn ~**********~ user: ", user);
       if (account.provider === "google") {
         try {
           const response = await axios.post(
             `${process.env.NEXT_PUBLIC_BASE_URL}/auth/google`,
             {
               id_token: account.id_token, // Google token
+              // name: user?.name,
+              // avatar: user?.image,
             },
             {
               headers: {

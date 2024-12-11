@@ -45,7 +45,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/" className="flex items-end justify-center gap-1">
           <Image src={logo} className="w-[32px]" alt="logo" />
-          <span className="text-primary-100 text-xs font-sans">AFRO AI</span>
+          <span className="text-primary-50 text-xs font-sans">AFRO AI</span>
         </Link>
 
         {/* User Session Logic */}
@@ -56,34 +56,36 @@ const Navbar = () => {
                 onClick={toggleDropdown}
                 className="flex items-center gap-2 cursor-pointer"
               >
-                {/* {user.image && (
+                {user && (
                   <Image
-                    src={user.image}
+                    src={user?.user?.avatar || logo}
                     alt="user"
                     width={32}
                     height={32}
                     className="rounded-full cursor-pointer"
                     onClick={toggleDropdown}
                   />
-                )} */}
+                )}
                 <span className="px-4 py-2 font-bold text-lg text-primary-50">
                   {/* {user.email || user.user?.email} */}
                   {user.user?.email}
                 </span>
               </div>
               {dropdownOpen && (
-                <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg">
+                // <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg">
+                <div className="absolute right-0 mt-2 w-64 border-gray-200 shadow-lg border rounded-lg bg-gray-600 cursor-pointer hover:border-green-500 hover:border-[1px]">
                   <ul className="py-1 text-gray-700">
                     {/* <li className="px-4 py-2 font-bold text-lg text-gray-900 border-b border-gray-300">
                       {user.name}
                     </li> */}
-                    <li className="px-4 py-2 text-sm text-gray-600">
+                    <li className="px-4 py-2 text-sm text-primary-50">
                       Available Tokens:{" "}
                       {(user.availableToken || user.token)?.toLocaleString()}
                     </li>
+                    <hr className="opacity-50 my-2 w-full" />
                     <li
                       onClick={gotoPlans}
-                      className="px-4 py-2 text-blue-500 cursor-pointer hover:bg-gray-100"
+                      className="px-4 py-2 text-primary-50 cursor-pointer hover:bg-gray-100 hover:text-primary-300"
                     >
                       {/* <Link
                         href="/plans"
@@ -94,7 +96,7 @@ const Navbar = () => {
                       {/* </Link> */}
                     </li>
                     <li
-                      className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-red-500"
+                      className="px-4 py-2 cursor-pointer text-red-500 hover:bg-gray-100"
                       onClick={() => {
                         logoutUser();
                         closeDropdown();
