@@ -43,7 +43,10 @@ const Navbar = () => {
     <div className="bg-inherit py-3 fixed font-inter left-0 right-0 z-20">
       <div className="flex items-center justify-between mx-auto w-[90%] p-4">
         {/* Logo */}
-        <Link href="/" className="flex items-end justify-center gap-1">
+        <Link
+          href="https://afroai.ai/home"
+          className="flex items-end justify-center gap-1"
+        >
           <Image src={logo} className="w-[32px]" alt="logo" />
           <span className="text-primary-50 text-xs font-sans">AFRO AI</span>
         </Link>
