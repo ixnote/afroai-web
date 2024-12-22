@@ -9,7 +9,7 @@ import { success, error, info } from "@/helpers/Alert";
 export const GeneralContext = createContext({});
 
 const GeneralProvider = (props: any) => {
-  const { data: session, status } = useSession(); // Use NextAuth session
+  const { data: session, status }: any = useSession(); // Use NextAuth session
   const router = useRouter();
 
   // MISC
@@ -18,7 +18,7 @@ const GeneralProvider = (props: any) => {
   // console.log("🚀 ~ GeneralProvider ~ authToken:", authToken);
 
   // USER
-  const [user, setUser] = useState(session?.user || null); // Initial from session
+  const [user, setUser] = useState(session?.user || null) as any; // Initial from session
   // console.log("🚀 ~ GeneralProvider ~ user:", user);
 
   // PLANS
