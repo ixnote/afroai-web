@@ -10,7 +10,7 @@ export default function RootLayout({
     <div className='flex flex-col bg-black'>
       <Navbar />
       <div>{children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
