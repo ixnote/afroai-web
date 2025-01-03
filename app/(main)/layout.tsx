@@ -1,5 +1,5 @@
-import Navbar from '@/components/sharedComponents/Navbar';
-import Footer from '@/components/sharedComponents/Footer';
+import Navbar from "@/components/sharedComponents/Navbar";
+import Footer from "@/components/sharedComponents/Footer";
 
 export default function RootLayout({
   children,
@@ -7,9 +7,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className='flex flex-col bg-black'>
+    <div className="flex flex-col bg-black h-screen">
       <Navbar />
-      <div>{children}</div>
+      <div className="bg-black">{children}</div>
       {/* <Footer /> */}
     </div>
   );
