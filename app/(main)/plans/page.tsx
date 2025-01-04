@@ -38,9 +38,9 @@ const Plans = () => {
   const gotoDashboard = () => {
     // window.location.href = "https://app.afrocentricai.org";
     if (user?.user?.password) {
-      window.location.href = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}?${user?.user?.password}`;
+      window.location.href = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}?afro=${user?.user?.password}`;
     } else {
-      window.location.href = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}?${user?.token}`;
+      window.location.href = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}?afro=${user?.token}`;
     }
   };
 
