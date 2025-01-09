@@ -212,9 +212,9 @@ const GeneralProvider = (props: any) => {
   }, [user]);
 
   useEffect(() => {
-    if (!user) {
-      router.push("/login");
-    }
+    // if (!user) {
+    //   router.push("/login");
+    // }
     getAllPlans();
   }, []);
 

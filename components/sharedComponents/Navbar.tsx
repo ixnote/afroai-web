@@ -45,7 +45,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link
           href="https://afroai.ai/home"
-          className="flex items-end justify-center gap-1"
+          className="flex flex-col items-end justify-center gap-1 md:flex-row"
         >
           <Image src={logo} className="w-[32px]" alt="logo" />
           <span className="text-primary-50 text-xs font-sans">AFRO AI</span>
@@ -69,7 +69,7 @@ const Navbar = () => {
                     onClick={toggleDropdown}
                   />
                 )}
-                <span className="px-4 py-2 font-bold text-lg text-primary-50">
+                <span className="hidden px-4 py-2 font-bold text-lg text-primary-50 md:block">
                   {/* {user.email || user.user?.email} */}
                   {user.user?.email}
                 </span>
