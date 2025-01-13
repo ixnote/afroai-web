@@ -22,6 +22,7 @@ const Plans = () => {
     transactionDetails,
     setTransactionDetails,
   }: any = useGeneralContext();
+  // console.log("🚀 ~ Plans ~ user:", user);
   // console.log("🚀 ~ Plans ~ allPlans:", allPlans);
 
   const searchParams = useSearchParams();
@@ -85,18 +86,20 @@ const Plans = () => {
     <>
       <div className="pt-24 items-center list-none max-w-7xl mx-auto w-full lg:flex lg:flex-col lg:gap-8">
         <section className="w-full h-auto mb-20 text-primary-50 px-4 lg:px-2">
-          <div className="flex flex-col items-center justify-center text-left py-6 font-inter space-x-4 lg:justify-between lg:flex-row">
-            <span className="flex items-center gap-2">
-              <span className="capitalize text-sm lg:text-lg">WELCOME, </span>
-              <span className="uppercase text-base lg:text-2xl">
-                {user?.user?.name}
+          {(user?.user?.name || user?.name) && (
+            <div className="flex flex-col items-center justify-center text-left py-6 font-inter space-x-4 lg:justify-between lg:flex-row">
+              <span className="flex items-center gap-2">
+                <span className="capitalize text-sm lg:text-lg">WELCOME, </span>
+                <span className="uppercase text-base lg:text-2xl">
+                  {user?.user?.name || user?.name}
+                </span>
               </span>
-            </span>
-            <span className="px-4 text-sm text-primary-50 lg:text-lg">
-              Available Tokens:{" "}
-              {(user?.availableToken || user?.token)?.toLocaleString()}
-            </span>
-          </div>
+              <span className="px-4 text-sm text-primary-50 lg:text-lg">
+                Available Tokens:{" "}
+                {(user?.availableToken || user?.token)?.toLocaleString()}
+              </span>
+            </div>
+          )}
 
           <hr className="opacity-50 my-8" />
 

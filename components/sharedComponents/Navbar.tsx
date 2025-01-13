@@ -12,7 +12,7 @@ const Navbar = () => {
   const router = useRouter();
 
   const { user, logoutUser }: any = useGeneralContext();
-  console.log("🚀 ~ Navbar ~ user:", user);
+  // console.log("🚀 ~ Navbar ~ user:", user);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -45,7 +45,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link
           href="https://afroai.ai/home"
-          className="flex flex-col items-end justify-center gap-1 md:flex-row"
+          className="flex flex-col items-center justify-center gap-1 md:flex-row md:items-end"
         >
           <Image src={logo} className="w-[32px]" alt="logo" />
           <span className="text-primary-50 text-xs font-sans">AFRO AI</span>
@@ -53,7 +53,7 @@ const Navbar = () => {
 
         {/* User Session Logic */}
         <div className="relative dropdown">
-          {user?.user ? (
+          {user?.user || user?.email ? (
             <div>
               <div
                 onClick={toggleDropdown}
@@ -61,7 +61,7 @@ const Navbar = () => {
               >
                 {user && (
                   <Image
-                    src={user?.user?.avatar || logo}
+                    src={user?.user?.avatar || user?.image || logo}
                     alt="user"
                     width={32}
                     height={32}
@@ -70,8 +70,8 @@ const Navbar = () => {
                   />
                 )}
                 <span className="hidden px-4 py-2 font-bold text-lg text-primary-50 md:block">
-                  {/* {user.email || user.user?.email} */}
-                  {user.user?.email}
+                  {user.email || user.user?.email}
+                  {/* {user.user?.email} */}
                 </span>
               </div>
               {dropdownOpen && (
