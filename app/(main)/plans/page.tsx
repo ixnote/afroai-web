@@ -16,12 +16,14 @@ const Plans = () => {
   const [selectedDisplay, setSelectedDisplay] = useState("plans");
   const {
     user,
+    authToken,
     allPlans,
     setPlanDetail,
     planLoading,
     transactionDetails,
     setTransactionDetails,
   }: any = useGeneralContext();
+  // console.log("🚀 ~ Plans ~ authToken:", authToken);
   // console.log("🚀 ~ Plans ~ user:", user);
   // console.log("🚀 ~ Plans ~ allPlans:", allPlans);
 
@@ -38,11 +40,14 @@ const Plans = () => {
 
   const gotoDashboard = () => {
     // window.location.href = "https://app.afrocentricai.org";
-    if (user?.user?.password) {
-      window.location.href = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}?afro=${user?.user?.password}`;
-    } else {
-      window.location.href = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}?afro=${user?.token}`;
+    if (authToken) {
+      window.location.href = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}?afro=${authToken}`;
     }
+    // else if (user?.user?.password) {
+    //   window.location.href = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}?afro=${user?.user?.password}`;
+    // } else {
+    //   window.location.href = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}?afro=${user?.token}`;
+    // }
   };
 
   const goBack = () => {
