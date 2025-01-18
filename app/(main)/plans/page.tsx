@@ -24,7 +24,7 @@ const Plans = () => {
     setTransactionDetails,
   }: any = useGeneralContext();
   // console.log("🚀 ~ Plans ~ authToken:", authToken);
-  // console.log("🚀 ~ Plans ~ user:", user);
+  console.log("🚀 ~ Plans ~ user:", user);
   // console.log("🚀 ~ Plans ~ allPlans:", allPlans);
 
   const searchParams = useSearchParams();
@@ -100,8 +100,8 @@ const Plans = () => {
                 </span>
               </span>
               <span className="px-4 text-sm text-primary-50 lg:text-lg">
-                Available Tokens:{" "}
-                {(user?.availableToken || user?.token)?.toLocaleString()}
+                Available Tokens: {user?.user && user?.token}
+                {/* {(user?.availableToken || user?.token)?.toLocaleString()} */}
               </span>
             </div>
           )}
