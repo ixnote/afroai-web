@@ -83,7 +83,7 @@ const Navbar = () => {
                     </li> */}
                     <li className="px-4 py-2 text-sm text-primary-50">
                       Available Tokens:{" "}
-                      {(user.availableToken || user.token)?.toLocaleString()}
+                      {user?.user && user?.token?.toLocaleString()}
                     </li>
                     <hr className="opacity-50 my-2 w-full" />
                     <li
