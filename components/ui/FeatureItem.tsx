@@ -10,7 +10,7 @@ const FeatureItem = ({ text, active = false }: any) => (
       alt="feature icon"
       className="w-6 h-6"
     />
-    <p className="text-lg">{text}</p>
+    <p className="text-base">{text}</p>
   </div>
 );
 

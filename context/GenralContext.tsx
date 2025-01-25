@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react";
 import { success, error, info } from "@/helpers/Alert";
@@ -158,20 +158,37 @@ const GeneralProvider = (props: any) => {
   };
 
   // Logout
+  // const logoutUser = async () => {
+  //   try {
+  //     setMiscLoading(true); // Optional: Show loading state during logout
+
+  //     // Clear session via NextAuth sign-out
+  //     const response = await axios.post("/api/auth/signout");
+  //     if (response.status === 200) {
+  //       setUser(null); // Clear user state
+  //       setAuthToken(undefined); // Clear auth token
+  //       router.push("/login"); // Redirect to login page
+  //       info("You were logged out.");
+  //     } else {
+  //       error("Failed to log out. Please try again.");
+  //     }
+  //   } catch (err: any) {
+  //     console.error("Logout error:", err.response?.data || err.message);
+  //     error("An error occurred during logout. Please try again.");
+  //   } finally {
+  //     setMiscLoading(false); // Reset loading state
+  //   }
+  // };
   const logoutUser = async () => {
     try {
       setMiscLoading(true); // Optional: Show loading state during logout
 
-      // Clear session via NextAuth sign-out
-      const response = await axios.post("/api/auth/signout");
-      if (response.status === 200) {
-        setUser(null); // Clear user state
-        setAuthToken(undefined); // Clear auth token
-        router.push("/login"); // Redirect to login page
-        info("You were logged out.");
-      } else {
-        error("Failed to log out. Please try again.");
-      }
+      // Trigger session destruction via NextAuth sign-out
+      await signOut({ redirect: false }); // No immediate redirect to allow custom handling
+      setUser(null); // Clear user state
+      setAuthToken(undefined); // Clear auth token
+      router.push("/login"); // Redirect to login page
+      info("You were logged out.");
     } catch (err: any) {
       console.error("Logout error:", err.response?.data || err.message);
       error("An error occurred during logout. Please try again.");
@@ -195,6 +212,9 @@ const GeneralProvider = (props: any) => {
   }, [user]);
 
   useEffect(() => {
+    // if (!user) {
+    //   router.push("/login");
+    // }
     getAllPlans();
   }, []);
 

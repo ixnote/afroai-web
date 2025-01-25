@@ -124,12 +124,12 @@ const Login = () => {
                 >
                   <FcGoogle size={25} /> CONTINUE WITH GOOGLE
                 </Button>
-                <Button
+                {/* <Button
                   type="submit"
                   className="flex gap-3 bg-slate-800 w-full h-[50px] hover:bg-black"
                 >
                   <IoLogoApple size={25} /> CONTINUE WITH APPLE
-                </Button>
+                </Button> */}
               </div>
             </form>
           </Form>
