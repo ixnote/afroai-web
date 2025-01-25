@@ -130,7 +130,7 @@ const GeneralProvider = (props: any) => {
     try {
       setPlanLoading(true); // Show loading stat
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/subscriptions/webhook`,
+        `${process.env.NEXT_PUBLIC_BASE_URL}/subscriptions/confirm`,
         { transactionDetails },
         {
           headers: {
